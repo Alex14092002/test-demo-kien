@@ -91,7 +91,7 @@ if(cart){
             <form
             target="hidden_iframe"
           onsubmit="submitted=true;"
-             action="https://script.google.com/macros/s/AKfycbzJX2ZShBDRZW11zbpXrPTkjGUymEybd8ssglvt0tKFQDocSOOmjhBXgVLQJcZCqdNN/exec" method="GET">
+             action="https://script.google.com/macros/s/AKfycbx5HQo1Ipdvdu9mVPFcW6NFtLhSijnocOBPz5dSq0LzBEgTR31ebxeEOZJJKK8IBNqm/exec" method="GET">
                 <div class="row form-detail">
                     <div class="col-4">
                         <label for="">Tên Khách Hàng</label>
