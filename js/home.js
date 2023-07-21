@@ -252,35 +252,37 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
       window.location.href = "cart.html"
   })
 };
-function addToCart(data) {
-  const productName = data.name;
-  const img = data.img1;
-  const price = data.price;
-  const quantity = 1;
+// function addToCart(data) {
+//   const productName = data.name;
+//   const img = data.img1;
+//   const price = data.price;
+//   const quantity = 1;
 
-  let selectedItems = localStorage.getItem("selectedItems");
-  selectedItems = selectedItems ? JSON.parse(selectedItems) : [];
+//   let selectedItems = localStorage.getItem("selectedItems");
+//   selectedItems = selectedItems ? JSON.parse(selectedItems) : [];
 
-  // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng hay chưa
-  const existingItemIndex = selectedItems.findIndex((item) => item.name === productName);
+//   // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng hay chưa
+//   const existingItemIndex = selectedItems.findIndex((item) => item.name === productName);
 
-  if (existingItemIndex !== -1) {
-    // Nếu sản phẩm đã tồn tại, tăng số lượng sản phẩm trong giỏ hàng lên 1
-    selectedItems[existingItemIndex].quantity += 1;
-  } else {
-    // Nếu sản phẩm chưa tồn tại, thêm sản phẩm mới vào giỏ hàng
-    selectedItems.push({
-      name: productName,
-      img: img,
-      price: price,
-      quantity: quantity,
-    });
-  }
+//   if (existingItemIndex !== -1) {
+//     // Nếu sản phẩm đã tồn tại, tăng số lượng sản phẩm trong giỏ hàng lên 1
+//     selectedItems[existingItemIndex].quantity += 1;
+//   } else {
+//     // Nếu sản phẩm chưa tồn tại, thêm sản phẩm mới vào giỏ hàng
+//     selectedItems.push({
+//       name: productName,
+//       img: img,
+//       price: price,
+//       quantity: quantity,
+//     });
+//   }
 
-  localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
+//   localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
   
+// }
+const addTocart = (data) =>{
+  console.log(data);
 }
-
 
 (async () => {
   const res = await fetch(
@@ -487,7 +489,7 @@ document.body.appendChild(overlay);
             <h2>${formatCurrency(value.price)}</h2>
           </div>
           <div class="btn-add add-to-cart">
-          <button data-name='${(value)}'>MUA TRỌN BỘ COMBO</button>
+          <button onclick="addTocart(${value})">MUA TRỌN BỘ COMBO</button>
           </div>
         </div>
       `;
@@ -641,10 +643,12 @@ document.body.appendChild(overlay);
  
     $('.slider-product').slick({
       dots: true,
-      infinite: false,
+      infinite: true,
       speed: 300,
       slidesToShow: 4,
       slidesToScroll: 4,
+      autoplay: true,
+      autoplaySpeed: 1000,
       responsive: [
         {
           breakpoint: 1024,
@@ -676,14 +680,14 @@ document.body.appendChild(overlay);
     });
     
   }
-  const btnAddCart = document.querySelectorAll('.add-to-cart button');
-  btnAddCart.forEach(button => {
-    button.addEventListener('click', function() {
-      const value = JSON.parse(this.dataset.name) 
-      console.log(value);
+  // const btnAddCart = document.querySelectorAll('.add-to-cart button');
+  // btnAddCart.forEach(button => {
+  //   button.addEventListener('click', function() {
+  //     const value = JSON.parse(this.dataset.name) 
+  //     console.log(value);
       
-    });
-  });
+  //   });
+  // });
   
   
 
