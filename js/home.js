@@ -159,6 +159,7 @@ popupChitiet.classList.remove('open-popup');
 popupCart.classList.add('open-popup-cart');
 const priceTotal = price*selectedQuantity
 showPopupCart(data, selectedQuantity , priceTotal); // Hiển thị popup giỏ hàng với thông tin sản phẩm đã được chọn
+localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
 });
 
 
@@ -331,11 +332,10 @@ function addToCart(data) {
         <div class="banner-5">
             <img src="${data.banner7}" alt="" width="100%">
         </div>
-        <div class="row main-product-home" id="tang1">
      
-            
-            
-        </div>
+      <div class="slider-product" id="tang1">
+
+      </div>
     </div>
 
 
@@ -343,10 +343,8 @@ function addToCart(data) {
         <div class="banner-5">
         <img src="${data.banner8}" alt="" width="100%">
         </div>
-        <div class="row main-product-home" id="combo2">
-          
-            
-            
+        <div class="slider-product" id="combo2">
+
         </div>
     </div>
 
@@ -355,11 +353,28 @@ function addToCart(data) {
         <div class="banner-5">
         <img src="${data.banner9}" alt="" width="100%">
         </div>
-        <div class="row main-product-home" id="combo3">
-         
-            
-            
+        <div class="slider-product" id="combo3">
+
         </div>
+    </div>
+
+    <div class="container product-phu">
+    <div class="title--v">
+        <h1>KEM CHỐNG NẮNG & MẶT NẠ</h1>
+
+    </div>
+    <div class="slider-product" id="kemchongnang">
+
+    </div>
+    </div>
+    <div class="container product-phu">
+    <div class="title--v">
+        <h1>DƯỠNG THỂ VÀ CHĂM SÓC TÓC</h1>
+
+    </div>
+    <div class="slider-product" id="duongthe">
+
+    </div>
     </div>
 
 
@@ -370,9 +385,6 @@ function addToCart(data) {
     </div>
 `;
   }
-
-  
-   
 
 (async ()=>{
     const res = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/homeproduct.json`)
@@ -422,35 +434,33 @@ function addToCart(data) {
 
 })()
 
-
-
-
-
-
 overlay.classList.add('overlay');
 document.body.appendChild(overlay);
-
-
-
 (async () => {
   const res = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/mua1tang1.json`);
   const res2 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/combo2.json`);
   const res3 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/combo3.json`);
-
+  const res4 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/kemchongnang.json`)
+  const res5 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/duongthe.json`)
   const data = await res.json();
   const data2 = await res2.json();
   const data3 = await res3.json();
-  
+  const data4  = await res4.json();
+  const data5 = await res5.json();
+
+
   const main = document.querySelector("#tang1");
   const main2 = document.querySelector("#combo2");
   const main3 = document.querySelector("#combo3");
+
+  const main4 = document.querySelector('#kemchongnang')
+  const main5 = document.querySelector('#duongthe')
  
-  if (data && data2 && data3) {
+  if (data && data2 && data3 && data4 && data5) {
     Object.entries(data).map(([key, value]) => {
      
       main.innerHTML += `
-        <div class="col-6 col-md-3 item-product-home ">
-      
+        <div class="item-product-home">
             <div class="img-product">
               <img src="${value.img1}" alt="" width="100%">
               <div class="img-hover mini-product">
@@ -488,7 +498,7 @@ document.body.appendChild(overlay);
 
     Object.entries(data2).map(([key, value]) => {
       main2.innerHTML += `
-        <div class="col-6 col-md-3 item-product-home ">
+        <div class=" item-product-home ">
          
             <div class="img-product">
               <img src="${value.img1}" alt="" width="100%">
@@ -523,7 +533,7 @@ document.body.appendChild(overlay);
 
     Object.entries(data3).map(([key, value]) => {
       main3.innerHTML += `
-        <div class="col-6 col-md-3 item-product-home ">
+        <div class=" item-product-home ">
         
             <div class="img-product">
               <img src="${value.img1}" alt="" width="100%">
@@ -556,13 +566,118 @@ document.body.appendChild(overlay);
       `;
       
     });
+    Object.entries(data4).map(([key, value]) => {
+      main4.innerHTML += `
+        <div class=" item-product-home ">
+        
+            <div class="img-product">
+              <img src="${value.img1}" alt="" width="100%">
+              <div class="img-hover mini-product">
+                <img src="${value.img2}" alt="" width="100%">
+                <button class="btn-view-more btn-mini" onclick="showPopup('combo3', '${encodeURIComponent(key)}'   )"" >XEM NHANH</button>
+              </div>
+            </div>
+            <div class="name-product name-product-combo">
+              <h3>${value.name}</h3>
+            </div>
+          
+          <div class="subcribe subcribe-mini">
+            <p>${value.subcibe}</p>
+          </div>
+          <div class="heart">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </div>
+          <div class="price">
+            <h2>${formatCurrency(value.price)}</h2>
+          </div>
+          <div class="btn-add add-to-cart">
+            <button>MUA TRỌN BỘ COMBO</button>
+          </div>
+        </div>
+      `;
+      
+    });
+    Object.entries(data5).map(([key, value]) => {
+      main5.innerHTML += `
+        <div class=" item-product-home ">
+        
+            <div class="img-product">
+              <img src="${value.img1}" alt="" width="100%">
+              <div class="img-hover mini-product">
+                <img src="${value.img2}" alt="" width="100%">
+                <button class="btn-view-more btn-mini" onclick="showPopup('combo3', '${encodeURIComponent(key)}'   )"" >XEM NHANH</button>
+              </div>
+            </div>
+            <div class="name-product name-product-combo">
+              <h3>${value.name}</h3>
+            </div>
+          
+          <div class="subcribe subcribe-mini">
+            <p>${value.subcibe}</p>
+          </div>
+          <div class="heart">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </div>
+          <div class="price">
+            <h2>${formatCurrency(value.price)}</h2>
+          </div>
+          <div class="btn-add add-to-cart">
+            <button>MUA TRỌN BỘ COMBO</button>
+          </div>
+        </div>
+      `;
+      
+    });
+    
+  
+ 
+    $('.slider-product').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+    
   }
 
+  
+
+  })();
 })();
-
-
-
-})();
-
-
-

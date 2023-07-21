@@ -115,6 +115,7 @@ body{
 }
 .main-product-home{
     padding: 20px 0;
+    margin: 0px !important;
 }
 .btn-add button{
     width: 100%;
@@ -156,6 +157,16 @@ body{
 }
 .item-product-home{
   margin-bottom: 12px;
+  padding: 0 3px;
+}
+.slick-dots li button:before{
+  font-size: 16px !important;
+}
+.slick-dots li.slick-active button:before{
+  opacity: 1 !important;
+}
+.slick-arrow{
+  display: none !important;
 }
 .item-product-home a{
     color: #000;
@@ -333,9 +344,7 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
 }
-body{
-    position: relative;
-}
+
 .chat{
     position: fixed;
     right: 0;
@@ -813,7 +822,21 @@ body{
     text-align: center;
     padding-top: 30px;
   }
-
+.header-top-code{
+  background-color: #00a3ff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.header-top-code span{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 14px;
+  
+  text-decoration: underline;
+}
   @keyframes spin {
     0% {
       transform: rotate(0deg);
@@ -855,6 +878,54 @@ body{
     padding: 5px 10px;
     border: none;
   }
+  .footer-mobile{
+    display: none;
+    background-color: #000;
+    line-height: 40px;
+    padding: 30px 0;
+  }
+.right-mobile {
+  position: relative;
+}  
+.right-mobile span{
+  position: absolute;
+  color: #000;
+  top: 43%;
+  font-weight: bold;
+  left: 16%;
+  font-size: 10px;
+}
+.product-phu{
+  padding: 20px 0;
+}  
+.title--v h1{
+  font-size: 24px;
+  color: #000;
+    font-family: 'Amiri', serif;
+    text-align: center;
+    font-weight: 600;
+}
+.popup-giam10{
+  position: fixed;
+  bottom: 2%;
+  right: 10%;
+  z-index: 30000;
+  width: 350px;
+  cursor: pointer;
+  height: 50px;
+}
+.popup-main-giam10{
+  position: fixed;
+  width: 310px;
+  height: 393px;
+  top: 10%;
+  z-index: 230000;
+  left: 5%;
+  display: none;
+}
+.visible{
+  display: block;
+}
 @media(min-width :1500px){
     .popup-xemnhanh{
         height: 80vh;
@@ -862,6 +933,27 @@ body{
 
 }
 @media(max-width : 700px){
+  
+  .popup-giam10 {
+    bottom: 2%;
+    left: 5%;
+    right: 0;
+  }
+  .bot-footer{
+    display: none;
+  }
+  .footer-mobile{
+    display: block;
+  }
+  .icon{
+    text-align: center;
+  }
+  .end-footer-mobile p{
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+  }
     .popup-xemnhanh{
         width: 100%;
     }
