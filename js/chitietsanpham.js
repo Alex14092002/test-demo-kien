@@ -90,7 +90,7 @@ function formatCurrency(number) {
 </div>
 
 <div class="code">
-    <h5>Mã <strong>WELCOME10</strong>  giảm 10% tối đa 200k khi là thành viên | Quà tặng trị giá 1.600k cho đơn từ 3.5 triệu <strong>Mua Deal Ngay</strong> </h5>
+    <h5>Nhập mã <strong>WELCOME10</strong>, giảm 10% (tối đa 200k) cho khách hàng mới. Miễn phí vận chuyển cho mọi đơn hàng</h5>
 </div>
 <br> 
 

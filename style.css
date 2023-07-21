@@ -172,14 +172,14 @@ body{
   opacity: 1 !important;
 }
 .slick-prev:before, .slick-next:before{
- 
+  padding: 8px !important;
   opacity: 1 !important;
 }
 /* CSS for slick-next button */
 
 .slick-next{
   position: absolute;
-  right: -3% !important;
+  right: -1% !important;
  
 }
 .slick-next:before{
@@ -189,7 +189,7 @@ body{
   color: #fff !important;
 }
 .slick-prev:before{
-   padding: 3px;
+   
   content: "❮" !important;
   background-color: #000;
   color: #fff !important;
@@ -238,7 +238,8 @@ body{
   border: 1px solid #000;
 }
 .btn-mini{
-    padding: 5px 10px !important;
+    padding: 5px 1px !important;
+   
 }
 .btn-view-more:hover{
     background-color: #000;
@@ -968,6 +969,7 @@ body{
   color: #000;
     font-family: 'Amiri', serif;
     text-align: center;
+    padding-bottom: 30px;
     font-weight: 600;
 }
 .popup-giam10{

@@ -443,7 +443,25 @@ const addTocart = (data) =>{
 
 overlay.classList.add('overlay');
 document.body.appendChild(overlay);
-(async () => {
+
+
+function chunkArray(arr, chunkSize) {
+  const chunks = [];
+  for (let i = 0; i < arr.length; i += chunkSize) {
+    chunks.push(arr.slice(i, i + chunkSize));
+  }
+  return chunks;
+}
+function getChunkSize() {
+  if (window.innerWidth >= 768) {
+    
+    return 6;
+  } else {
+    
+    return 3;
+  }
+}
+  (async () => {
   const res = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/mua1tang1.json`);
   const res2 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/combo2.json`);
   const res3 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/combo3.json`);
@@ -454,210 +472,60 @@ document.body.appendChild(overlay);
   const data3 = await res3.json();
   const data4  = await res4.json();
   const data5 = await res5.json();
+   
+  const productsChunks = chunkArray(Object.entries(data), getChunkSize());
 
-
-  const main = document.querySelector("#tang1");
-  const main2 = document.querySelector("#combo2");
-  const main3 = document.querySelector("#combo3");
-
-  const main4 = document.querySelector('#kemchongnang')
-  const main5 = document.querySelector('#duongthe')
- 
-  if (data && data2 && data3 && data4 && data5) {
-    Object.entries(data).map(([key, value]) => {
-     
-      main.innerHTML += `
+  // Lặp qua từng nhóm sản phẩm để tạo các slider và hiển thị lên trang web
+  productsChunks.forEach((products, index) => {
+    const sliderId = `slider-${index}`;
+    const sliderContainer = document.createElement('div');
+    sliderContainer.className = 'slider-product';
+    sliderContainer.id = sliderId;
+    products.forEach(([key, value]) => {
+      sliderContainer.innerHTML += `
         <div class="item-product-home">
-            <div class="img-product">
-              <img src="${value.img1}" alt="" width="100%">
-              <div class="img-hover mini-product">
-                <img src="${value.img2}" alt="" width="100%">
-                <button class="btn-view-more btn-mini" onclick="showPopup('mua1tang1' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
-              </div>
-         
-            </div>
-            <a href="../chitietsp.html?catelory=mua1tang1&key=${key}">
-            <div class="name-product">
-            <h3>${value.name}</h3>
+        <div class="item-product-home">
+        <div class="img-product">
+          <img src="${value.img1}" alt="" width="100%">
+          <div class="img-hover mini-product">
+            <img src="${value.img2}" alt="" width="100%">
+            <button class="btn-view-more btn-mini" onclick="showPopup('mua1tang1' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
           </div>
-            </a>
-           
-        
-          <div class="subcribe subcribe-mini">
-            <p>${value.subcibe}</p>
-          </div>
-          <div class="heart">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </div>
-          <div class="price">
-            <h2>${formatCurrency(value.price)}</h2>
-          </div>
-          <div class="btn-add add-to-cart">
-          <button onclick="addTocart(${value})">MUA TRỌN BỘ COMBO</button>
-          </div>
+     
         </div>
-      `;
-      
-      
-      
-    });
-
-    Object.entries(data2).map(([key, value]) => {
-      main2.innerHTML += `
-        <div class=" item-product-home ">
-         
-            <div class="img-product">
-              <img src="${value.img1}" alt="" width="100%">
-              <div class="img-hover mini-product">
-                <img src="${value.img2}" alt="" width="100%">
-                <button class="btn-view-more btn-mini" onclick="showPopup('combo2', '${encodeURIComponent(key)}')" >XEM NHANH</button>
-              </div>
-            </div>
-            <a href="../chitietsp.html?catelory=combo2&key=${key}">
-            <div class="name-product">
-            <h3>${value.name}</h3>
-          </div>
-            </a>
-         
-          <div class="subcribe subcribe-mini">
-            <p>${value.subcibe}</p>
-          </div>
-          <div class="heart">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </div>
-          <div class="price">
-            <h2>${formatCurrency(value.price)}</h2>
-          </div>
-          <div class="btn-add add-to-cart">
-            <button onclick="addToCart(${value})" >MUA TRỌN BỘ COMBO</button>
-          </div>
-        </div>
-      `;
-    });
-
-    Object.entries(data3).map(([key, value]) => {
-      main3.innerHTML += `
-        <div class=" item-product-home ">
-        
-            <div class="img-product">
-              <img src="${value.img1}" alt="" width="100%">
-              <div class="img-hover mini-product">
-                <img src="${value.img2}" alt="" width="100%">
-                <button class="btn-view-more btn-mini" onclick="showPopup('combo3', '${encodeURIComponent(key)}'   )"" >XEM NHANH</button>
-              </div>
-            </div>
-            <a href="../chitietsp.html?catelory=combo3&key=${key}">
-            <div class="name-product">
-            <h3>${value.name}</h3>
-          </div>
-            </a>
-          
-          <div class="subcribe subcribe-mini">
-            <p>${value.subcibe}</p>
-          </div>
-          <div class="heart">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </div>
-          <div class="price">
-            <h2>${formatCurrency(value.price)}</h2>
-          </div>
-          <div class="btn-add add-to-cart">
-            <button>MUA TRỌN BỘ COMBO</button>
-          </div>
-        </div>
-      `;
-      
-    });
-    Object.entries(data4).map(([key, value]) => {
-      main4.innerHTML += `
-        <div class=" item-product-home ">
-        
-            <div class="img-product">
-              <img src="${value.img1}" alt="" width="100%">
-              <div class="img-hover mini-product">
-                <img src="${value.img2}" alt="" width="100%">
-                <button class="btn-view-more btn-mini" onclick="showPopup('kemchongnang', '${encodeURIComponent(key)}'   )"" >XEM NHANH</button>
-              </div>
-            </div>
-            <a href="../chitietsp.html?catelory=kemchongnang&key=${key}">
-            <div class="name-product">
-            <h3>${value.name}</h3>
-          </div>
-            </a>
-          
-          <div class="subcribe subcribe-mini">
-            <p>${value.subcibe}</p>
-          </div>
-          <div class="heart">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </div>
-          <div class="price">
-            <h2>${formatCurrency(value.price)}</h2>
-          </div>
-          <div class="btn-add add-to-cart">
-            <button>MUA TRỌN BỘ COMBO</button>
-          </div>
-        </div>
-      `;
-      
-    });
-    Object.entries(data5).map(([key, value]) => {
-      main5.innerHTML += `
-        <div class=" item-product-home ">
-        
-            <div class="img-product">
-              <img src="${value.img1}" alt="" width="100%">
-              <div class="img-hover mini-product">
-                <img src="${value.img2}" alt="" width="100%">
-                <button class="btn-view-more btn-mini" onclick="showPopup('duongthe', '${encodeURIComponent(key)}'   )"" >XEM NHANH</button>
-              </div>
-            </div>
-            <a href="../chitietsp.html?catelory=duongthe&key=${key}">
-            <div class="name-product">
-            <h3>${value.name}</h3>
-          </div>
-            </a>
-          
-          <div class="subcribe subcribe-mini">
-            <p>${value.subcibe}</p>
-          </div>
-          <div class="heart">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-          </div>
-          <div class="price">
-            <h2>${formatCurrency(value.price)}</h2>
-          </div>
-          <div class="btn-add add-to-cart">
-            <button>MUA TRỌN BỘ COMBO</button>
-          </div>
-        </div>
-      `;
-      
-    });
+        <a href="../chitietsp.html?catelory=mua1tang1&key=${key}">
+        <div class="name-product">
+        <h3>${value.name}</h3>
+      </div>
+        </a>
+       
     
-  
+      <div class="subcribe subcribe-mini">
+        <p>${value.subcibe}</p>
+      </div>
+      <div class="heart">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+      </div>
+      <div class="price">
+        <h2>${formatCurrency(value.price)}</h2>
+      </div>
+      <div class="btn-add add-to-cart">
+      <button onclick="addTocart(${value})">MUA TRỌN BỘ COMBO</button>
+      </div>
+    </div>
+        </div>
+      `;
+    });
+    const main = document.querySelector("#tang1");
+   
+    main.appendChild(sliderContainer);
+   
  
-    $('.slider-product').slick({
+    $(`#${sliderId}`).slick({
       dots: true,
       infinite: true,
       speed: 300,
@@ -689,25 +557,365 @@ document.body.appendChild(overlay);
             slidesToScroll: 2
           }
         }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
       ]
     });
+  });
+
+  const productsChunksCombo2 = chunkArray(Object.entries(data2), getChunkSize());
+  productsChunksCombo2.forEach((products, index) => {
+    const sliderId = `slider-combo2-${index}`;
+    const sliderContainer = document.createElement('div');
+    sliderContainer.className = 'slider-product';
+    sliderContainer.id = sliderId;
+    products.forEach(([key, value]) => {
+      sliderContainer.innerHTML += `
+        <div class="item-product-home">
+        <div class="item-product-home">
+        <div class="img-product">
+          <img src="${value.img1}" alt="" width="100%">
+          <div class="img-hover mini-product">
+            <img src="${value.img2}" alt="" width="100%">
+            <button class="btn-view-more btn-mini" onclick="showPopup('combo2' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
+          </div>
+     
+        </div>
+        <a href="../chitietsp.html?catelory=combo2&key=${key}">
+        <div class="name-product">
+        <h3>${value.name}</h3>
+      </div>
+        </a>
+       
     
-  }
-  // const btnAddCart = document.querySelectorAll('.add-to-cart button');
-  // btnAddCart.forEach(button => {
-  //   button.addEventListener('click', function() {
-  //     const value = JSON.parse(this.dataset.name) 
-  //     console.log(value);
-      
-  //   });
-  // });
-  
-  
+      <div class="subcribe subcribe-mini">
+        <p>${value.subcibe}</p>
+      </div>
+      <div class="heart">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+      </div>
+      <div class="price">
+        <h2>${formatCurrency(value.price)}</h2>
+      </div>
+      <div class="btn-add add-to-cart">
+      <button onclick="addTocart(${value})">MUA TRỌN BỘ COMBO</button>
+      </div>
+    </div>
+        </div>
+      `;
+    });
+    const main = document.querySelector("#combo2");
+   
+    main.appendChild(sliderContainer);
+   
+ 
+    $(`#${sliderId}`).slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        }
+      ]
+    });
+  });
+
+
+
+  const productsChunksCombo3 = chunkArray(Object.entries(data3), getChunkSize());
+  productsChunksCombo3.forEach((products, index) => {
+    const sliderId = `slider-combo3-${index}`;
+    const sliderContainer = document.createElement('div');
+    sliderContainer.className = 'slider-product';
+    sliderContainer.id = sliderId;
+    products.forEach(([key, value]) => {
+      sliderContainer.innerHTML += `
+        <div class="item-product-home">
+        <div class="item-product-home">
+        <div class="img-product">
+          <img src="${value.img1}" alt="" width="100%">
+          <div class="img-hover mini-product">
+            <img src="${value.img2}" alt="" width="100%">
+            <button class="btn-view-more btn-mini" onclick="showPopup('combo3' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
+          </div>
+     
+        </div>
+        <a href="../chitietsp.html?catelory=combo3&key=${key}">
+        <div class="name-product">
+        <h3>${value.name}</h3>
+      </div>
+        </a>
+       
+    
+      <div class="subcribe subcribe-mini">
+        <p>${value.subcibe}</p>
+      </div>
+      <div class="heart">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+      </div>
+      <div class="price">
+        <h2>${formatCurrency(value.price)}</h2>
+      </div>
+      <div class="btn-add add-to-cart">
+      <button onclick="addTocart(${value})">MUA TRỌN BỘ COMBO</button>
+      </div>
+    </div>
+        </div>
+      `;
+    });
+    const main = document.querySelector("#combo3");
+   
+    main.appendChild(sliderContainer);
+   
+ 
+    $(`#${sliderId}`).slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        }
+      ]
+    });
+  });
+
+
+  const productsChunksKemchongnang = chunkArray(Object.entries(data4), getChunkSize());
+  productsChunksKemchongnang.forEach((products, index) => {
+    const sliderId = `slider-kemchongnang-${index}`;
+    const sliderContainer = document.createElement('div');
+    sliderContainer.className = 'slider-product';
+    sliderContainer.id = sliderId;
+    products.forEach(([key, value]) => {
+      sliderContainer.innerHTML += `
+        <div class="item-product-home">
+        <div class="item-product-home">
+        <div class="img-product">
+          <img src="${value.img1}" alt="" width="100%">
+          <div class="img-hover mini-product">
+            <img src="${value.img2}" alt="" width="100%">
+            <button class="btn-view-more btn-mini" onclick="showPopup('kemchongnang' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
+          </div>
+     
+        </div>
+        <a href="../chitietsp.html?catelory=kemchongnang&key=${key}">
+        <div class="name-product">
+        <h3>${value.name}</h3>
+      </div>
+        </a>
+       
+    
+      <div class="subcribe subcribe-mini">
+        <p>${value.subcibe}</p>
+      </div>
+      <div class="heart">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+      </div>
+      <div class="price">
+        <h2>${formatCurrency(value.price)}</h2>
+      </div>
+      <div class="btn-add add-to-cart">
+      <button onclick="addTocart(${value})">MUA TRỌN BỘ COMBO</button>
+      </div>
+    </div>
+        </div>
+      `;
+    });
+    const main = document.querySelector("#kemchongnang");
+   
+    main.appendChild(sliderContainer);
+   
+ 
+    $(`#${sliderId}`).slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        }
+      ]
+    });
+  });
+
+
+
+  const productsChunksDuongthe = chunkArray(Object.entries(data5), getChunkSize());
+  productsChunksDuongthe.forEach((products, index) => {
+    const sliderId = `slider-duongthe-${index}`;
+    const sliderContainer = document.createElement('div');
+    sliderContainer.className = 'slider-product';
+    sliderContainer.id = sliderId;
+    products.forEach(([key, value]) => {
+      sliderContainer.innerHTML += `
+        <div class="item-product-home">
+        <div class="item-product-home">
+        <div class="img-product">
+          <img src="${value.img1}" alt="" width="100%">
+          <div class="img-hover mini-product">
+            <img src="${value.img2}" alt="" width="100%">
+            <button class="btn-view-more btn-mini" onclick="showPopup('duongthe' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
+          </div>
+     
+        </div>
+        <a href="../chitietsp.html?catelory=duongthe&key=${key}">
+        <div class="name-product">
+        <h3>${value.name}</h3>
+      </div>
+        </a>
+       
+    
+      <div class="subcribe subcribe-mini">
+        <p>${value.subcibe}</p>
+      </div>
+      <div class="heart">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+      </div>
+      <div class="price">
+        <h2>${formatCurrency(value.price)}</h2>
+      </div>
+      <div class="btn-add add-to-cart">
+      <button onclick="addTocart(${value})">MUA TRỌN BỘ COMBO</button>
+      </div>
+    </div>
+        </div>
+      `;
+    });
+    const main = document.querySelector("#duongthe");
+   
+    main.appendChild(sliderContainer);
+   
+ 
+    $(`#${sliderId}`).slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        }
+      ]
+    });
+  });
 
   
+  
   })();
+
+
+
+  
 })();
 
