@@ -278,7 +278,7 @@ function addToCart(data) {
   }
 
   localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
-  showPopupCart(); // Hiển thị popup giỏ hàng với thông tin sản phẩm đã được thêm
+  
 }
 
 
@@ -487,7 +487,7 @@ document.body.appendChild(overlay);
             <h2>${formatCurrency(value.price)}</h2>
           </div>
           <div class="btn-add add-to-cart">
-            <button onclick="addToCart(this)" data-product='${JSON.stringify(value)}'>MUA TRỌN BỘ COMBO</button>
+          <button data-name='${(value)}'>MUA TRỌN BỘ COMBO</button>
           </div>
         </div>
       `;
@@ -525,7 +525,7 @@ document.body.appendChild(overlay);
             <h2>${formatCurrency(value.price)}</h2>
           </div>
           <div class="btn-add add-to-cart">
-            <button >MUA TRỌN BỘ COMBO</button>
+            <button onclick="addToCart(${value})" >MUA TRỌN BỘ COMBO</button>
           </div>
         </div>
       `;
@@ -676,8 +676,18 @@ document.body.appendChild(overlay);
     });
     
   }
-
+  const btnAddCart = document.querySelectorAll('.add-to-cart button');
+  btnAddCart.forEach(button => {
+    button.addEventListener('click', function() {
+      const value = JSON.parse(this.dataset.name) 
+      console.log(value);
+      
+    });
+  });
+  
   
 
+  
   })();
 })();
+
