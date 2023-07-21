@@ -22,7 +22,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -41,11 +41,31 @@
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
                 }
             ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
+                }
+            ],
             "nameSheet":"ABZZZ"
         },
         {
-            "id":1,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -65,7 +85,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -84,11 +104,32 @@
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
                 }
             ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
+                }
+            ],
             "nameSheet":"ABZZZ"
         },
+    
         {
-            "id":2,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -108,7 +149,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -127,11 +168,32 @@
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
                 }
             ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
+                }
+            ],
             "nameSheet":"ABZZZ"
         },
+    
         {
-            "id":3,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -151,7 +213,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -168,15 +230,36 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
         }
+    
     ],
     "combo2":[
         {
             "id":0,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -196,7 +279,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -213,13 +296,33 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
         },
         {
-            "id":1,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -239,7 +342,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -256,13 +359,34 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
         },
+    
         {
-            "id":2,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -282,7 +406,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -299,13 +423,34 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
         },
+    
         {
-            "id":3,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -325,7 +470,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -342,6 +487,26 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
@@ -350,7 +515,7 @@
     "combo3":[
         {
             "id":0,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -370,7 +535,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -387,13 +552,33 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
         },
         {
-            "id":1,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -413,7 +598,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -430,13 +615,34 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
         },
+    
         {
-            "id":2,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -456,7 +662,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -473,13 +679,34 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
         },
+    
         {
-            "id":3,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -499,7 +726,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -516,6 +743,26 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
@@ -541,7 +788,7 @@
     "homeproduct":[
         {
             "id":0,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -561,7 +808,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -579,11 +826,32 @@
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
                 }
-            ]
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
+                }
+            ],
+            "nameSheet":"ABZZZ"
         },
         {
             "id":0,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -603,7 +871,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -621,13 +889,34 @@
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
                 }
-            ]
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
+                }
+            ],
+            "nameSheet":"ABZZZ"
         }
     ],
     "kemchongnang":[
         {
             "id":0,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -647,7 +936,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -664,13 +953,33 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
         },
         {
-            "id":1,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -690,7 +999,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -707,13 +1016,34 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
         },
+    
         {
-            "id":2,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -733,7 +1063,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -750,13 +1080,34 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
         },
+    
         {
-            "id":3,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -776,7 +1127,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -793,6 +1144,26 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
@@ -801,7 +1172,7 @@
     "duongthe":[
         {
             "id":0,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -821,7 +1192,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -838,13 +1209,33 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
         },
         {
-            "id":1,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -864,7 +1255,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -881,13 +1272,34 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
         },
+    
         {
-            "id":2,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -907,7 +1319,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -924,13 +1336,34 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"
         },
+    
         {
-            "id":3,
-            "name":"Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml",
+            "id":0,
+            "name":"aa Ưu Đãi Serum Kiehl's Clearly Corrective Dark Spot Solution 30ml2222",
             "type":"Mọi loại da",
             "subcibe":"Công thức đặc biệt chứa EAA giúp giảm các vết thâm mụn & làm da sáng rạng rỡ. Kết hợp cùng Salicylic Acid giúp da được thông thoáng, đều màu hơn.",
             "price":"1750000",
@@ -950,7 +1383,7 @@
             "textTP2":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
             "nameTP3":"SALICYLIC ACID",
             "textTP3":"Trong công thức của Kiehl's, Salicylic Acid đệm tập trung trên bề mặt da để lấy đi tế bào da chết ở các vùng da sạm nám, cải thiện rõ rệt bề mặt da, mang lại làn da đều màu hơn.",
-            "hdsd":"Sử dụng sản phẩm vào buổi sáng và buổi tối, trước khi thoa kem dưỡng ẩm",
+           
             "gift":[
                 {
                     "name":"Nước Thần Làm Sáng Da 40ml",
@@ -967,6 +1400,26 @@
                     "soluong":1,
                     "dungtich":"30ml",
                     "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/vi_VN/dw84138456/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/kiehls-face-serum-clearly-corrective-dark-spot-solution-30ml-000-3605970202637-front.jpg?sw=90&sfrm=png&q=70"
+                }
+            ],
+            "tp":[
+                {
+                    "img":"https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/default/dwcb940b8f/images/pdp/ingredients/scientific3-kiehls-ingredient.jpg?sw=570&q=70",
+                    "name":"PHYTOMIMETIC VITAMIN A",
+                    "mota":"Sản phẩm của Kiehl's có chứa Phytomimetic Vitamin A với nguồn gốc tự nhiên từ thực vật sẽ giúp làm giảm rõ rệt các nếp nhăn, tái tạo bề mặt da một cách rõ rệt để đem lại vẻ ngoài mịn màng và mềm mại hơn."
+                }
+            ],
+            "cd":[
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                },
+                {
+                    "content":"Phù hợp với mọi loại da (da thường, da khô, da dầu, da mụn) và kể cả da nhạy cảm"
+                }
+            ],
+            "hdsd":[
+                {
+                    "content":"Tìm hiểu thêm cách sử dụng sữa rửa mặt để tăng hiệu quả chăm sóc da tối ưu hơn. "
                 }
             ],
             "nameSheet":"ABZZZ"

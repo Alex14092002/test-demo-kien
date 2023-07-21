@@ -399,17 +399,22 @@ const addTocart = (data) =>{
            
             maing.innerHTML += `
                    <div class="col-6 col-md-6 item-product-home ">
-                
+                  
                     <div class="img-product">
-                        <img src="${value.img1}" alt="" width="100%">
-                        <div class="img-hover mini-product">
-                            <img src="${value.img2}" alt="" width="100%">
-                            <button class="btn-view-more" onclick="showPopup('homeproduct' ,${key})">XEM NHANH</button>
-                        </div>
+                    <img src="${value.img1}" alt="" width="100%">
+                    <div class="img-hover mini-product">
+                        <img src="${value.img2}" alt="" width="100%">
+                        <button class="btn-view-more" onclick="showPopup('homeproduct' ,${key})">XEM NHANH</button>
                     </div>
-                    <div class="name-product">
-                        <h3>${value.name}</h3>
-                    </div>
+                </div>
+                <a href="../chitietsp.html?catelory=homeproduct&key=${key}">
+                <div class="name-product">
+                <h3>${value.name}</h3>
+                </div>
+               
+                </a>
+              
+                   
                
                
                 <div class="subcribe ">
@@ -471,9 +476,12 @@ document.body.appendChild(overlay);
               </div>
          
             </div>
+            <a href="../chitietsp.html?catelory=mua1tang1&key=${key}">
             <div class="name-product">
-              <h3>${value.name}</h3>
-            </div>
+            <h3>${value.name}</h3>
+          </div>
+            </a>
+           
         
           <div class="subcribe subcribe-mini">
             <p>${value.subcibe}</p>
@@ -509,9 +517,11 @@ document.body.appendChild(overlay);
                 <button class="btn-view-more btn-mini" onclick="showPopup('combo2', '${encodeURIComponent(key)}')" >XEM NHANH</button>
               </div>
             </div>
-            <div class="name-product name-product-combo">
-              <h3>${value.name}</h3>
-            </div>
+            <a href="../chitietsp.html?catelory=combo2&key=${key}">
+            <div class="name-product">
+            <h3>${value.name}</h3>
+          </div>
+            </a>
          
           <div class="subcribe subcribe-mini">
             <p>${value.subcibe}</p>
@@ -544,9 +554,11 @@ document.body.appendChild(overlay);
                 <button class="btn-view-more btn-mini" onclick="showPopup('combo3', '${encodeURIComponent(key)}'   )"" >XEM NHANH</button>
               </div>
             </div>
-            <div class="name-product name-product-combo">
-              <h3>${value.name}</h3>
-            </div>
+            <a href="../chitietsp.html?catelory=combo3&key=${key}">
+            <div class="name-product">
+            <h3>${value.name}</h3>
+          </div>
+            </a>
           
           <div class="subcribe subcribe-mini">
             <p>${value.subcibe}</p>
@@ -576,12 +588,14 @@ document.body.appendChild(overlay);
               <img src="${value.img1}" alt="" width="100%">
               <div class="img-hover mini-product">
                 <img src="${value.img2}" alt="" width="100%">
-                <button class="btn-view-more btn-mini" onclick="showPopup('combo3', '${encodeURIComponent(key)}'   )"" >XEM NHANH</button>
+                <button class="btn-view-more btn-mini" onclick="showPopup('kemchongnang', '${encodeURIComponent(key)}'   )"" >XEM NHANH</button>
               </div>
             </div>
-            <div class="name-product name-product-combo">
-              <h3>${value.name}</h3>
-            </div>
+            <a href="../chitietsp.html?catelory=kemchongnang&key=${key}">
+            <div class="name-product">
+            <h3>${value.name}</h3>
+          </div>
+            </a>
           
           <div class="subcribe subcribe-mini">
             <p>${value.subcibe}</p>
@@ -611,12 +625,14 @@ document.body.appendChild(overlay);
               <img src="${value.img1}" alt="" width="100%">
               <div class="img-hover mini-product">
                 <img src="${value.img2}" alt="" width="100%">
-                <button class="btn-view-more btn-mini" onclick="showPopup('combo3', '${encodeURIComponent(key)}'   )"" >XEM NHANH</button>
+                <button class="btn-view-more btn-mini" onclick="showPopup('duongthe', '${encodeURIComponent(key)}'   )"" >XEM NHANH</button>
               </div>
             </div>
-            <div class="name-product name-product-combo">
-              <h3>${value.name}</h3>
-            </div>
+            <a href="../chitietsp.html?catelory=duongthe&key=${key}">
+            <div class="name-product">
+            <h3>${value.name}</h3>
+          </div>
+            </a>
           
           <div class="subcribe subcribe-mini">
             <p>${value.subcibe}</p>
