@@ -492,7 +492,7 @@ body{
         float: right;
     }
     .overlay {
-        z-index: 5000;
+        z-index: 3000;
         position: fixed;
         top: 0;
         left: 0;
