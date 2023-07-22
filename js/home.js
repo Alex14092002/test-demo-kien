@@ -141,7 +141,8 @@ muaTronBoComboBtn.addEventListener("click", () => {
   const img = data.img1
 const selectedQuantity = parseInt(quantityInput.value);
 
-selectedItems = selectedItems ? JSON.parse(selectedItems) : [];
+selectedItems = selectedItems ? selectedItems : [];
+console.log(selectedItems);
 const existingItemIndex = selectedItems.findIndex(item => item.name === productName);
 
 if (existingItemIndex !== -1) {
@@ -449,41 +450,37 @@ function getChunkSize() {
     sliderContainer.id = sliderId;
     products.forEach(([key, value]) => {
       sliderContainer.innerHTML += `
-        <div class="item-product-home">
-        <div class="item-product-home">
-        <div class="img-product">
-          <img src="${value.img1}" alt="" width="100%">
-          <div class="img-hover mini-product">
+       
+    <div class="item-product-home">
+      <div class="img-product">
+         <img src="${value.img1}" alt="" width="100%">
+         <div class="img-hover mini-product">
             <img src="${value.img2}" alt="" width="100%">
             <button class="btn-view-more btn-mini" onclick="showPopup('mua1tang1' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
-          </div>
-     
-        </div>
-        <a href="../chitietsp.html?catelory=mua1tang1&key=${key}">
-        <div class="name-product">
-        <h3>${value.name}</h3>
+         </div>
       </div>
-        </a>
-       
-    
+      <a href="../chitietsp.html?catelory=mua1tang1&key=${key}">
+         <div class="name-product">
+            <h3>${value.name}</h3>
+         </div>
+      </a>
       <div class="subcribe subcribe-mini">
-        <p>${value.subcibe}</p>
+         <p>${value.subcibe}</p>
       </div>
       <div class="heart">
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
       </div>
       <div class="price">
-        <h2>${formatCurrency(value.price)}</h2>
+         <h2>${formatCurrency(value.price)}</h2>
       </div>
       <div class="btn-add btn-add-to-cart add-to-cart">
-      <button data-category="mua1tang1" data-key="${encodeURIComponent(key)}">MUA TRỌN BỘ COMBO</button>
+         <button data-category="mua1tang1" data-key="${encodeURIComponent(key)}">MUA TRỌN BỘ COMBO</button>
       </div>
-    </div>
-        </div>
+   </div>
       `;
     });
     const main = document.querySelector("#tang1");
@@ -907,7 +904,7 @@ function getChunkSize() {
   
 
 
-  // Gọi hàm addToCart khi người dùng nhấn vào nút "MUA TRỌN BỘ COMBO"
+  
  
    
    

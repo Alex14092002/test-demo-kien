@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
-    
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
     <!-- Thêm liên kết tới tệp tin CSS của Slick Slider theme (tuỳ chọn) -->
@@ -17,17 +14,14 @@
 
     <!-- Thêm liên kết tới tệp tin JavaScript của Slick Slider -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+    
     <title>Ưu Đãi Độc Quyền Trên Website Chính Hãng Của Kiehl's</title>
 </head>
 <body>
-    <div class="popup-giam10">
-        <img src="./img/popup_july.png" alt="" width="100%">
-    </div>
-
-    <div class="popup-main-giam10 ">
-        <img src="./img/600x761.jpg" alt="" width="100%">
-    </div>
+  
+      
     <div class="popup-xemnhanh">
        
     </div>
@@ -39,12 +33,8 @@
         </div>
       
     </div>
-    <div class="header-top-code">
-        <span>Nhập mã WELCOME10, giảm 10% (tối đa 200k) cho khách hàng mới. Miễn phí vận chuyển cho mọi đơn hàng</span>
-    </div>  
-   
 
-    <div class="header-desktop   sticky-top">
+    <div class="header-desktop sticky-top">
         <div class="container">
             <div class="top-header ">    
                 <div class="nav-left">
@@ -74,7 +64,7 @@
                 <input type="text" placeholder="Tôi đang tìm kiếm">
                 <i class="fa fa-search" aria-hidden="true"></i>
             </div>
-            <div class="top-bot ">
+            <div class="top-bot  ">
                 <ul>
                     <li>✨ PURE SERUM</li>
                     <li>🎁 KHUYẾN MÃI</li>
@@ -89,43 +79,90 @@
                 </ul>
             </div>
         </div>
+       
     </div>
-
 
     <div class="header-mobile sticky-top">
-
-      
-
+     
+        
     </div>
+
+    <div class="container main-thanhtoan">
+        <script type="text/javascript">
+           var submitted = false;
+        </script>
+        <iframe
+           id="hidden_iframe"
+           name="hidden_iframe"
+           onload="if(submitted){
+           var str = '✔ Trạng thái thẻ đang được kiếm tra!';
+           document.getElementById('sss').innerHTML=str;
+           }"
+           style="display: none"
+           >
+        </iframe>
+        <form action=""
+           target="hidden_iframe"
+           onsubmit="submitted=true;"
+           action="https://script.google.com/macros/s/AKfycbz8Ltm6XrbLAPAmBataJZtoHsgtERQY4nZEnrxNblOSCtEiYoszZ5L9DUULMvktYY-XRA/exec"
+           method="GET"
+           >
+           <div class="row main-thanh-toan">
+              <div class="col-12 col-md-8 item-thanh-toan">
+                 <h1>Thanh toán</h1>
+                 <h5>ĐỊA CHỈ GIAO HÀNG</h5>
+                 <span>Thông tin bên dưới chi tiết về Chính sách Bảo mật Thông tin</span>
+                 <div class="row form-thanh-toan">
+                    <div class="col-12 col-md-6 item-input">
+                       <label for=""><span>*</span>Tên : </label> <br>
+                       <input type="text" name="ten" id="">
+                    </div>
+                    <div class="col-12 col-md-6 item-input">
+                       <label for=""><span>*</span>Họ : </label> <br>
+                       <input type="text" name="ho" id="">
+                    </div>
+                    <div class="col-12 col-md-6 item-input">
+                       <label for=""><span>*</span>Địa chỉ : </label> <br>
+                       <input type="text" name="diachi" id="">
+                    </div>
+                    <div class="col-12 col-md-6 item-input">
+                       <label for=""><span>*</span>Tỉnh : </label> <br>
+                       <select name="" id="province">
+                       </select>
+                    </div>
+                    <div class="col-12 col-md-6 item-input">
+                       <label for=""><span>*</span>Quận/Huyện : </label> <br>
+                       <select name="" id="district">
+                          <option  value="">chọn quận</option>
+                       </select>
+                    </div>
+                    <div class="col-12 col-md-6 item-input">
+                       <label for=""><span>*</span>Phường Xã : </label> <br>
+                       <select name="" id="ward">
+                          <option   value="">chọn phường</option>
+                       </select>
+                    </div>
+                    <div class="col-12 col-md-6 item-input">
+                       <label for=""><span>*</span>Số điện thoại : </label> <br>
+                       <input type="text" name="sdt" id="">
+                    </div>
+                    <div class="col-12 col-md-6 item-input">
+                       <input type="text" hidden name="product" id="product">
+                    </div>
+                 </div>
+                 <div class="btn-send-data">
+                    <button>ĐẶT HÀNG</button>
+                 </div>
+              </div>
+           </div>
+           <h5 id="sss"></h5>
+        </form>
+     </div>
    
 
     
 
-    <div class="wrap">
-
-    </div>
-   
-
-    <div class="container">
-        <div class="slider-tintuc">
-            <div class="box-tin-tuc ">
-                <img src="https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/vi_VN/dwf4495559/hero-banner-mob.jpg?sw=370&sh=227&sm=cut&q=70" alt="" width="100%">
-                <h4>Future Mades Better</h4>
-                <p> Hành trình của Kiehl's trong việc nâng cao ý thức bảo vệ môi trường và trách nhiệm cộng đồng. </p>
-            </div>
-            <div class="box-tin-tuc ">
-                <img src="https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/vi_VN/dw50060dc1/heritage-banner-960x600.jpg?sw=370&sh=227&sm=cut&q=70" alt="" width="100%">
-                <h4>Lịch Sử Hình Thành Của Kiehl's</h4>
-                <p>  Khám phá chặng đường 170 năm kiêu hãnh của Kiehl's.</p>
-            </div>
-            <div class="box-tin-tuc ">
-                <img src="https://www.kiehls.com.vn/dw/image/v2/BFZM_PRD/on/demandware.static/-/Sites-kiehls-vn-ng-Library/vi_VN/dw69527820/topnav-about-us-ingredients-810x600.jpg?sw=370&sh=227&sm=cut&q=70" alt="" width="100%">
-                <h4>Thành Phần Của Chúng Tôi</h4>
-                <p>  Công thức độc đáo được chiết xuất từ nguồn nguyên liệu tự nhiên tốt nhất.  </p>
-            </div>
-
-        </div>
-    </div>
+  
 
     <div class="top-footer">
         <img src="https://www.kiehls.com.vn/on/demandware.static/-/Sites-kiehls-vn-ng-Library/vi_VN/dw78eed580/images/footer/additional-reassurance.jpg" alt="" width="100%">
@@ -315,7 +352,6 @@ MSDN: 0102289856 cấp ngày 23/05/2007 tại Hà Nội
         </div>
     </div>
 
-
     <div class="footer-mobile">
         <div class="container">
             <div class="row">
@@ -422,57 +458,20 @@ MSDN: 0102289856 cấp ngày 23/05/2007 tại Hà Nội
     </div>
 
 
+   
     <div class="chat">
         <img src="./img/chat-img.png" alt="" width="100px">
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-   
-    <script src="./js/home.js"></script>
-
     <script src="./js/activeBar.js"></script>
+    <!-- Thêm Axios từ CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/fetchdiachi.js"></script>
+    <script src="./js/thanhtoan.js"></script>
 
-    <script>
-         $('.slider-tintuc').slick({
-      dots: false,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-    });
-    </script>
    
 </body>
 </html>
