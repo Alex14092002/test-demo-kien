@@ -138,6 +138,7 @@ muaTronBoComboBtn.addEventListener("click", () => {
   const gift = data.gift
   const price = data.price
   const img = data.img1
+  const name2 = data.name
 const selectedQuantity = parseInt(quantityInput.value);
 
 selectedItems = selectedItems ? selectedItems : [];
@@ -147,7 +148,7 @@ if (existingItemIndex !== -1) {
 selectedItems[existingItemIndex].quantity += selectedQuantity;
 selectedItems[existingItemIndex].price += price*selectedQuantity
 } else {
-selectedItems.push({ name: productName, quantity: selectedQuantity , gift : gift , img: img, price : price*selectedQuantity});
+selectedItems.push({ name: productName, quantity: selectedQuantity , gift : gift , img: img, name2 : name2 , price : price*selectedQuantity});
 }
 localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
 popupChitiet.classList.remove('open-popup');
@@ -260,8 +261,7 @@ const mainCart = document.querySelector('.main-cart')
 let total = 0
 if(cart){
     Object.entries(cart).map(([key, value])=>{
-      total += value.price
-
+      total +=  value.price
         carts.innerHTML += `
         <div class="item-cart">
         <div class="row cart">
@@ -269,7 +269,7 @@ if(cart){
                 <img src="${value.img}" alt="" width="100%">
               </div>
               <div class="col-6 col-md-6 cart-mem add-cart gift-popup">
-                <h5>${value.name}</h5>
+                <h5>${value.name2}</h5>
                 <div class="--cart">
                     <p>Chỉnh sửa</p>
                     <p>Thêm vào danh sách</p>
@@ -286,7 +286,7 @@ if(cart){
               </div>
               <div class="col-6 col-md-2">
                 <div class="price pricePopup">
-                  <h2>${formatCurrency(value.price)}</h2>
+                  <h2>${formatCurrency(parseInt(value.price))}</h2>
                 </div>
               </div>
         </div>
@@ -305,7 +305,7 @@ if(cart){
          <h5>TẠM TÍNH</h5>
       </div>
       <div class="col-6 item-tam-tinh right-t">
-         <h4>${formatCurrency(total)}</h4>
+         <h4>${formatCurrency(parseInt(total))}</h4>
       </div>
       <div class="col-6 item-tam-tinh left-t">
          <h5>ESTIMATED SHIPPING </h5>
@@ -329,7 +329,7 @@ if(cart){
      <h5>TỔNG</h5>
   </div>
   <div class="col-6 item-tam-tinh tongtien right-t">
-     <h4>${formatCurrency(total)}</h4>
+     <h4>${formatCurrency(parseInt(total))} </h4>
   </div>
      </div>
 
@@ -444,7 +444,7 @@ if(cart){
    
    if (!existingProduct) {
      // Nếu sản phẩm chưa tồn tại trong giỏ hàng, thêm nó vào với số lượng và giá mặc định
-     selectedItems.push({ name: data.name, gift: data.gift, img: data.img1, price: data.price, quantity: quantity });
+     selectedItems.push({ name: data.nameSheet, gift: data.gift, img: data.img1, name2 : data.name , price: data.price, quantity: quantity });
    } else {
      // Nếu sản phẩm đã tồn tại trong giỏ hàng, cập nhật số lượng và giá
      existingProduct.quantity += 1;

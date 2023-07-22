@@ -135,21 +135,22 @@ quantityInput.value = quantity;
 const popupCart = document.querySelector('.popup-themgiohang')
 
 muaTronBoComboBtn.addEventListener("click", () => {
-  const productName = data.name;
+  const productName = data.nameSheet;
   const gift = data.gift
   const price = data.price
   const img = data.img1
+  const name2 = data.name
 const selectedQuantity = parseInt(quantityInput.value);
 
 selectedItems = selectedItems ? selectedItems : [];
-console.log(selectedItems);
-const existingItemIndex = selectedItems.findIndex(item => item.name === productName);
 
+const existingItemIndex = selectedItems.findIndex(item => item.name === productName);
+console.log(existingItemIndex);
 if (existingItemIndex !== -1) {
 selectedItems[existingItemIndex].quantity += selectedQuantity;
 selectedItems[existingItemIndex].price += price*selectedQuantity
 } else {
-selectedItems.push({ name: productName, quantity: selectedQuantity , gift : gift , img: img, price : price*selectedQuantity});
+selectedItems.push({ name: productName, quantity: selectedQuantity , gift : gift , img: img, name2  : name2 , price : price*selectedQuantity});
 }
 localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
 popupChitiet.classList.remove('open-popup');
@@ -883,11 +884,11 @@ function getChunkSize() {
   
     let selectedItems = localStorage.getItem('selectedItems') ? JSON.parse(localStorage.getItem('selectedItems')) : [];
     const quantity = 1;
-    const existingProduct = selectedItems.find(item => item.name === data.name);
+    const existingProduct = selectedItems.find(item => item.name === data.nameSheet);
     
     if (!existingProduct) {
       // Nếu sản phẩm chưa tồn tại trong giỏ hàng, thêm nó vào với số lượng và giá mặc định
-      selectedItems.push({ name: data.name, gift: data.gift, img: data.img1, price: data.price, quantity: quantity });
+      selectedItems.push({ name: data.nameSheet, gift: data.gift, img: data.img1, name2:data.name , price: data.price, quantity: quantity });
     } else {
       // Nếu sản phẩm đã tồn tại trong giỏ hàng, cập nhật số lượng và giá
       existingProduct.quantity += 1;
@@ -902,12 +903,6 @@ function getChunkSize() {
     console.log(document.querySelector('.cart-mobile span').textContent = cartLength);
   };
   
-
-
-  
- 
-   
-   
     addToCartButtons.forEach(button => {
       button.addEventListener('click', () => {
         const category = button.getAttribute('data-category');

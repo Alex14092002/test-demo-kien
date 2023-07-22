@@ -1,3 +1,4 @@
+
 // 1. what is API
 // 2. How do I call API
 // 3. Explain code
@@ -21,23 +22,27 @@ var callApiWard = (api) => {
             renderData(response.data.wards, "ward");
         });
 }
-
 var renderData = (array, select) => {
     let row = ' <option disable value="">chọn</option>';
     array.forEach(element => {
-        row += `<option value="${element.code}">${element.name}</option>`
+        row += `<option value="${element.name}" data-code="${element.code}">${element.name}</option>`;
     });
-    document.querySelector("#" + select).innerHTML = row
+    document.querySelector("#" + select).innerHTML = row;
 }
 
+
 $("#province").change(() => {
-    callApiDistrict(host + "p/" + $("#province").val() + "?depth=2");
+    const provinceCode = $("#province option:selected").data("code");
+    callApiDistrict(host + "p/" + provinceCode + "?depth=2");
     printResult();
 });
+
 $("#district").change(() => {
-    callApiWard(host + "d/" + $("#district").val() + "?depth=2");
+    const districtCode = $("#district option:selected").data("code");
+    callApiWard(host + "d/" + districtCode + "?depth=2");
     printResult();
 });
+
 $("#ward").change(() => {
     printResult();
 })

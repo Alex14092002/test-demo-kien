@@ -1168,21 +1168,103 @@ body{
   border: 1px #000 solid;
   padding: 8px;
 }
-.btn-send-data{
+.btn-send-data-dat-hang{
   display: flex;
   justify-content: center;
 }
-.btn-send-data button{
+.btn-send-data-dat-hang button{
   border: none;
   background-color: #000;
   color: #fff;
   padding: 7px 30px;
   font-weight: 600;
 }
-.btn-send-data button:hover{
+.btn-send-data-dat-hang button:hover{
   background-color: #fff;
   color: #000;
   border: 1px solid #000;
+}
+.popup-camon{
+  position: fixed;
+  display: none;
+  width: 50%;
+  z-index: 3000;
+  height: 50%;
+  background-color: #fff;
+  /* Thêm các thuộc tính để căn giữa popup */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.open-camon{
+  display: block;
+}
+.popup-camon h1{
+  font-size: 32px;
+  font-family: 'Amiri', serif;
+  color: #000;
+  text-align: center;
+  padding: 50px 0 0 0 ;
+}
+.popup-camon p{
+  padding-top: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Amiri', serif;
+  color: #000;
+}
+.btn-ok {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.btn-ok button{
+  text-decoration: none;
+  padding: 5px 30px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+}
+.btn-ok button:hover{
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+.item-thanh-toan h2{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'Roboto' ,serif;
+}
+.item-tomtat h5{
+  font-size: 16px;
+  font-family: 'Amiri', serif;
+}
+.item-tomtat p{
+  font-size: 12px;
+   font-family: 'Roboto' ,serif;
+   font-weight: 600;
+} 
+.item-sp-tomtat{
+  padding: 10px 0;
+  
+}
+.tom-tat-don-hang{
+  padding: 20px 0;
+  border: #999 1px solid;
+}
+.--sp-tomtat {
+  text-align: right;
+}
+.total-tomtat p{
+  font-size: 13px;
+  font-family: 'Roboto' ,serif;
+  font-weight: 500;
+}
+.end-tomtat{
+  font-size: 16px !important;
+  font-weight: bold;
 }
 @media(min-width :1500px){
     .popup-xemnhanh{
@@ -1191,6 +1273,10 @@ body{
 
 }
 @media(max-width : 700px){
+  .popup-camon{
+    width: 90%;
+    height: 35%;
+  }
   .slider-chitiet{
     order: 1;
   }

@@ -20,7 +20,13 @@
     <title>Ưu Đãi Độc Quyền Trên Website Chính Hãng Của Kiehl's</title>
 </head>
 <body>
-  
+    <div class="popup-camon">
+        <h1>CẢM ƠN</h1>
+        <p>Cảm ơn bạn đã đặt hàng, đơn hàng của bạn sẽ được giao đến sớm nhất</p>
+        <div class="btn-ok">
+            <button>XÁC NHẬN</a>
+        </div>
+    </div>
       
     <div class="popup-xemnhanh">
        
@@ -95,17 +101,17 @@
            id="hidden_iframe"
            name="hidden_iframe"
            onload="if(submitted){
-           var str = '✔ Trạng thái thẻ đang được kiếm tra!';
-           document.getElementById('sss').innerHTML=str;
+            
            }"
            style="display: none"
            >
         </iframe>
-        <form action=""
+        <form
            target="hidden_iframe"
            onsubmit="submitted=true;"
-           action="https://script.google.com/macros/s/AKfycbz8Ltm6XrbLAPAmBataJZtoHsgtERQY4nZEnrxNblOSCtEiYoszZ5L9DUULMvktYY-XRA/exec"
+           
            method="GET"
+           class="thong-tin"
            >
            <div class="row main-thanh-toan">
               <div class="col-12 col-md-8 item-thanh-toan">
@@ -115,47 +121,63 @@
                  <div class="row form-thanh-toan">
                     <div class="col-12 col-md-6 item-input">
                        <label for=""><span>*</span>Tên : </label> <br>
-                       <input type="text" name="ten" id="">
+                       <input type="text" name="ten" id="ten">
                     </div>
                     <div class="col-12 col-md-6 item-input">
                        <label for=""><span>*</span>Họ : </label> <br>
-                       <input type="text" name="ho" id="">
+                       <input type="text" name="ho" id="ho">
                     </div>
                     <div class="col-12 col-md-6 item-input">
                        <label for=""><span>*</span>Địa chỉ : </label> <br>
-                       <input type="text" name="diachi" id="">
+                       <input type="text" name="diachi" id="diachi">
                     </div>
                     <div class="col-12 col-md-6 item-input">
                        <label for=""><span>*</span>Tỉnh : </label> <br>
-                       <select name="" id="province">
+                       <select name="tinh" id="province">
                        </select>
                     </div>
                     <div class="col-12 col-md-6 item-input">
                        <label for=""><span>*</span>Quận/Huyện : </label> <br>
-                       <select name="" id="district">
+                       <select name="quan" id="district">
                           <option  value="">chọn quận</option>
                        </select>
                     </div>
                     <div class="col-12 col-md-6 item-input">
                        <label for=""><span>*</span>Phường Xã : </label> <br>
-                       <select name="" id="ward">
+                       <select name="phuong" id="ward">
                           <option   value="">chọn phường</option>
                        </select>
                     </div>
                     <div class="col-12 col-md-6 item-input">
                        <label for=""><span>*</span>Số điện thoại : </label> <br>
-                       <input type="text" name="sdt" id="">
+                       <input type="text" name="sdt" id="sdt">
                     </div>
                     <div class="col-12 col-md-6 item-input">
-                       <input type="text" hidden name="product" id="product">
+                       <input type="text" hidden name="sanpham_sl" id="product">
+                       <input type="text" hidden name="magiamgia" id="magiamgia">
                     </div>
+                    <div class="btn-send-data-dat-hang">
+                        <button type="submit">ĐẶT HÀNG</button>
+                     </div>
+                      
                  </div>
-                 <div class="btn-send-data">
-                    <button>ĐẶT HÀNG</button>
-                 </div>
+                
+              </div>
+              <div class="col-12 col-md-4 item-thanh-toan">
+                <h2>TÓM TẮT ĐƠN ĐẶT HÀNG</h2>
+                <div class="tom-tat-don-hang">
+                    <div class="sp-tom-tat">
+                        
+                    </div>
+                 
+                   
+                  
+                </div>
+                
+              
               </div>
            </div>
-           <h5 id="sss"></h5>
+          
         </form>
      </div>
    
@@ -469,9 +491,9 @@ MSDN: 0102289856 cấp ngày 23/05/2007 tại Hà Nội
     <script src="./js/activeBar.js"></script>
     <!-- Thêm Axios từ CDN -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./js/fetchdiachi.js"></script>
+   
     <script src="./js/thanhtoan.js"></script>
-
+    <script src="./js/fetchdiachi.js"></script>
    
 </body>
 </html>

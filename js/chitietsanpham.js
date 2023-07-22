@@ -388,10 +388,11 @@ quantityInput.value = quantity;
 });
 
 muaTronBoComboBtn.addEventListener("click", () => {
-  const productName = data.name;
+  const productName = data.nameSheet;
   const gift = data.gift
   const price = data.price
   const img = data.img1
+  const name2 = data.name
 const selectedQuantity = parseInt(quantityInput.value);
 let selectedItems = localStorage.getItem("selectedItems");
 selectedItems = selectedItems ? JSON.parse(selectedItems) : [];
@@ -401,7 +402,7 @@ if (existingItemIndex !== -1) {
 selectedItems[existingItemIndex].quantity += selectedQuantity;
 selectedItems[existingItemIndex].price += price*selectedQuantity
 } else {
-selectedItems.push({ name: productName, quantity: selectedQuantity , gift : gift , img: img, price : price*selectedQuantity});
+selectedItems.push({ name: productName, quantity: selectedQuantity , gift : gift , img: img, name2 : name2, price : price*selectedQuantity});
 }
 localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
 
