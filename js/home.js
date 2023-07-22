@@ -113,8 +113,7 @@ const showPopup = async ( product , key) =>{
       overlay.classList.toggle('active-overlay');
   })
 
-  // Trích xuất phần hiển thị số lượng và nút "MUA TRỌN BỘ COMBO"
-  // Số lượng mặc định là 1
+ 
 let quantity = 1;
 const quantityInput = document.querySelector(".quantity-input");
 const decreaseBtn = document.querySelector(".quantity-btn.decrease");
@@ -191,9 +190,10 @@ localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
   
  
 }
+const popupCart = document.querySelector('.popup-themgiohang');
 const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
 
-  const popupCart = document.querySelector('.popup-themgiohang');
+ 
   popupCart.innerHTML = `
     <div class="container">
       <div class="row cart-popup">
@@ -472,10 +472,7 @@ function getChunkSize() {
   const data3 = await res3.json();
   const data4  = await res4.json();
   const data5 = await res5.json();
-   
   const productsChunks = chunkArray(Object.entries(data), getChunkSize());
-
-  // Lặp qua từng nhóm sản phẩm để tạo các slider và hiển thị lên trang web
   productsChunks.forEach((products, index) => {
     const sliderId = `slider-${index}`;
     const sliderContainer = document.createElement('div');
@@ -513,15 +510,14 @@ function getChunkSize() {
       <div class="price">
         <h2>${formatCurrency(value.price)}</h2>
       </div>
-      <div class="btn-add add-to-cart">
-      <button onclick="addTocart(${value})">MUA TRỌN BỘ COMBO</button>
+      <div class="btn-add btn-add-to-cart add-to-cart">
+      <button data-category="mua1tang1" data-key="${encodeURIComponent(key)}">MUA TRỌN BỘ COMBO</button>
       </div>
     </div>
         </div>
       `;
     });
     const main = document.querySelector("#tang1");
-   
     main.appendChild(sliderContainer);
    
  
@@ -532,7 +528,7 @@ function getChunkSize() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 2000,
       responsive: [
         {
           breakpoint: 1024,
@@ -559,6 +555,8 @@ function getChunkSize() {
         }
       ]
     });
+  
+
   });
 
   const productsChunksCombo2 = chunkArray(Object.entries(data2), getChunkSize());
@@ -599,8 +597,8 @@ function getChunkSize() {
       <div class="price">
         <h2>${formatCurrency(value.price)}</h2>
       </div>
-      <div class="btn-add add-to-cart">
-      <button onclick="addTocart(${value})">MUA TRỌN BỘ COMBO</button>
+      <div class="btn-add btn-add-to-cart add-to-cart">
+      <button data-category="combo2" data-key="${encodeURIComponent(key)}">MUA TRỌN BỘ COMBO</button>
       </div>
     </div>
         </div>
@@ -618,7 +616,7 @@ function getChunkSize() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 2000,
       responsive: [
         {
           breakpoint: 1024,
@@ -687,8 +685,8 @@ function getChunkSize() {
       <div class="price">
         <h2>${formatCurrency(value.price)}</h2>
       </div>
-      <div class="btn-add add-to-cart">
-      <button onclick="addTocart(${value})">MUA TRỌN BỘ COMBO</button>
+      <div class="btn-add btn-add-to-cart add-to-cart">
+      <button data-category="combo3" data-key="${encodeURIComponent(key)}" >MUA TRỌN BỘ COMBO</button>
       </div>
     </div>
         </div>
@@ -706,7 +704,7 @@ function getChunkSize() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 2000,
       responsive: [
         {
           breakpoint: 1024,
@@ -774,8 +772,8 @@ function getChunkSize() {
       <div class="price">
         <h2>${formatCurrency(value.price)}</h2>
       </div>
-      <div class="btn-add add-to-cart">
-      <button onclick="addTocart(${value})">MUA TRỌN BỘ COMBO</button>
+      <div class=" btn-add btn-add-to-cart add-to-cart">
+      <button data-category="kemchongnang" data-key="${encodeURIComponent(key)}" >MUA TRỌN BỘ COMBO</button>
       </div>
     </div>
         </div>
@@ -793,7 +791,7 @@ function getChunkSize() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 2000,
       responsive: [
         {
           breakpoint: 1024,
@@ -862,8 +860,8 @@ function getChunkSize() {
       <div class="price">
         <h2>${formatCurrency(value.price)}</h2>
       </div>
-      <div class="btn-add add-to-cart">
-      <button onclick="addTocart(${value})">MUA TRỌN BỘ COMBO</button>
+      <div class="btn-add btn-add-to-cart add-to-cart">
+      <button data-category="duongthe" data-key="${encodeURIComponent(key)}" >MUA TRỌN BỘ COMBO</button>
       </div>
     </div>
         </div>
@@ -881,7 +879,7 @@ function getChunkSize() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 2000,
       responsive: [
         {
           breakpoint: 1024,
@@ -909,6 +907,52 @@ function getChunkSize() {
       ]
     });
   });
+
+
+  const addToCartButtons = document.querySelectorAll('.btn-add-to-cart button');
+   // Hàm để lưu thông tin sản phẩm vào local storage
+   const addToCart = async (category, key) => {
+    const res = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/${category}/${key}.json`);
+    const data = await res.json();
+  
+    let selectedItems = localStorage.getItem('selectedItems') ? JSON.parse(localStorage.getItem('selectedItems')) : [];
+    const quantity = 1;
+    const existingProduct = selectedItems.find(item => item.name === data.name);
+    
+    if (!existingProduct) {
+      // Nếu sản phẩm chưa tồn tại trong giỏ hàng, thêm nó vào với số lượng và giá mặc định
+      selectedItems.push({ name: data.name, gift: data.gift, img: data.img1, price: data.price, quantity: quantity });
+    } else {
+      // Nếu sản phẩm đã tồn tại trong giỏ hàng, cập nhật số lượng và giá
+      existingProduct.quantity += 1;
+      existingProduct.price = data.price * existingProduct.quantity;
+    }
+  
+    localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
+    showPopupCart(data, existingProduct ? existingProduct.quantity : quantity, existingProduct ? existingProduct.price : data.price);
+    popupCart.classList.add('open-popup-cart');
+    overlay.classList.add('active-overlay');
+  };
+  
+  
+  
+
+  // Gọi hàm addToCart khi người dùng nhấn vào nút "MUA TRỌN BỘ COMBO"
+ 
+   
+   
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        const key = decodeURIComponent(button.getAttribute('data-key'));
+        addToCart(category, key)
+      });
+    });
+  
+
+
+
+
 
   
   

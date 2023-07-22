@@ -16,7 +16,10 @@ header.innerHTML += `
     <i class="fa fa-map-marker" aria-hidden="true"></i>
 </div>
 <div class="logo-mobile">
+    <a href="../index.html">
     <img src="./img/logo.png" alt="" width="150px">
+    </a>
+    
 </div>
 <div class="right-mobile">
 <a href="../cart.html">

@@ -390,6 +390,7 @@ body{
 .chat{
     position: fixed;
     right: 0;
+    z-index: 30000;
     bottom: 10%;
 }
 .mobile-banner{
@@ -491,6 +492,7 @@ body{
         float: right;
     }
     .overlay {
+        z-index: 5000;
         position: fixed;
         top: 0;
         left: 0;
@@ -1126,7 +1128,7 @@ body{
   }
     .popup-themgiohang{
         width: 95%;
-        height: 70%;
+        height: 90%;
     }
     .slider-detail{
         margin-bottom: 30px;

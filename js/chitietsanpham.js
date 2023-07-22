@@ -1,3 +1,7 @@
+const overlay = document.createElement('div');
+overlay.classList.add('overlay');
+document.body.appendChild(overlay);
+
 function formatCurrency(number) {
     const parts = number.toString().split(".");
     const integerPart = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -297,4 +301,117 @@ function formatCurrency(number) {
       // instead of a settings object
     ]
   });
+
+
+
+  const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
+    overlay.classList.toggle('active-overlay');
+    const popupCart = document.querySelector('.popup-themgiohang');
+    
+    popupCart.innerHTML = `
+      <div class="container">
+        <div class="row cart-popup">
+          <div class="col-12 col-md-2">
+            <img src="${data.img1}" alt="" width="100%">
+          </div>
+          <div class="col-12 col-md-5 add-cart gift-popup">
+            <h5>${data.name}</h5>
+            <p>${data.subcibe}</p>
+          </div>
+          <div class="col-6 col-md-2 add-cart">
+            <div class="quantity-control">
+              <button class="quantity-btn decrease">-</button>
+              <input type="text" readonly class="quantity-input" value="${selectedQuantity}">
+              <button class="quantity-btn increase">+</button>
+              <label class="quantity-label" for="">Số lượng</label> <br>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="price pricePopup">
+              <h2>${formatCurrency(priceTotal)}</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row btn-cart">
+          <div class="col-12 col-md-6">
+            <div class="btn-add-cart no-active">
+              <button class="tieptuc">TIẾP TỤC MUA SẮM</button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="btn-add-cart">
+              <button class="getCart">ĐI ĐẾN GIỎ HÀNG CỦA TÔI</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="close-popup-cart">
+        <button>✖</button>
+      </div>
+    `;
+
+    popupCart.classList.add('open-popup-cart');
+  
+    const closeCart = document.querySelector('.close-popup-cart');
+    closeCart.addEventListener('click', () => {
+      popupCart.classList.remove('open-popup-cart');
+      overlay.classList.toggle('active-overlay');
+    });
+    const tieptuc = document.querySelector('.tieptuc')
+    tieptuc.addEventListener('click', ()=>{
+      window.location.href = "../index.html"
+    })
+  
+    const getCart = document.querySelector('.getCart')
+    getCart.addEventListener('click' , ()=>{
+        window.location.href = "cart.html"
+    })
+  };
+
+
+
+  let quantity = 1;
+const quantityInput = document.querySelector(".quantity-input");
+const decreaseBtn = document.querySelector(".quantity-btn.decrease");
+const increaseBtn = document.querySelector(".quantity-btn.increase");
+const muaTronBoComboBtn = document.querySelector(".btn-add button");
+decreaseBtn.addEventListener("click", () => {
+if (quantity > 1) {
+  quantity--;
+  quantityInput.value = quantity;
+}
+});
+
+increaseBtn.addEventListener("click", () => {
+quantity++;
+quantityInput.value = quantity;
+});
+
+muaTronBoComboBtn.addEventListener("click", () => {
+  const productName = data.name;
+  const gift = data.gift
+  const price = data.price
+  const img = data.img1
+const selectedQuantity = parseInt(quantityInput.value);
+let selectedItems = localStorage.getItem("selectedItems");
+selectedItems = selectedItems ? JSON.parse(selectedItems) : [];
+const existingItemIndex = selectedItems.findIndex(item => item.name === productName);
+
+if (existingItemIndex !== -1) {
+selectedItems[existingItemIndex].quantity += selectedQuantity;
+selectedItems[existingItemIndex].price += price*selectedQuantity
+} else {
+selectedItems.push({ name: productName, quantity: selectedQuantity , gift : gift , img: img, price : price*selectedQuantity});
+}
+localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
+
+const priceTotal = price*selectedQuantity
+showPopupCart(data, selectedQuantity , priceTotal); // Hiển thị popup giỏ hàng với thông tin sản phẩm đã được chọn
+localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
+});
 })();
+
+
+
+
+
