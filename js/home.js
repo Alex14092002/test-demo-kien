@@ -497,7 +497,7 @@ function getChunkSize() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 3000,
       responsive: [
         {
           breakpoint: 1024,
@@ -585,7 +585,7 @@ function getChunkSize() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 3000,
       responsive: [
         {
           breakpoint: 1024,
@@ -673,7 +673,7 @@ function getChunkSize() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 3000,
       responsive: [
         {
           breakpoint: 1024,
@@ -760,7 +760,7 @@ function getChunkSize() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 3000,
       responsive: [
         {
           breakpoint: 1024,
@@ -848,7 +848,7 @@ function getChunkSize() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 3000,
       responsive: [
         {
           breakpoint: 1024,
