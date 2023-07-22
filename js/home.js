@@ -1,3 +1,4 @@
+
 const overlay = document.createElement('div');
 function formatCurrency(number) {
   const parts = number.toString().split(".");
@@ -6,9 +7,7 @@ function formatCurrency(number) {
   return `₫ ${integerPart}${decimalPart}`;
 }
 const showPopup = async ( product , key) =>{
- 
   overlay.classList.toggle('active-overlay');
-
   const res = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/${product}/${key}.json`)
   const data = await res.json()
   const popupChitiet = document.querySelector(".popup-xemnhanh");
@@ -140,10 +139,8 @@ muaTronBoComboBtn.addEventListener("click", () => {
   const gift = data.gift
   const price = data.price
   const img = data.img1
-  console.log(img);
-  
 const selectedQuantity = parseInt(quantityInput.value);
-let selectedItems = localStorage.getItem("selectedItems");
+
 selectedItems = selectedItems ? JSON.parse(selectedItems) : [];
 const existingItemIndex = selectedItems.findIndex(item => item.name === productName);
 
@@ -159,7 +156,10 @@ popupCart.classList.add('open-popup-cart');
 const priceTotal = price*selectedQuantity
 showPopupCart(data, selectedQuantity , priceTotal); // Hiển thị popup giỏ hàng với thông tin sản phẩm đã được chọn
 localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
+
 });
+
+
 
 
 
@@ -192,8 +192,6 @@ localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
 }
 const popupCart = document.querySelector('.popup-themgiohang');
 const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
-
- 
   popupCart.innerHTML = `
     <div class="container">
       <div class="row cart-popup">
@@ -252,37 +250,8 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
       window.location.href = "cart.html"
   })
 };
-// function addToCart(data) {
-//   const productName = data.name;
-//   const img = data.img1;
-//   const price = data.price;
-//   const quantity = 1;
 
-//   let selectedItems = localStorage.getItem("selectedItems");
-//   selectedItems = selectedItems ? JSON.parse(selectedItems) : [];
 
-//   // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng hay chưa
-//   const existingItemIndex = selectedItems.findIndex((item) => item.name === productName);
-
-//   if (existingItemIndex !== -1) {
-//     // Nếu sản phẩm đã tồn tại, tăng số lượng sản phẩm trong giỏ hàng lên 1
-//     selectedItems[existingItemIndex].quantity += 1;
-//   } else {
-//     // Nếu sản phẩm chưa tồn tại, thêm sản phẩm mới vào giỏ hàng
-//     selectedItems.push({
-//       name: productName,
-//       img: img,
-//       price: price,
-//       quantity: quantity,
-//     });
-//   }
-
-//   localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
-  
-// }
-const addTocart = (data) =>{
-  console.log(data);
-}
 
 (async () => {
   const res = await fetch(
@@ -430,8 +399,8 @@ const addTocart = (data) =>{
                 <div class="price">
                     <h2>${formatCurrency(value.price)}</h2>
                 </div>
-                <div class="btn-add">
-                    <button>MUA TRỌN BỘ COMBO</button>
+                <div class="btn-add btn-add-to-cart">
+                    <button data-category="homeproduct" data-key="${encodeURIComponent(key)}" >MUA TRỌN BỘ COMBO</button>
                 </div>
             </div>
             `
@@ -927,15 +896,16 @@ function getChunkSize() {
       existingProduct.quantity += 1;
       existingProduct.price = data.price * existingProduct.quantity;
     }
-  
     localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
+    var cartLength = selectedItems.length;
+
     showPopupCart(data, existingProduct ? existingProduct.quantity : quantity, existingProduct ? existingProduct.price : data.price);
     popupCart.classList.add('open-popup-cart');
     overlay.classList.add('active-overlay');
+    console.log(document.querySelector('.cart-mobile span').textContent = cartLength);
   };
   
-  
-  
+
 
   // Gọi hàm addToCart khi người dùng nhấn vào nút "MUA TRỌN BỘ COMBO"
  

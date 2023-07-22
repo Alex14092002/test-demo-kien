@@ -1,14 +1,4 @@
-
-const cartI = localStorage.getItem('selectedItems') 
-const cartDb = JSON.parse(cartI)
-let numberCart
-if(cartDb){
-    numberCart = cartDb.length
-} else{
-    numberCart = 0
-}
-
-console.log(numberCart);
+let selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || []
 const header = document.querySelector('.header-mobile')
 header.innerHTML += `
 <div class="nav-mobile">
@@ -25,7 +15,7 @@ header.innerHTML += `
 <a href="../cart.html">
 <div class="cart-mobile">
         <img src="./img/bag.svg" alt="" width="25px">
-        <span>${numberCart}</span>
+        <span>${selectedItems.length}</span>
     </div>
 </a>
     
@@ -82,6 +72,8 @@ header.innerHTML += `
 </div>
 </div>
 `
+
+
 const btnOpen = document.querySelector('.menu i')
 const bar = document.querySelector('.bar-mobile')
 const btnClose = document.querySelector('.btn-closes button')
