@@ -48,7 +48,14 @@
         localStorage.removeItem('magiamgia');
         window.location.href = "../vi_vn-offers-page.html";
     });
-    const phoneRegex = /^\+?[0-9]{10,15}$/;
+    function isValidStringLength(str) {
+        // Sử dụng biểu thức chính quy để kiểm tra độ dài chuỗi
+        // Quy tắc: chuỗi có độ dài chính xác 10 ký tự.
+        const stringLengthRegex = /^.{10}$/;
+      
+        // Kiểm tra xem chuỗi có khớp với biểu thức chính quy hay không
+        return stringLengthRegex.test(str);
+      }
     let checkData = document.querySelectorAll('.check-data')
 
     function removeOpenDataClass() {
@@ -80,7 +87,7 @@
                     element.classList.add('open-data');
                 });
                 
-            } else if (!phoneRegex.test(sdt.value)) {
+            } else if (!isValidStringLength(sdt.value)) {
                 phoneCheck.classList.add('open-data')
                 console.log('thất bại');
             } 
