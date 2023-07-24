@@ -431,42 +431,14 @@ body{
     padding-left: 0;
     color: #fff;
 }
-/* Mặc định cho các trình duyệt khác */
-.subcribe p {
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* Số dòng hiển thị */
-  -webkit-box-orient: vertical;
+.subcribe p{
+  max-height: 35px; /* Thay giá trị này bằng chiều cao tối đa mong muốn */
+  /* Bắt đầu áp dụng overflow khi nội dung vượt quá chiều cao */
   overflow: hidden;
+  /* Cắt bỏ các từ và hiển thị dấu "..." khi nội dung vượt quá chiều cao */
   text-overflow: ellipsis;
+  height: max-content;
 }
-
-/* Cách thức thay thế cho Safari */
-@media not all and (min-resolution: 0.001dpcm) {
-  /* Safari 10.0-10.2 có hỗ trợ lỗi cho đoạn mã Flexbox này */
-  @supports (-webkit-line-clamp: 1) {
-    .subcribe p {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      max-height: calc(2em * 2); /* Chiều cao tối đa: 2 dòng văn bản */
-      overflow: hidden;
-    }
-
-    /* Dòng văn bản sẽ được cắt và hiển thị dấu chấm chấm khi vượt quá chiều cao tối đa */
-    .subcribe p::after {
-      content: "...";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      padding-left: 20px; /* Khoảng cách giữa văn bản và dấu chấm chấm */
-      background: linear-gradient(to right, transparent, white 70%);
-    }
-  }
-}
-
 
 .chat{
     position: fixed;
