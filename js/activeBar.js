@@ -17,7 +17,7 @@ headerDesktop.innerHTML += `
     
     <div class="nav-left nav-right">
         <div class="logo">
-            <a href="./index.html"> <img src="./img/logo.png" alt="" width="250px"></a>
+            <a href="./vi_vn-offers-page.html"> <img src="./img/logo.png" alt="" width="250px"></a>
            
         </div>
         <ul >
@@ -41,7 +41,7 @@ headerDesktop.innerHTML += `
 </div>
 <div class="top-bot ">
     <ul>
-        <li>✨ PURE SERUM</li>
+       
         <li>🎁 KHUYẾN MÃI</li>
         <li>❤️ MỚI & BÁN CHẠY</li>
         <li>SET ƯU ĐÃI</li>
@@ -61,7 +61,7 @@ header.innerHTML += `
     <i class="fa fa-map-marker" aria-hidden="true"></i>
 </div>
 <div class="logo-mobile">
-    <a href="../index.html">
+    <a href="../vi_vn-offers-page.html">
     <img src="./img/logo.png" alt="" width="150px">
     </a>
     
@@ -87,7 +87,7 @@ header.innerHTML += `
 
 <div class="list-menu-mobile">
 <ul>
-    <li>✨ PURE SERUM</li>
+    
     <li>🎁 KHUYẾN MÃI</li>
     <li>❤️ MỚI & BÁN CHẠY</li>
     <li>SET ƯU ĐÃI</li>
@@ -104,7 +104,7 @@ header.innerHTML += `
 <div class="bar-mobile">
 <h5>ĐĂNG NHẬP HOẶC ĐĂNG KÝ</h5>
 <ul>
-    <li>✨ PURE SERUM <i class="fa fa-plus" aria-hidden="true"></i> </li>
+ 
     <li>🎁 KHUYẾN MÃI <i class="fa fa-plus" aria-hidden="true"></i> </li>
     <li>❤️ MỚI & BÁN CHẠY <i class="fa fa-plus" aria-hidden="true"></i> </li>
     <li>SET ƯU ĐÃI <i class="fa fa-plus" aria-hidden="true"></i> </li>

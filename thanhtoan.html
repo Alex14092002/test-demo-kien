@@ -148,22 +148,17 @@
 
 
      <div class="container main-thanhtoan form-phu">
-        <script type="text/javascript">
-           var submitted = false;
-        </script>
         <iframe
-           id="hidden_iframe"
-           name="hidden_iframe"
-           onload="if(submitted){
-            
-           }"
-           style="display: none"
-           >
-        </iframe>
+        id="hidden_iframes"
+        name="hidden_iframes"
+       
+        style="display: none"
+        >
+     </iframe>
         <form
-           target="hidden_iframe"
-           onsubmit="submitted=true;"
-
+         
+           
+            target="hidden_iframes"
            method="GET"
            class="thong-tin-phu"
            >
@@ -187,20 +182,15 @@
                     </div>
                     <div class="col-12 col-md-6 item-input">
                        <label for=""><span>*</span>Tỉnh : </label> <br>
-                       <select name="tinh" id="provincephu">
-                       </select>
+                      <input type="text" name="tinh" id="provincephu">
                     </div>
                     <div class="col-12 col-md-6 item-input">
                        <label for=""><span>*</span>Quận/Huyện : </label> <br>
-                       <select name="quan" id="districtphu">
-                          <option  value="">chọn quận</option>
-                       </select>
+                       <input type="text" name="quan" id="districtphu">
                     </div>
                     <div class="col-12 col-md-6 item-input">
                        <label for=""><span>*</span>Phường Xã : </label> <br>
-                       <select name="phuong" id="wardphu">
-                          <option   value="">chọn phường</option>
-                       </select>
+                       <input type="text" name="phuong" id="wardphu">
                     </div>
                     <div class="col-12 col-md-6 item-input">
                        <label for=""><span>*</span>Số điện thoại : </label> <br>
@@ -215,19 +205,7 @@
                  </div>
                 
               </div>
-              <div class="col-12 col-md-4 item-thanh-toan">
-                <h2>TÓM TẮT ĐƠN ĐẶT HÀNG</h2>
-                <div class="tom-tat-don-hang">
-                    <div class="sp-tom-tat">
-                        
-                    </div>
-                 
-                   
-                  
-                </div>
-                
-              
-              </div>
+           
            </div>
           
         </form>

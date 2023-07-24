@@ -432,6 +432,15 @@ function getChunkSize() {
     return 3;
   }
 }
+function getChunkSize2() {
+  if (window.innerWidth >= 768) {
+    
+    return 4;
+  } else {
+    
+    return 3;
+  }
+}
   (async () => {
   const res = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/mua1tang1.json`);
   const res2 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/combo2.json`);
@@ -443,7 +452,7 @@ function getChunkSize() {
   const data3 = await res3.json();
   const data4  = await res4.json();
   const data5 = await res5.json();
-  const productsChunks = chunkArray(Object.entries(data), getChunkSize());
+  const productsChunks = chunkArray(Object.entries(data), getChunkSize2());
   productsChunks.forEach((products, index) => {
     const sliderId = `slider-${index}`;
     const sliderContainer = document.createElement('div');
