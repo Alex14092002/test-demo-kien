@@ -177,10 +177,9 @@ $(document).ready(function() {
   });
   
 
-
   $(document).ready(function() {
     var lastScrollTop = 0;
-
+  
     $(window).on('scroll', function() {
       var scrollPosition = $(this).scrollTop();
       if (scrollPosition < lastScrollTop) {
@@ -188,6 +187,13 @@ $(document).ready(function() {
       } else {
         $('.header-mobile').removeClass('ghim');
       }
+  
+      // Kiểm tra khi cuộn lên đầu trang (0), sẽ bỏ ghim
+      if (scrollPosition === 0) {
+        $('.header-mobile').removeClass('ghim');
+      }
+  
       lastScrollTop = scrollPosition;
     });
   });
+  

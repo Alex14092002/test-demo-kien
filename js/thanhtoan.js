@@ -1,10 +1,11 @@
     let form2 = document.querySelector('.thong-tin-phu');
+    let form = document.querySelector('.thong-tin');
     (async () => {
         const res = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/sheet/0.json`);
         const res2 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/sheet/1.json`);
         const data = await res.json();
         const data2 = await res2.json();
-        const form = document.querySelector('.thong-tin');
+     
        
         form2.action = data2.content;
         form.action = data.content;
@@ -47,60 +48,95 @@
         localStorage.removeItem('magiamgia');
         window.location.href = "../vi_vn-offers-page.html";
     });
+    const phoneRegex = /^\+?[0-9]{10,15}$/;
+    let checkData = document.querySelectorAll('.check-data')
 
-    btnS.addEventListener('click', () => {
-        popupCamon.classList.toggle('open-camon');
-        const inputProduct = document.querySelector('#product');
-        const magiamgia = document.querySelector('#magiamgia');
-        magiamgia.value = ma;
-        inputProduct.value = nameString;
-        const ho = document.querySelector('#ho');
-        const ten = document.querySelector('#ten');
-        const diachi = document.querySelector('#diachi');
-        const tinh = document.querySelector('#province');
-        const quan = document.querySelector('#district');
-        const phuong = document.querySelector('#ward');
-        const sdt = document.querySelector('#sdt');
-        overlay.classList.toggle('active-overlay');
-        setTimeout(() => {
-            ho.value = "";
-            ten.value = "";
-            diachi.value = "";
-            tinh.value = "";
-            quan.value = "";
-            phuong.value = "";
-            sdt.value = "";
-            inputProduct.value = "";
-            magiamgia.value = "";
-        }, 2000);
-
-        // Get the second form with class "thong-tin-phu"
-    
-
-        // Copy the values from the first form to the second form
-        const hoPhu = document.querySelector('#hophu');
-        const tenPhu = document.querySelector('#tenphu');
-        const diachiPhu = document.querySelector('#diachiphu');
-        const tinhPhu = document.querySelector('#provincephu');
-        const quanPhu = document.querySelector('#districtphu');
-        const phuongPhu = document.querySelector('#wardphu');
-        const sdtPhu = document.querySelector('#sdtphu');
-        const inputProductPhu = document.querySelector('#productphu');
-        const magiamgiaPhu = document.querySelector('#magiamgiaphu');
+    function removeOpenDataClass() {
+        checkData.forEach((element) => {
+          element.classList.remove('open-data');
+        });
+      }
+    console.log(checkData); 
+    const ho = document.querySelector('#ho');
+    const ten = document.querySelector('#ten');
+    const diachi = document.querySelector('#diachi');
+    const tinh = document.querySelector('#province');
+    const quan = document.querySelector('#district');
+    const phuong = document.querySelector('#ward');
+    const sdt = document.querySelector('#sdt');
+    const phoneCheck = document.querySelector('.phone-check')
+    btnS.addEventListener('click', (event) => {
+            event.preventDefault(); // Ngăn chặn sự kiện submit mặc định
+            const inputProduct = document.querySelector('#product');
+            const magiamgia = document.querySelector('#magiamgia');
+            magiamgia.value = ma;
+            inputProduct.value = nameString;
+           
+            
         
-        hoPhu.value = ho.value;
-        tenPhu.value = ten.value;
-        diachiPhu.value = diachi.value;
-        tinhPhu.value = tinh.value;
-        quanPhu.value = quan.value;
-        phuongPhu.value = phuong.value;
-        sdtPhu.value = sdt.value;
-        inputProductPhu.value = inputProduct.value;
-        magiamgiaPhu.value = magiamgia.value;
+            if(ho.value.trim() === '' || ten.value.trim() === '' || diachi.value.trim() === '' || tinh.value.trim() === '' || quan.value.trim() === '' || phuong.value.trim() === '' || sdt.value.value === ''){
+                console.log('Chưa nhập đủ thông tin');
+                checkData.forEach((element) => {
+                    element.classList.add('open-data');
+                });
+                
+            } else if (!phoneRegex.test(sdt.value)) {
+                phoneCheck.classList.add('open-data')
+                console.log('thất bại');
+            } 
+            else {
+                form.submit()
+                popupCamon.classList.toggle('open-camon');
+                overlay.classList.toggle('active-overlay');
+                setTimeout(() => {
+                    ho.value = "";
+                    ten.value = "";
+                    diachi.value = "";
+                    tinh.value = "";
+                    quan.value = "";
+                    phuong.value = "";
+                    sdt.value = "";
+                    inputProduct.value = "";
+                    magiamgia.value = "";
+                }, 2000);
+        
+                const hoPhu = document.querySelector('#hophu');
+                const tenPhu = document.querySelector('#tenphu');
+                const diachiPhu = document.querySelector('#diachiphu');
+                const tinhPhu = document.querySelector('#provincephu');
+                const quanPhu = document.querySelector('#districtphu');
+                const phuongPhu = document.querySelector('#wardphu');
+                const sdtPhu = document.querySelector('#sdtphu');
+                const inputProductPhu = document.querySelector('#productphu');
+                const magiamgiaPhu = document.querySelector('#magiamgiaphu');
+                
+                hoPhu.value = ho.value;
+                tenPhu.value = ten.value;
+                diachiPhu.value = diachi.value;
+                tinhPhu.value = tinh.value;
+                quanPhu.value = quan.value;
+                phuongPhu.value = phuong.value;
+                sdtPhu.value = sdt.value;
+                inputProductPhu.value = inputProduct.value;
+                magiamgiaPhu.value = magiamgia.value;
+        
+                
+                form2.submit();
+            }
 
-        console.log(tinhPhu.value , quanPhu.value , phuongPhu.value);
-        form2.submit();
+
+        
     });
+    
+      
+      // Xử lý sự kiện focus trên các ô input
+      ho.addEventListener('focus', removeOpenDataClass);
+      ten.addEventListener('focus', removeOpenDataClass);
+      diachi.addEventListener('focus', removeOpenDataClass);
+      tinh.addEventListener('focus', removeOpenDataClass);
+      quan.addEventListener('focus', removeOpenDataClass);
+      phuong.addEventListener('focus', removeOpenDataClass);
+      sdt.addEventListener('focus', removeOpenDataClass);    
 
     const tomtat = document.querySelector('.sp-tom-tat');
     const totalTomtat = document.querySelector('.tom-tat-don-hang');

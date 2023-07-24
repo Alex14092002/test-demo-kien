@@ -17,6 +17,25 @@ body{
    
     color: #fff;
 }
+.check-data{
+  display: none;
+  margin-bottom: 0;
+  padding-top: 10px;
+  font-weight: 600;
+   color: #ff0000;
+
+}
+.open-data{
+  display: block !important;
+}
+.phone-check{
+  display: none;
+  margin-bottom: 0;
+  padding-top: 10px;
+  font-weight: 600;
+   color: #ff0000;
+}
+
 .form-phu{
   display: none;
 }
@@ -129,10 +148,7 @@ body{
 
   .header-mobile.ghim {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999; /* Đảm bảo header hiển thị phía trên tất cả các phần tử khác */
+    top: 0px; /* Đẩy header lên trên 100px khi được ghim */
   }
 .subcribe p{
     font-size: .875rem;
@@ -1482,7 +1498,8 @@ body{
     .header-mobile{
         background-color: #000;
         display: block;
-        
+        width: 100%;
+        z-index: 500000;
     }
     .list-menu-mobile{
         overflow-x: auto;
