@@ -1,5 +1,60 @@
 let selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || []
 const header = document.querySelector('.header-mobile')
+const headerDesktop = document.querySelector('.header-desktop')
+
+
+
+headerDesktop.innerHTML += `
+<div class="container">
+<div class="top-header ">    
+    <div class="nav-left">
+        <ul>
+            <li class="li-1"> ₫ - VN (VI) <i class="fa fa-chevron-down" aria-hidden="true"></i></li>
+            <li class="li-1">CHĂM SÓC KHÁCH HÀNG</li>
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    
+    <div class="nav-left nav-right">
+        <div class="logo">
+            <a href="./index.html"> <img src="./img/logo.png" alt="" width="250px"></a>
+           
+        </div>
+        <ul >
+            <li class="li-1 li-2">KIEHL'S REWARDS</li>
+            <li class="li-1 li-2">EMAIL ĐĂNG KÝ</li>
+            <li class="li-1 li-2">TÀI KHOẢN CỦA TÔI</li>
+            <li class="cart"> 
+            <a href="/cart.html">
+            <img src="./img/bag.svg" alt="" width="25px">
+            <span>GIỎ HÀNG (${selectedItems.length})</span> </li>
+           
+            </a>
+           
+            
+        </ul>
+    </div>
+</div>
+<div class="top-search">
+    <input type="text" placeholder="Tôi đang tìm kiếm">
+    <i class="fa fa-search" aria-hidden="true"></i>
+</div>
+<div class="top-bot ">
+    <ul>
+        <li>✨ PURE SERUM</li>
+        <li>🎁 KHUYẾN MÃI</li>
+        <li>❤️ MỚI & BÁN CHẠY</li>
+        <li>SET ƯU ĐÃI</li>
+        <li>DƯỠNG DA</li>
+        <li>CHĂM SÓC CƠ THỂ</li>
+        <li>CHĂM SÓC TÓC</li>
+        <li>DÀNH CHO NAM</li>
+        <li>DỊCH VỤ TƯ VẤN</li>
+        <li> <a href="/vekiel.html">VỀ KIEHL'S</a> </li>
+    </ul>
+</div>
+</div>
+`
 header.innerHTML += `
 <div class="nav-mobile">
 <div class="map-mobile">
@@ -74,6 +129,7 @@ header.innerHTML += `
 `
 
 
+
 const btnOpen = document.querySelector('.menu i')
 const bar = document.querySelector('.bar-mobile')
 const btnClose = document.querySelector('.btn-closes button')
@@ -98,3 +154,40 @@ btnGiam10.addEventListener('click',()=>{
     popup.classList.toggle('visible')
     overlays.classList.toggle('active-overlay');
 })
+
+
+$(document).ready(function() {
+    var lastScrollTop = 0;
+  
+    $(window).on('scroll', function() {
+      var scrollPosition = $(this).scrollTop();
+      if (scrollPosition < lastScrollTop) {
+        $('.header-desktop').addClass('ghim');
+      } else {
+        $('.header-desktop').removeClass('ghim');
+      }
+  
+      // Kiểm tra khi cuộn lên đầu trang (0), sẽ bỏ ghim
+      if (scrollPosition === 0) {
+        $('.header-desktop').removeClass('ghim');
+      }
+  
+      lastScrollTop = scrollPosition;
+    });
+  });
+  
+
+
+  $(document).ready(function() {
+    var lastScrollTop = 0;
+
+    $(window).on('scroll', function() {
+      var scrollPosition = $(this).scrollTop();
+      if (scrollPosition < lastScrollTop) {
+        $('.header-mobile').addClass('ghim');
+      } else {
+        $('.header-mobile').removeClass('ghim');
+      }
+      lastScrollTop = scrollPosition;
+    });
+  });

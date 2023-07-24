@@ -715,15 +715,15 @@ function getChunkSize() {
           <img src="${value.img1}" alt="" width="100%">
           <div class="img-hover mini-product">
             <img src="${value.img2}" alt="" width="100%">
-            <button class="btn-view-more btn-mini" onclick="showPopup('kemchongnang' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
+            <button class="btn-view-more btn-mini">XEM NHANH</button>
           </div>
      
         </div>
-        <a href="../chitietsp.html?catelory=kemchongnang&key=${key}">
+      
         <div class="name-product">
         <h3>${value.name}</h3>
       </div>
-        </a>
+       
        
     
       <div class="subcribe subcribe-mini">
@@ -739,8 +739,8 @@ function getChunkSize() {
       <div class="price">
         <h2>${formatCurrency(value.price)}</h2>
       </div>
-      <div class=" btn-add btn-add-to-cart add-to-cart">
-      <button data-category="kemchongnang" data-key="${encodeURIComponent(key)}" >MUA TRỌN BỘ COMBO</button>
+      <div class=" btn-add">
+      <button  >MUA TRỌN BỘ COMBO</button>
       </div>
     </div>
         </div>
@@ -803,15 +803,15 @@ function getChunkSize() {
           <img src="${value.img1}" alt="" width="100%">
           <div class="img-hover mini-product">
             <img src="${value.img2}" alt="" width="100%">
-            <button class="btn-view-more btn-mini" onclick="showPopup('duongthe' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
+            <button class="btn-view-more btn-mini" >XEM NHANH</button>
           </div>
      
         </div>
-        <a href="../chitietsp.html?catelory=duongthe&key=${key}">
+      
         <div class="name-product">
         <h3>${value.name}</h3>
       </div>
-        </a>
+     
        
     
       <div class="subcribe subcribe-mini">
@@ -827,8 +827,8 @@ function getChunkSize() {
       <div class="price">
         <h2>${formatCurrency(value.price)}</h2>
       </div>
-      <div class="btn-add btn-add-to-cart add-to-cart">
-      <button data-category="duongthe" data-key="${encodeURIComponent(key)}" >MUA TRỌN BỘ COMBO</button>
+      <div class="btn-add ">
+      <button >MUA TRỌN BỘ COMBO</button>
       </div>
     </div>
         </div>
@@ -881,7 +881,6 @@ function getChunkSize() {
    const addToCart = async (category, key) => {
     const res = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/${category}/${key}.json`);
     const data = await res.json();
-  
     let selectedItems = localStorage.getItem('selectedItems') ? JSON.parse(localStorage.getItem('selectedItems')) : [];
     const quantity = 1;
     const existingProduct = selectedItems.find(item => item.name === data.nameSheet);
@@ -896,11 +895,10 @@ function getChunkSize() {
     }
     localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
     var cartLength = selectedItems.length;
-
     showPopupCart(data, existingProduct ? existingProduct.quantity : quantity, existingProduct ? existingProduct.price : data.price);
     popupCart.classList.add('open-popup-cart');
     overlay.classList.add('active-overlay');
-    console.log(document.querySelector('.cart-mobile span').textContent = cartLength);
+    document.querySelector('.cart span').textContent = `GIỎ HÀNG (${selectedItems.length})`
   };
   
     addToCartButtons.forEach(button => {
@@ -910,18 +908,6 @@ function getChunkSize() {
         addToCart(category, key)
       });
     });
-  
-
-
-
-
-
-  
-  
   })();
-
-
-
-  
 })();
 

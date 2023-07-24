@@ -26,20 +26,22 @@ body{
 .li-1{
     border-right: 0.5px solid #fff;
 }
-.header-desktop{
-    background-color: #000;
-    padding: 30px 0 5px 0 ;
-}
+
 .logo{
     margin-right: 50px;
 }
 .heart i{
     color: #c04c47;
 }
-.cart{
+.cart a{
     display: flex;
+    color: #fff;
+    text-decoration: none;
     align-items: center;
 
+}
+.cart a:hover{
+  color: #fff;
 }
 .cart span{
     margin-left: 5px;
@@ -78,6 +80,9 @@ body{
 .top-search input:focus{
     outline: none;
 }
+.top-bot{
+  background-color: #000;
+}
 .top-bot ul{
     padding-left: 0px;
     list-style: none;
@@ -90,6 +95,10 @@ body{
     font-size: 12px;
     font-weight: 600;
 }
+.top-bot ul li a{
+  text-decoration: none;
+  color: #fff;
+}
 .pd-2{
     padding-bottom: 30px;
 }
@@ -101,6 +110,27 @@ body{
     font-weight: bold;
     text-align: center;
 }
+.header-desktop {
+  background-color: #000;
+  padding: 30px 0 5px 0;
+  width: 100%;
+  z-index: 9999;
+  transition: top 0.3s ease; /* Thêm hiệu ứng transition và easing */
+}
+
+.header-desktop.ghim {
+
+  position: fixed;
+  top: -145px; /* Đẩy header lên trên 100px khi được ghim */
+}
+
+  .header-mobile.ghim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Đảm bảo header hiển thị phía trên tất cả các phần tử khác */
+  }
 .subcribe p{
     font-size: .875rem;
     font-family: 'Amiri', serif;
@@ -815,7 +845,7 @@ body{
     display: block;
   }
   .main-cart{
-    padding: 50px 0;
+    padding: 120px 0;
   }
   .cart-mem h5{
     font-size: 20px;
@@ -923,8 +953,15 @@ body{
     background-color: #f8f8f8;
     padding: 30px 20px;
   }
- 
   
+  .btn-thanhtoan-cart button{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 5px 0;
+    font-weight: 600;
+    width: 100%;
+  }
   .btn-thanhtoan{
     text-align: center;
     display: flex;
@@ -1123,7 +1160,7 @@ body{
   font-size: 12px;
 }
 .main-thanhtoan{
-  padding: 30px 0;
+  padding: 100px 0;
 }
 .main-thanhtoan h1{
   font-size: 32px ;
@@ -1266,6 +1303,73 @@ body{
   font-size: 16px !important;
   font-weight: bold;
 }
+.box-tin-tuc{
+  padding: 0 6px;
+}
+.banner-vekieh-desktop{
+  position: relative;
+}
+.title-kiel{
+  position: absolute;
+ 
+  top: 16%;
+  left: 30%;
+  width: 40%;
+ 
+}
+.title-kiel h5{
+  color: #000;
+   font-weight: 600;
+  text-align: center;
+  font-size: 44px;
+    font-family: 'Amiri', serif;
+}
+.title-kiel p{
+  font-family: 'Roboto' ,serif;
+  color: #000;
+
+  text-align: center;
+}
+.mua-btn {
+  display: flex;
+  justify-content: center;
+}
+.mua-btn a{
+  text-decoration: none;
+  padding: 10px 40px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Roboto' ,serif;
+  
+}
+.mua-btn a:hover{
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.banner-vekieh-mobile{
+  display: none;
+}
+.img-content{
+  display: flex;
+  justify-content: center;
+}
+.content-about{
+  align-items: center;
+  padding: 70px 0;
+  border-bottom:  1px solid #888888;
+}
+.text-content h5{
+  font-size: 32px;
+  font-weight: 500;
+  font-family: 'Amiri', serif;
+}
+.text-content p{
+  font-family: 'Roboto' ,serif;
+  font-size: 16px;
+}
 @media(min-width :1500px){
     .popup-xemnhanh{
         height: 80vh;
@@ -1273,9 +1377,37 @@ body{
 
 }
 @media(max-width : 700px){
+  .banner-vekieh-desktop{
+    display: none;
+  }
+  .title-kiel-mobile{
+    padding: 10px;
+  }
+  .title-kiel-mobile h5{
+    font-size: 28px;
+    font-family: 'Amiri', serif;
+    font-weight: 600;
+    text-align: center;
+  }
+  .title-kiel-mobile p{
+    font-family: 'Roboto' ,serif;
+    text-align: center;
+  }
+  .banner-vekieh-mobile {
+    display: block;
+  }
+  .name-product h3{
+    height: 60px;
+  }
+  .subcribe p{
+    margin-bottom: 0;
+  }
   .popup-camon{
     width: 90%;
     height: 35%;
+  }
+  .chat img{
+    width: 70px;
   }
   .slider-chitiet{
     order: 1;

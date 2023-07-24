@@ -75,7 +75,7 @@ const totalTomtat = document.querySelector('.tom-tat-don-hang')
 let sum = 0
 
 data.map((value)=>{
-    sum += value.price
+    sum += parseInt(value.price)
     tomtat.innerHTML += `
     <div class="container">
     <div class="row item-sp-tomtat">
@@ -97,7 +97,7 @@ totalTomtat.innerHTML += `
 <div class="container">
 <div class="row total-tomtat ">
     <p class="col-6 ">Tổng phụ</p>
-    <p class="col-6 --sp-tomtat">${formatCurrency(parseInt(sum))}</p>
+    <p class="col-6 --sp-tomtat">${formatCurrency(sum)}</p>
 </div>
 <div class="row total-tomtat ">
     <p class="col-6 ">Phí vận chuyển</p>
@@ -105,7 +105,7 @@ totalTomtat.innerHTML += `
 </div>
 <div class="row total-tomtat ">
     <p class="col-6 end-tomtat">Tổng tạm tính</p>
-    <p class="col-6 --sp-tomtat end-tomtat">${formatCurrency(parseInt(sum))}</p>
+    <p class="col-6 --sp-tomtat end-tomtat">${formatCurrency(sum)}</p>
 </div>
 </div>
 `
