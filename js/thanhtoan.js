@@ -3,6 +3,8 @@
         const res = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/sheet/0.json`)
         const data = await res.json()
         const form = document.querySelector('.thong-tin')
+        const form2 = document.querySelector('.thong-tin-phu')
+        console.log(form2);
         form.action = data.content
     })()
     function formatCurrency(number) {

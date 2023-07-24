@@ -17,6 +17,9 @@ body{
    
     color: #fff;
 }
+.form-phu{
+  display: none;
+}
 .item-thanhphan{
   padding: 0 12px;
 }
