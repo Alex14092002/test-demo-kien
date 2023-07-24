@@ -43,24 +43,8 @@
         window.location.href = "../index.html"
     })
     btnS.addEventListener('click' , ()=>{
-        const form = document.querySelector('.thong-tin'); // Move this line here
-        const formData = new FormData(form);
-        const request1 = fetch(data.content, {
-            method: 'GET', // Hoặc 'POST' nếu bạn muốn gửi dữ liệu bằng phương thức POST
-            body: formData,
-          });
-
-          const request2 = fetch('https://data-kieh-default-rtdb.firebaseio.com/sheet/1.json', {
-        method: 'GET', // Hoặc 'POST' nếu bạn muốn gửi dữ liệu bằng phương thức POST
-        body: formData,
-      });
-      Promise.all([request1, request2])
-      .then((responses) => {
-        // Xử lý kết quả nếu cần thiết
-      })
-      .catch((error) => {
-        // Xử lý lỗi nếu cần thiết
-      });
+       
+        
     popupCamon.classList.toggle('open-camon')
     const inputProduct = document.querySelector('#product')
     const magiamgia = document.querySelector('#magiamgia')
