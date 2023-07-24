@@ -2,8 +2,17 @@ let selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || []
 const header = document.querySelector('.header-mobile')
 const headerDesktop = document.querySelector('.header-desktop')
 
-
-
+let param = window.location.pathname
+const checkPage = () =>{
+    if(param === '/vi_vn-offers-page.html'){
+        return true
+    }
+    else {
+        return false
+    }
+}
+checkPage()
+console.log(param);
 headerDesktop.innerHTML += `
 <div class="container">
 <div class="top-header ">    
@@ -41,10 +50,9 @@ headerDesktop.innerHTML += `
 </div>
 <div class="top-bot ">
     <ul>
-       
-        <li>🎁 KHUYẾN MÃI</li>
-        <li>❤️ MỚI & BÁN CHẠY</li>
-        <li>SET ƯU ĐÃI</li>
+        <li> <a href="${checkPage() ? '#tang1' : '/vi_vn-offers-page.html'}"> 🎁 KHUYẾN MÃI</a></li>
+        <li> <a href="${checkPage() ? '#combo2' : '/vi_vn-offers-page.html'}">❤️ MỚI & BÁN CHẠY</a> </li>
+        <li> <a href="${checkPage() ? '#combo3' : '/vi_vn-offers-page.html'}">SET ƯU ĐÃI</a> </li>
         <li>DƯỠNG DA</li>
         <li>CHĂM SÓC CƠ THỂ</li>
         <li>CHĂM SÓC TÓC</li>
@@ -88,15 +96,15 @@ header.innerHTML += `
 <div class="list-menu-mobile">
 <ul>
     
-    <li>🎁 KHUYẾN MÃI</li>
-    <li>❤️ MỚI & BÁN CHẠY</li>
-    <li>SET ƯU ĐÃI</li>
+<li> <a href="${checkPage() ? '#tang1' : '/vi_vn-offers-page.html'}"> 🎁 KHUYẾN MÃI</a></li>
+<li> <a href="${checkPage() ? '#combo2' : '/vi_vn-offers-page.html'}">❤️ MỚI & BÁN CHẠY</a> </li>
+<li> <a href="${checkPage() ? '#combo3' : '/vi_vn-offers-page.html'}">SET ƯU ĐÃI</a> </li>
     <li>DƯỠNG DA</li>
     <li>CHĂM SÓC CƠ THỂ</li>
     <li>CHĂM SÓC TÓC</li>
     <li>DÀNH CHO NAM</li>
     <li>DỊCH VỤ TƯ VẤN</li>
-    <li>VỀ KIEHL'S</li>
+    <li> <a href="/vekiel.html">VỀ KIEHL'S</a> </li>
 </ul>
 </div>
 

@@ -461,7 +461,7 @@ function getChunkSize2() {
     products.forEach(([key, value]) => {
       sliderContainer.innerHTML += `
        
-    <div class="item-product-home">
+    <div class="item-product-home" >
       <div class="img-product">
          <img src="${value.img1}" alt="" width="100%">
          <div class="img-hover mini-product">
@@ -544,7 +544,7 @@ function getChunkSize2() {
     products.forEach(([key, value]) => {
       sliderContainer.innerHTML += `
         <div class="item-product-home">
-        <div class="item-product-home">
+        <div class="item-product-home" >
         <div class="img-product">
           <img src="${value.img1}" alt="" width="100%">
           <div class="img-hover mini-product">
@@ -632,7 +632,7 @@ function getChunkSize2() {
     products.forEach(([key, value]) => {
       sliderContainer.innerHTML += `
         <div class="item-product-home">
-        <div class="item-product-home">
+        <div class="item-product-home" >
         <div class="img-product">
           <img src="${value.img1}" alt="" width="100%">
           <div class="img-hover mini-product">

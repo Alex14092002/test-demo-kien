@@ -438,6 +438,7 @@ body{
   /* Cắt bỏ các từ và hiển thị dấu "..." khi nội dung vượt quá chiều cao */
   text-overflow: ellipsis;
   display: -webkit-box;
+  
 -webkit-box-orient: vertical;
 -webkit-line-clamp: 2; /* Số dòng hiển thị */
   height: max-content;
@@ -1446,15 +1447,14 @@ body{
   .chat img{
     width: 70px;
   }
-  .slider-chitiet{
-    order: 1;
-  }
+ 
   .btn-view-more{
     display: none;
   }
-  .name-chitiet{
-    order: 0;
-    padding-bottom: 20px;
+
+  .slider-chitiet{
+    
+    padding-bottom: 40px;
   }
   .name-product h3{
     font-size: 14px;
@@ -1516,12 +1516,17 @@ body{
         display: flex;
        
     }
+   
     .list-menu-mobile ul li{
         flex: 0 0 auto; /* Các mục không co dãn, giữ nguyên kích thước */
         padding: 10px;
         white-space: nowrap;
         font-size: 12px; /* Ngăn các mục xuống dòng */
         color: #fff;
+    }
+    .list-menu-mobile ul li a{
+      text-decoration: none;
+      color: #fff;
     }
     .right-mobile{
         display: flex;
