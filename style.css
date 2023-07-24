@@ -432,11 +432,17 @@ body{
     color: #fff;
 }
 .subcribe-mini p{
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* Số dòng hiển thị */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+      /* Thiết lập chiều cao cố định cho phần tử chứa văn bản */
+      height: max-content; /* Điều chỉnh giá trị theo ý muốn */
+      max-height: 80px;
+     /* Hiển thị nhiều dòng văn bản */
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 2; /* Số dòng bạn muốn hiển thị */
+ 
+     /* Ẩn phần dư thừa và hiển thị dấu chấm chấm (...) */
+     overflow: hidden;
+     text-overflow: ellipsis;
 }
 
 .chat{
@@ -1491,6 +1497,20 @@ body{
       overflow: hidden;
       text-overflow: ellipsis;
   }
+  .subcribe-mini p{
+    /* Thiết lập chiều cao cố định cho phần tử chứa văn bản */
+    height: max-content; /* Điều chỉnh giá trị theo ý muốn */
+    max-height: 80px;
+   /* Hiển thị nhiều dòng văn bản */
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2; /* Số dòng bạn muốn hiển thị */
+
+   /* Ẩn phần dư thừa và hiển thị dấu chấm chấm (...) */
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
     .popup-themgiohang{
         width: 95%;
         height: 90%;
