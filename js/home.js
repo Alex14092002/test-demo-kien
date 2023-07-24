@@ -194,6 +194,20 @@ localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
 }
 const popupCart = document.querySelector('.popup-themgiohang');
 const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
+  let priceItem
+  const updateLocalStorage = () => {
+    const selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || [];
+    const productName = data.nameSheet;
+    const existingItemIndex = selectedItems.findIndex((item) => item.name === productName);
+    const pricePopup = document.querySelector('.pricePopup')
+    if (existingItemIndex !== -1) {
+      selectedItems[existingItemIndex].quantity = quantity;
+      selectedItems[existingItemIndex].price = data.price * quantity;
+      pricePopup.textContent = formatCurrency(data.price * quantity) ;
+    }
+
+    localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
+  };
   popupCart.innerHTML = `
     <div class="container">
       <div class="row cart-popup">
@@ -235,6 +249,26 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
       <button>✖</button>
     </div>
   `;
+ 
+
+  let quantity = selectedQuantity;
+  const quantityInput = document.querySelector(".quantity-input");
+  const decreaseBtn = document.querySelector(".quantity-btn.decrease");
+  const increaseBtn = document.querySelector(".quantity-btn.increase");
+
+  decreaseBtn.addEventListener("click", () => {
+    if (quantity > 1) {
+      quantity--;
+      quantityInput.value = quantity;
+      updateLocalStorage(); // Update quantity and price in localStorage
+    }
+  });
+
+  increaseBtn.addEventListener("click", () => {
+    quantity++;
+    quantityInput.value = quantity;
+    updateLocalStorage(); // Update quantity and price in localStorage
+  });
 
   const closeCart = document.querySelector('.close-popup-cart');
   closeCart.addEventListener('click', () => {
@@ -910,13 +944,13 @@ function getChunkSize2() {
     document.querySelector('.cart span').textContent = `GIỎ HÀNG (${selectedItems.length})`
   };
   
-    addToCartButtons.forEach(button => {
+  addToCartButtons.forEach(button => {
       button.addEventListener('click', () => {
         const category = button.getAttribute('data-category');
         const key = decodeURIComponent(button.getAttribute('data-key'));
         addToCart(category, key)
       });
-    });
+  });
   })();
 })();
 

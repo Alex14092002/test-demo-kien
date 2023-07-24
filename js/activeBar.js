@@ -61,7 +61,18 @@ headerDesktop.innerHTML += `
         <li> <a href="/vekiel.html">VỀ KIEHL'S</a> </li>
     </ul>
 </div>
+
+
 </div>
+<div class="sub-menu">
+    <div class="container">
+        <div class="row">
+            <div class="">
+            </div>
+        </div>
+    </div>
+</div>
+
 `
 header.innerHTML += `
 <div class="nav-mobile">
