@@ -474,7 +474,7 @@ function getChunkSize2() {
             <h3>${value.name}</h3>
          </div>
       </a>
-      <div class="subcribe subcribe-mini">
+      <div class="subcribe ">
          <p>${value.subcibe}</p>
       </div>
       <div class="heart">
@@ -560,7 +560,7 @@ function getChunkSize2() {
         </a>
        
     
-      <div class="subcribe subcribe-mini">
+      <div class="subcribe ">
         <p>${value.subcibe}</p>
       </div>
       <div class="heart">
@@ -648,7 +648,7 @@ function getChunkSize2() {
         </a>
        
     
-      <div class="subcribe subcribe-mini">
+      <div class="subcribe ">
         <p>${value.subcibe}</p>
       </div>
       <div class="heart">
@@ -735,7 +735,7 @@ function getChunkSize2() {
        
        
     
-      <div class="subcribe subcribe-mini">
+      <div class="subcribe ">
         <p>${value.subcibe}</p>
       </div>
       <div class="heart">
@@ -823,7 +823,7 @@ function getChunkSize2() {
      
        
     
-      <div class="subcribe subcribe-mini special-sub">
+      <div class="subcribe  special-sub">
         <p>${value.subcibe}</p>
       </div>
       <div class="heart">

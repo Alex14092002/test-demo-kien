@@ -431,12 +431,12 @@ body{
     padding-left: 0;
     color: #fff;
 }
-.subcribe-mini p{
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* Số dòng hiển thị */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.subcribe p{
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Số dòng hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .chat{
