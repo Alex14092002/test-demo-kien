@@ -729,7 +729,7 @@ function getChunkSize2() {
      
         </div>
       
-        <div class="name-product">
+        <div class="name-product special-name">
         <h3>${value.name}</h3>
       </div>
        
@@ -817,13 +817,13 @@ function getChunkSize2() {
      
         </div>
       
-        <div class="name-product">
+        <div class="name-product special-name">
         <h3>${value.name}</h3>
       </div>
      
        
     
-      <div class="subcribe subcribe-mini">
+      <div class="subcribe subcribe-mini special-sub">
         <p>${value.subcibe}</p>
       </div>
       <div class="heart">

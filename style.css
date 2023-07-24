@@ -1397,6 +1397,12 @@ body{
   font-family: 'Roboto' ,serif;
   font-size: 16px;
 }
+.special-name h3{
+  height: 80px !important;
+}
+.special-sub p{
+  height: 60px !important;
+}
 @media(min-width :1500px){
     .popup-xemnhanh{
         height: 80vh;
