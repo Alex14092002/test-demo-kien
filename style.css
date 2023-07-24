@@ -437,6 +437,9 @@ body{
   overflow: hidden;
   /* Cắt bỏ các từ và hiển thị dấu "..." khi nội dung vượt quá chiều cao */
   text-overflow: ellipsis;
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2; /* Số dòng hiển thị */
   height: max-content;
 }
 
