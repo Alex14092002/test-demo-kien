@@ -432,26 +432,11 @@ body{
     color: #fff;
 }
 .subcribe-mini p{
-    /* Thiết lập chiều cao cố định cho phần tử chứa văn bản */
-max-height: 80px;
-overflow: hidden;
-
-/* Hiển thị nhiều dòng văn bản với Flexbox */
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-orient: vertical;
--ms-flex-direction: column;
-flex-direction: column;
--webkit-box-pack: start;
--ms-flex-pack: start;
-justify-content: flex-start;
-
-/* Xử lý hiển thị chỉ 2 dòng văn bản */
-line-height: 1.2; /* Điều chỉnh độ cao của mỗi dòng */
--webkit-line-clamp: 2; /* Số dòng bạn muốn hiển thị */
-text-overflow: ellipsis;
-
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Số dòng hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .chat{
@@ -1506,8 +1491,6 @@ text-overflow: ellipsis;
       overflow: hidden;
       text-overflow: ellipsis;
   }
-
-
     .popup-themgiohang{
         width: 95%;
         height: 90%;
