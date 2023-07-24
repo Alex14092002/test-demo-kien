@@ -267,7 +267,7 @@ function increaseQuantity(key) {
   localStorage.setItem("selectedItems", JSON.stringify(cart));
 
   // Update the total price on the page
-  updateTotalPrice();
+  updateTotalPrice(key);
 }
 
 function decreaseQuantity(key) {
@@ -284,11 +284,10 @@ function decreaseQuantity(key) {
     localStorage.setItem("selectedItems", JSON.stringify(cart));
 
     // Update the total price on the page
-    updateTotalPrice();
+    updateTotalPrice(key);
   }
 }
-
-function updateTotalPrice() {
+function updateTotalPrice(key) {
   const cart = JSON.parse(localStorage.getItem("selectedItems"));
   let totals = 0;
   let itemPrice
@@ -296,10 +295,10 @@ function updateTotalPrice() {
   Object.values(cart).forEach(item => {
     itemPrice = parseInt(item.price);
     itemQuantity = parseInt(item.quantity);
-
+    totals += itemPrice;
   });
-  totals += itemPrice;
-  const totalItem = document.querySelector(".price h2");
+  
+  const totalItem = document.querySelector(`.price-${key} h2`);
   totalItem.textContent = formatCurrency(itemPrice);
   const totalCart = document.querySelector('.tamtinh1')
   const totalCart2 = document.querySelector('.tamtinh2')
@@ -310,12 +309,9 @@ function updateTotalPrice() {
  
 }
 
-if (cart) {
+if (cart.length ) {
   Object.entries(cart).map(([key, value]) => {
     total += parseInt(value.price);
-    
-
-
     carts.innerHTML += `
         <div class="item-cart">
         <div class="row cart">
@@ -327,7 +323,7 @@ if (cart) {
                 <div class="--cart">
                     <p>Chỉnh sửa</p>
                     <p>Thêm vào danh sách</p>
-                    <p class="cancle">Bỏ</p>
+                    <p  class="cancle">Bỏ</p>
                 </div>
               </div>
               <div class="col-6 col-md-2 add-cart">
@@ -341,7 +337,7 @@ if (cart) {
                 </div>
               </div>
               <div class="col-6 col-md-2">
-                <div class="price pricePopup">
+                <div class="price pricePopup price-${key}">
                   <h2>${formatCurrency(parseInt(value.price))}</h2>
                 </div>
               </div>
@@ -353,6 +349,9 @@ if (cart) {
        
         
   });
+
+ 
+  
   
   document.addEventListener("click", event => {
     if (event.target.classList.contains("increase")) {
