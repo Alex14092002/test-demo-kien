@@ -51,7 +51,7 @@ headerDesktop.innerHTML += `
 <div class="top-bot ">
     <ul>
         <li> <a href="${checkPage() ? '#tang1' : '/vi_vn-offers-page.html'}"> 🎁 KHUYẾN MÃI</a></li>
-        <li> <a href="${checkPage() ? '#combo2' : '/vi_vn-offers-page.html'}">❤️ MỚI & BÁN CHẠY</a> </li>
+        <li class="san-pham-ban-chay"> <a href="${checkPage() ? '#combo2' : '/vi_vn-offers-page.html'}">❤️ MỚI & BÁN CHẠY</a> </li>
         <li> <a href="${checkPage() ? '#combo3' : '/vi_vn-offers-page.html'}">SET ƯU ĐÃI</a> </li>
         <li>DƯỠNG DA</li>
         <li>CHĂM SÓC CƠ THỂ</li>
@@ -64,14 +64,7 @@ headerDesktop.innerHTML += `
 
 
 </div>
-<div class="sub-menu">
-    <div class="container">
-        <div class="row">
-            <div class="">
-            </div>
-        </div>
-    </div>
-</div>
+
 
 `
 header.innerHTML += `
@@ -216,3 +209,13 @@ $(document).ready(function() {
     });
   });
   
+  const subMenu = document.querySelector(".sub-menu");
+  const sanPhamBanChayLi = document.querySelector("li.san-pham-ban-chay");
+  
+  sanPhamBanChayLi.addEventListener("mouseover", () => {
+    subMenu.classList.remove("hidden");
+  });
+  
+  sanPhamBanChayLi.addEventListener("mouseout", () => {
+    subMenu.classList.add("hidden");
+  });

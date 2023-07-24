@@ -1408,6 +1408,31 @@ body{
 .special-sub p{
   height: 60px !important;
 }
+.sub-menu{
+  width: 100%;
+  position: absolute;
+  top: 1.9%;
+  left: 0;
+  z-index: 10000;
+  background-color: #fff;
+  padding: 40px 0;
+}
+.sub-menu h5{
+  font-size: 16px;
+  font-family: 'Roboto' ,serif;
+}
+.sub-menu ul{
+  padding-left: 0;
+  list-style: none;
+  font-size: 14px;
+
+}
+.sub-menu h4{
+  font-size: 18px;
+  padding-top: 10px;
+  font-family: 'Amiri', serif;
+
+}
 @media(min-width :1500px){
     .popup-xemnhanh{
         height: 80vh;

@@ -408,8 +408,11 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
                     <div class="img-product">
                     <img src="${value.img1}" alt="" width="100%">
                     <div class="img-hover mini-product">
-                        <img src="${value.img2}" alt="" width="100%">
-                        <button class="btn-view-more" onclick="showPopup('homeproduct' ,${key})">XEM NHANH</button>
+                    <a class="link-buy-nhanh" href="../chitietsp.html?catelory=homeproduct&key=${key}">
+                      <img src="${value.img2}" alt="" width="100%">
+                    </a>
+                    <button class="btn-view-more" onclick="showPopup('homeproduct' ,${key})">XEM NHANH</button>
+                      
                     </div>
                 </div>
                 <a href="../chitietsp.html?catelory=homeproduct&key=${key}">
@@ -499,7 +502,10 @@ function getChunkSize2() {
       <div class="img-product">
          <img src="${value.img1}" alt="" width="100%">
          <div class="img-hover mini-product">
-            <img src="${value.img2}" alt="" width="100%">
+         <a class="link-buy-nhanh" href="../chitietsp.html?catelory=homeproduct&key=${key}">
+         <img src="${value.img2}" alt="" width="100%">
+         </a>
+            
             <button class="btn-view-more btn-mini" onclick="showPopup('mua1tang1' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
          </div>
       </div>
@@ -582,7 +588,10 @@ function getChunkSize2() {
         <div class="img-product">
           <img src="${value.img1}" alt="" width="100%">
           <div class="img-hover mini-product">
-            <img src="${value.img2}" alt="" width="100%">
+          <a class="link-buy-nhanh" href="../chitietsp.html?catelory=homeproduct&key=${key}">
+          <img src="${value.img2}" alt="" width="100%">
+          </a>
+             
             <button class="btn-view-more btn-mini" onclick="showPopup('combo2' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
           </div>
      
@@ -670,7 +679,10 @@ function getChunkSize2() {
         <div class="img-product">
           <img src="${value.img1}" alt="" width="100%">
           <div class="img-hover mini-product">
-            <img src="${value.img2}" alt="" width="100%">
+          <a class="link-buy-nhanh" href="../chitietsp.html?catelory=homeproduct&key=${key}">
+          <img src="${value.img2}" alt="" width="100%">
+          </a>
+             
             <button class="btn-view-more btn-mini" onclick="showPopup('combo3' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
           </div>
      
