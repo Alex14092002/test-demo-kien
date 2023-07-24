@@ -50,7 +50,7 @@ headerDesktop.innerHTML += `
         <li>CHĂM SÓC TÓC</li>
         <li>DÀNH CHO NAM</li>
         <li>DỊCH VỤ TƯ VẤN</li>
-        <li> <a href="/vekiel.html">VỀ KIEHL'S</a> </li>
+        <li> <a href="../vekiel.html">VỀ KIEHL'S</a> </li>
     </ul>
 </div>
 </div>
