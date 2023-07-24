@@ -130,6 +130,7 @@
             </div>
             <div class="row total-tomtat">
                 <p class="col-6">Phí vận chuyển</p>
+                <p class="col-6 --sp-tomtat end-tomtat">0đ</p>
             </div>
             <div class="row total-tomtat">
                 <p class="col-6 end-tomtat">Tổng tạm tính</p>
