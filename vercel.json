@@ -1,6 +1,6 @@
 {
     "routes": [
-      { "src": "/", "dest": "/vi_VN/offers-page.html.html" }
+      { "src": "/vi_VN/offers-page.html.html", "dest": "/vi_VN/offers-page.html.html" }
     ]
   }
   
