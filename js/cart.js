@@ -256,60 +256,86 @@ let total = 0;
 
 function increaseQuantity(key) {
   const quantityInput = document.getElementById(`quantity-input-${key}`);
-  const quantity = parseInt(quantityInput.value);
-  const newQuantity = quantity + 1;
-  quantityInput.value = newQuantity;
+  let quantity = parseInt(quantityInput.value);
+  quantity++;
+  quantityInput.value = quantity;
 
   // Update the cart in localStorage with the new quantity
   const cart = JSON.parse(localStorage.getItem("selectedItems"));
-  cart[key].quantity = newQuantity;
-  cart[key].price = (cart[key].price/quantity * newQuantity)
+  cart[key].quantity = quantity;
+  cart[key].price = cart[key].price / (quantity - 1) * quantity;
   localStorage.setItem("selectedItems", JSON.stringify(cart));
 
   // Update the total price on the page
-  updateTotalPrice(key);
+  updateTotalPrice();
+  updateItemPrice(key);
 }
 
 function decreaseQuantity(key) {
   const quantityInput = document.getElementById(`quantity-input-${key}`);
-  const quantity = parseInt(quantityInput.value);
+  let quantity = parseInt(quantityInput.value);
   if (quantity > 1) {
-    const newQuantity = quantity - 1;
-    quantityInput.value = newQuantity;
+    quantity--;
+    quantityInput.value = quantity;
 
     // Update the cart in localStorage with the new quantity
     const cart = JSON.parse(localStorage.getItem("selectedItems"));
-    cart[key].quantity = newQuantity;
-    cart[key].price = (cart[key].price/quantity * newQuantity)
+    cart[key].quantity = quantity;
+    cart[key].price = cart[key].price / (quantity + 1) * quantity;
     localStorage.setItem("selectedItems", JSON.stringify(cart));
 
     // Update the total price on the page
-    updateTotalPrice(key);
+    updateTotalPrice();
+    updateItemPrice(key);
   }
 }
-function updateTotalPrice(key) {
-  const cart = JSON.parse(localStorage.getItem("selectedItems"));
-  let totals = 0;
-  let itemPrice
-  let itemQuantity
-  Object.values(cart).forEach(item => {
-    itemPrice = parseInt(item.price);
-    itemQuantity = parseInt(item.quantity);
-    totals += itemPrice;
-  });
-  
-  const totalItem = document.querySelector(`.price-${key} h2`);
-  totalItem.textContent = formatCurrency(itemPrice);
-  const totalCart = document.querySelector('.tamtinh1')
-  const totalCart2 = document.querySelector('.tamtinh2')
-  console.log(totals);
-  totalCart.textContent = formatCurrency(totals)
-  totalCart2.textContent = formatCurrency(totals)
 
- 
+function updateItemPrice(key) {
+  const cart = JSON.parse(localStorage.getItem("selectedItems"));
+  const item = cart[key];
+  const itemPrice = item.price;
+  const formattedPrice = formatCurrency(itemPrice);
+  const totalItem = document.querySelector(`.price-${key} h2`);
+  totalItem.textContent = formattedPrice;
 }
 
-if (cart.length ) {
+function updateTotalPrice() {
+  const cart = JSON.parse(localStorage.getItem("selectedItems"));
+  let total = 0;
+
+  Object.values(cart).forEach(item => {
+    const itemPrice = parseInt(item.price);
+    
+    total += itemPrice ;
+  });
+
+  const totalCart = document.querySelector('.tamtinh1');
+  const totalCart2 = document.querySelector('.tamtinh2');
+  totalCart.textContent = formatCurrency(total);
+  totalCart2.textContent = formatCurrency(total);
+}
+
+
+
+const deleteCart = (key) => {
+  let cart = JSON.parse(localStorage.getItem("selectedItems"));
+
+  // for (let i = 0; i < cart.length; i++) {
+  //   if (cart[i].name.trim() == name) {
+  //     cart.splice(i, 1);
+  //   }
+  // }
+  Object.entries(cart).map(([key , value]) =>{
+    cart.splice(key , 1)
+  })
+  localStorage.setItem("selectedItems", JSON.stringify(cart));
+
+  setTimeout(function () {
+    window.location.reload();
+  }, 100);
+};
+
+if (cart.length > 0 && cart != null) {
   Object.entries(cart).map(([key, value]) => {
     total += parseInt(value.price);
     carts.innerHTML += `
@@ -323,7 +349,7 @@ if (cart.length ) {
                 <div class="--cart">
                     <p>Chỉnh sửa</p>
                     <p>Thêm vào danh sách</p>
-                    <p  class="cancle">Bỏ</p>
+                    <p  class="cancle" onclick="deleteCart(${key})">Bỏ</p>
                 </div>
               </div>
               <div class="col-6 col-md-2 add-cart">

@@ -50,21 +50,282 @@ headerDesktop.innerHTML += `
 </div>
 <div class="top-bot ">
     <ul>
-        <li> <a href="${checkPage() ? '#tang1' : '/vi_vn-offers-page.html'}"> 🎁 KHUYẾN MÃI</a></li>
-        <li class="san-pham-ban-chay"> <a href="${checkPage() ? '#combo2' : '/vi_vn-offers-page.html'}">❤️ MỚI & BÁN CHẠY</a> </li>
-        <li> <a href="${checkPage() ? '#combo3' : '/vi_vn-offers-page.html'}">SET ƯU ĐÃI</a> </li>
-        <li>DƯỠNG DA</li>
-        <li>CHĂM SÓC CƠ THỂ</li>
-        <li>CHĂM SÓC TÓC</li>
-        <li>DÀNH CHO NAM</li>
-        <li>DỊCH VỤ TƯ VẤN</li>
-        <li> <a href="/vekiel.html">VỀ KIEHL'S</a> </li>
+        <li  > <a href="${checkPage() ? '#tang1' : '/vi_vn-offers-page.html'}"> 🎁 KHUYẾN MÃI</a></li>
+        <li class="san-pham-ban-chay submenu-trigger" data-submenu="submenu-1"> <a href="${checkPage() ? '#combo2' : '/vi_vn-offers-page.html'}">❤️ MỚI & BÁN CHẠY</a> </li>
+        <li class="submenu-trigger" data-submenu="submenu-2"> <a href="${checkPage() ? '#combo3' : '/vi_vn-offers-page.html'}">SET ƯU ĐÃI</a> </li>
+        <li class="submenu-trigger" data-submenu="submenu-3">DƯỠNG DA</li>
+        <li class="submenu-trigger" data-submenu="submenu-4">CHĂM SÓC CƠ THỂ</li>
+        <li class="submenu-trigger" data-submenu="submenu-5">CHĂM SÓC TÓC</li>
+        <li class="submenu-trigger" data-submenu="submenu-6">DÀNH CHO NAM</li>
+        <li class="submenu-trigger" data-submenu="submenu-7">DỊCH VỤ TƯ VẤN</li>
+        <li class="submenu-trigger" data-submenu="submenu-8"> <a href="/vekiel.html">VỀ KIEHL'S</a> </li>
     </ul>
+    
+</div>
+</div>
+<div class="sub-menu-container">
+   <div class="sub-menu" id="submenu-1">
+      <div class="container">
+         <div class="row">
+            <div class="col-3">
+               <h5>MỚI</h5>
+               <ul>
+                  <li>Sản Phẩm Bán Chạy</li>
+                  <li>Sản Phẩm Mới</li>
+               </ul>
+            </div>
+            <div class="col-3">
+               <img src="../img/topnav-about-us-ingredients-810x600.jpg"  width="100%" height="200px"/>
+               <h4>SẢN PHẨM BÁN CHẠY</h4>
+            </div>
+            <div class="col-3">
+               <img src="../img/TOPNAVI.jpg" width="100%" height="200px"/>
+               <h4>MỚI: BỘ 3 DƯỠNG CHẤT DƯỠNG DA PURE SERUM</h4>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="sub-menu" id="submenu-2">
+      <div class="container">
+         <div class="row">
+            <div class="col-3">
+               <h5>SET ƯU ĐÃI</h5>
+               <ul>
+                  <li>Tất cả</li>
+                  <li>Quà Cho Nàng</li>
+                  <li>Quà Cho Chàng</li>
+               </ul>
+            </div>
+            <div class="col-3">
+               <h5>THEO GIÁ TRỊ</h5>
+               <ul>
+                  <li>Dưới 1 triệu</li>
+                  <li>Trên 1 triệu</li>
+                  <li>Trên 2 triệu</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="sub-menu" id="submenu-3">
+      <div class="container">
+         <div class="row-5">
+            <div class="item-row-5">
+               <h5>DANH MỤC</h5>
+               <ul>
+                  <li>Tất Cả</li>
+                  <li>Sữa Rửa Mặt & Làm Sạch Tế Bào Da Chết</li>
+                  <li>Nước Cân Bằng</li>
+                  <li>Dướng Mắt</li>
+                  <li>Tinh Chất</li>
+                  <li>Giải Pháp Giảm Mụn</li>
+                  <li>Tinh Chất Dưỡng Dạng Dầu</li>
+                  <li>Dưỡng Ẩm</li>
+                  <li>Mặt Nạ</li>
+                  <li>Chống Nắng</li>
+                  <li>Dưỡng Môi</li>
+               </ul>
+            </div>
+            <div class="item-row-5">
+               <h5>LOẠI DA</h5>
+               <ul>
+                  <li>Da Khô</li>
+                  <li>Da Dầu</li>
+                  <li>Da Thường</li>
+                  <li>Da Hỗn Hợp</li>
+                  <li>Da Nhạy Cảm</li>
+               </ul>
+            </div>
+            <div class="item-row-5">
+               <h5>VẤN ĐỀ VỀ DA</h5>
+               <ul>
+                  <li>Chăm Sóc Da Dầu Mụn</li>
+                  <li>Ngăn Ngừa Lão Hóa</li>
+                  <li>Nâng & Săn Chắc Da</li>
+                  <li>Đốm Nâu & Thâm Nám</li>
+                  <li>Lỗ Chân Lông To</li>
+                  <li>Da Không Đều Màu</li>
+                  <li>Nếp Nhắn & Đường Nhăn Mảnh</li>
+                  <li>Da Xỉn Màu</li>
+               </ul>
+            </div>
+            <div class="item-row-5">
+               <h5>DÒNG SẢN PHẨM</h5>
+               <ul>
+                  <li>Calendula</li>
+                  <li>Clearly Corrective Collection</li>
+                  <li>Retinol</li>
+                  <li>Dermatologist Solutions™</li>
+                  <li>Rare Earth</li>
+                  <li>Ultra Facial</li>
+                  <li>Ultra Facial Oil-Free</li>
+                  <li>Midnight Recovery</li>
+                  <li>Powerful-Strength Line-Reducing</li>
+                  <li>Powerful Wrinkle Reducing</li>
+                  <li>Super Multi-Corrective</li>
+                  <li>Blue Herbal</li>
+               </ul>
+            </div>
+            <div class="item-row-5">
+               <img src="../img/Topnav_retinol.jpg" width="100%" height="200px"/>
+               <h4>RETINOL GIÚP TÁI TẠO DA TỐI ƯU</h4>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="sub-menu" id="submenu-4">
+      <div class="container">
+         <div class="row">
+            <div class="col-3">
+               <h5>DANH MỤC</h5>
+               <ul>
+                  <li>Tất cả</li>
+                  <li>Sữa Tắm & Tẩy Tế Bào Chết</li>
+                  <li>Dưỡng Thể</li>
+                  <li>Dưỡng Da Tay</li>
+                  <li>Nước Hoa</li>
+                  <li>Mẹ & Bé</li>
+                  <li>Vệ Sinh Và Khử Mùi</li>
+               </ul>
+            </div>
+            <div class="col-3">
+               <h5>DÒNG SẢN PHẨM</h5>
+               <ul>
+                  <li>Creme de Corps</li>
+                  <li>Musk</li>
+                  <li>Ultimate Strength Hand Salve</li>
+               </ul>
+            </div>
+            <div class="col-3">
+            <img src="../img/topnav-cdc-810x600.jpg" width="100%" height="200px"/>
+            <h4>BỘ SƯU TẬP CREME DE CORPS</h4>
+         </div>
+         </div>
+      </div>
+   </div>
+   <div class="sub-menu" id="submenu-5">
+      <div class="container">
+         <div class="row">
+            <div class="col-3">
+               <h5>DANH MỤC</h5>
+               <ul>
+                  <li>Tất cả</li>
+                  <li>Dầu Gội</li>
+                  <li>Dầu Xả</li>
+                  <li>Tạo Kiểu Tóc</li>
+                  <li>Dưỡng Tóc</li>
+                  
+               </ul>
+            </div>
+            <div class="col-3">
+               <h5>VẤN ĐỀ VỀ TÓC</h5>
+               <ul>
+                  <li>Tóc Nhuộm</li>
+                  <li>Da Đầu Khô & Gàu</li>
+                  <li>Tóc Mỏng, Thưa & Hư tổn</li>
+                  <li>Tóc Thường</li>
+                  <li>Tóc Khô</li>
+               </ul>
+            </div>
+            <div class="col-3">
+            <h5>DÒNG SẢN PHẨM</h5>
+            <ul>
+               <li>Amino Acid</li>
+               <li>Olive Fruit Oil</li>
+               <li>Sunflower Color Preserve</li>
+               <li>Rice and Wheat</li>
+               <li>Stylist Series</li>
+            </ul>
+         </div>
+            <div class="col-3">
+            <img src="../img/topnav-amino-acid-810x600.jpg" width="100%" height="200px"/>
+            <h4>BỘ SƯU TẬP AMINO ACID</h4>
+         </div>
+         </div>
+      </div>
+   </div>
+   <div class="sub-menu" id="submenu-6">
+      <div class="container">
+         <div class="row">
+            <div class="col-3">
+               <h5>DANH MỤC</h5>
+               <ul>
+                  <li>Tất cả</li>
+                  <li>Sản Phẩm Bán Chạy</li>
+                  <li>Sữa Rửa Mặt</li>
+                  <li>Cạo Râu</li>
+                  <li>Dưỡng Ẩm</li>
+                  <li>Dưỡng Thể & Khử Mùi</li>
+                  <li>Tạo Kiểu</li>
+                  <li>Dưỡng Mắt & Môi</li>
+               </ul>
+            </div>
+            <div class="col-3">
+               <h5>SẢN PHẨM CHO NAM</h5>
+               <ul>
+                  <li>Age Defender</li>
+                  <li>Facial Fuel</li>
+                  <li>Ultra Facial</li>
+                  <li>Ultra Facial Oil-Free</li>
+                  <li>Men’s Grooming Solution</li>
+                  <li>Men's Oil Eliminator</li>
+               </ul>
+            </div>
+
+            <div class="col-3">
+            <img src="../img/topnav-mens-bestsellers-810x600.jpg" width="100%" height="200px"/>
+            <h4>SẢN PHẨM BÁN CHẠY</h4>
+         </div>
+         </div>
+      </div>
+   </div>
+   <div class="sub-menu" id="submenu-7">
+   <div class="container">
+      <div class="row">
+         <div class="col-3">
+            <h5>DỊCH VỤ</h5>
+            <ul>
+               <li>Kiehl's Instant Skin Reader</li>
+            </ul>
+         </div>
+         
+
+         <div class="col-3">
+         <img src="../img/kie_skin_multi_beautyreader_launch21_KISR_TopNav_Web_810x600 (1).jpg" width="100%" height="200px"/>
+         <h4>CÔNG NGHỆ SOI DA KIEHL'S INSTANT SKIN READER</h4>
+      </div>
+      </div>
+   </div>
 </div>
 
 
+<div class="sub-menu" id="submenu-8">
+<div class="container">
+   <div class="row">
+      <div class="col-3">
+         <h5>VỀ KIEHL'S</h5>
+         <ul>
+            <li>Lịch Sử Hình Thành</li>
+            <li>Phát Triển Bền Vững</li>
+            <li>Thành Phần</li>
+            <li>Chương Trình Thiện Nguyện</li>
+            <li>Kiehl's Blogs</li>
+            <li>Da khô là gì</li>
+         </ul>
+      </div>
+      
+      <div class="col-3">
+      <img src="../img/topnav-about-us-ingredients-810x600.jpg" width="100%" height="200px"/>
+      <h4>THÀNH PHẦN</h4>
+   </div>
+      <div class="col-3">
+      <img src="../img//Topnav_KHL-BLOGS.jpg" width="100%" height="200px"/>
+      <h4>KIEHL'S BLOGS</h4>
+   </div>
+   </div>
 </div>
-
+</div>
+</div>
 
 `
 header.innerHTML += `
@@ -160,12 +421,12 @@ btnClose.addEventListener('click' , ()=>{
 
 
 
-const btnGiam10 = document.querySelector('.popup-giam10')
-const popup = document.querySelector('.popup-main-giam10')
-btnGiam10.addEventListener('click',()=>{
-    popup.classList.toggle('visible')
-    overlays.classList.toggle('active-overlay');
-})
+// const btnGiam10 = document.querySelector('.popup-giam10')
+// const popup = document.querySelector('.popup-main-giam10')
+// btnGiam10.addEventListener('click',()=>{
+//     popup.classList.toggle('visible')
+//     overlays.classList.toggle('active-overlay');
+// })
 
 
 $(document).ready(function() {
@@ -209,13 +470,47 @@ $(document).ready(function() {
     });
   });
   
-  const subMenu = document.querySelector(".sub-menu");
-  const sanPhamBanChayLi = document.querySelector("li.san-pham-ban-chay");
-  
-  sanPhamBanChayLi.addEventListener("mouseover", () => {
-    subMenu.classList.remove("hidden");
+
+
+
+
+
+// Lấy tất cả các submenu-trigger li
+const submenuTriggers = document.querySelectorAll('.submenu-trigger');
+
+// Lấy tất cả các submenu
+const submenus = document.querySelectorAll('.submenu');
+
+// Lưu submenu hiện tại đang hoạt động
+let activeSubmenu = null;
+
+// Thêm event listener cho từng submenu-trigger li
+submenuTriggers.forEach((trigger) => {
+  trigger.addEventListener('mouseenter', () => {
+    // Ẩn submenu hiện tại đang hoạt động (nếu có)
+    if (activeSubmenu) {
+      activeSubmenu.style.display = 'none';
+      
+    }
+
+    // Lấy data-submenu của li đang hover
+    const submenuId = trigger.getAttribute('data-submenu');
+
+    // Hiển thị submenu tương ứng
+    activeSubmenu = document.getElementById(submenuId);
+    if (activeSubmenu) {
+      activeSubmenu.style.display = 'block';
+      headerDesktop.style.paddingBottom = '0px'
+      
+    }
   });
-  
-  sanPhamBanChayLi.addEventListener("mouseout", () => {
-    subMenu.classList.add("hidden");
+
+  // Thêm event listener để ẩn submenu khi rời chuột khỏi li
+  trigger.addEventListener('mouseleave', () => {
+    if (activeSubmenu) {
+      activeSubmenu.style.display = 'none';
+      headerDesktop.style.paddingBottom = '5px'
+      activeSubmenu = null;
+    }
   });
+});

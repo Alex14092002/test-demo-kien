@@ -199,7 +199,7 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
     const selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || [];
     const productName = data.nameSheet;
     const existingItemIndex = selectedItems.findIndex((item) => item.name === productName);
-    const pricePopup = document.querySelector('.pricePopup')
+    const pricePopup = document.querySelector('.pricePopup h2')
     if (existingItemIndex !== -1) {
       selectedItems[existingItemIndex].quantity = quantity;
       selectedItems[existingItemIndex].price = data.price * quantity;
@@ -489,6 +489,7 @@ function getChunkSize2() {
   const data3 = await res3.json();
   const data4  = await res4.json();
   const data5 = await res5.json();
+  console.log(data);
   const productsChunks = chunkArray(Object.entries(data), getChunkSize2());
   productsChunks.forEach((products, index) => {
     const sliderId = `slider-${index}`;

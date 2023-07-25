@@ -17,6 +17,9 @@ body{
    
     color: #fff;
 }
+.cancle{
+  cursor: pointer;
+}
 .check-data{
   display: none;
   margin-bottom: 0;
@@ -1409,22 +1412,29 @@ body{
   height: 60px !important;
 }
 .sub-menu{
-  width: 100%;
-  position: absolute;
-  top: 1.9%;
-  left: 0;
   z-index: 10000;
-  background-color: #fff;
-  padding: 40px 0;
+  background-color: #f8f8f8;
+  padding: 40px 0 0px 0;
+  display: none;
+  border-bottom: #797979 1px solid;
+  
+}
+.row-5{
+  display: flex;
+
+}
+.item-row-5{
+  width: 20%;
 }
 .sub-menu h5{
-  font-size: 16px;
+  font-size: 0.75rem;
   font-family: 'Roboto' ,serif;
 }
 .sub-menu ul{
   padding-left: 0;
   list-style: none;
-  font-size: 14px;
+  line-height: 30px;
+  font-size: 0.75rem;
 
 }
 .sub-menu h4{
@@ -1439,7 +1449,16 @@ body{
     }
 
 }
+@media(max-width : 1400px){
+  .sub-menu{
+    top: 2.1%;
+  }
+}
 @media(max-width : 700px){
+ 
+  .--cart{
+    display: block;
+  }
   .banner-vekieh-desktop{
     display: none;
   }
