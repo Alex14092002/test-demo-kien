@@ -512,6 +512,8 @@ function getChunkSize2() {
     const sliderContainer = document.createElement('div');
     sliderContainer.className = 'slider-product';
     sliderContainer.id = sliderId;
+
+    
     products.forEach(([key, value]) => {
       sliderContainer.innerHTML += `
        
@@ -519,7 +521,7 @@ function getChunkSize2() {
       <div class="img-product">
          <img src="${value.img1}" alt="" width="100%">
          <div class="img-hover mini-product">
-         <a class="link-buy-nhanh" href="../chitietsp.html?catelory=homeproduct&key=${key}">
+         <a class="link-buy-nhanh" href="../chitietsp.html?catelory=mua1tang1&key=${key}">
          <img src="${value.img2}" alt="" width="100%">
          </a>
             
@@ -598,15 +600,25 @@ function getChunkSize2() {
     const sliderContainer = document.createElement('div');
     sliderContainer.className = 'slider-product';
     sliderContainer.id = sliderId;
-
+    let maxHeight = 0;
     products.forEach(([key, value]) => {
+      const descriptionHeight = value.subcibe.split('\n').length;
+      if (descriptionHeight > maxHeight && descriptionHeight < 5) {
+        maxHeight = descriptionHeight;
+      } else {
+        maxHeight = descriptionHeight + 2;
+      }
+    });
+   
+    products.forEach(([key, value]) => {
+    
       sliderContainer.innerHTML += `
         <div class="item-product-home">
         <div class="item-product-home" >
         <div class="img-product">
           <img src="${value.img1}" alt="" width="100%">
           <div class="img-hover mini-product">
-          <a class="link-buy-nhanh" href="../chitietsp.html?catelory=homeproduct&key=${key}">
+          <a class="link-buy-nhanh" href="../chitietsp.html?catelory=combo2&key=${key}">
           <img src="${value.img2}" alt="" width="100%">
           </a>
              
@@ -622,7 +634,7 @@ function getChunkSize2() {
        
     
       <div class="subcribe ">
-        <textarea class="myTextarea" readonly rows="9" cols="auto">${value.subcibe}</textarea>
+        <textarea class="myTextarea" readonly rows="${maxHeight}" cols="auto">${value.subcibe}</textarea>
       </div>
       <div class="heart">
         <i class="fa fa-heart" aria-hidden="true"></i>
@@ -690,6 +702,15 @@ function getChunkSize2() {
     const sliderContainer = document.createElement('div');
     sliderContainer.className = 'slider-product';
     sliderContainer.id = sliderId;
+    let maxHeight = 0;
+    products.forEach(([key, value]) => {
+      const descriptionHeight = value.subcibe.split('\n').length;
+      if (descriptionHeight > maxHeight && descriptionHeight < 5) {
+        maxHeight = descriptionHeight;
+      } else {
+        maxHeight = descriptionHeight + 4;
+      }
+    });
     products.forEach(([key, value]) => {
       sliderContainer.innerHTML += `
         <div class="item-product-home">
@@ -697,7 +718,7 @@ function getChunkSize2() {
         <div class="img-product">
           <img src="${value.img1}" alt="" width="100%">
           <div class="img-hover mini-product">
-          <a class="link-buy-nhanh" href="../chitietsp.html?catelory=homeproduct&key=${key}">
+          <a class="link-buy-nhanh" href="../chitietsp.html?catelory=combo3&key=${key}">
           <img src="${value.img2}" alt="" width="100%">
           </a>
              
@@ -713,7 +734,7 @@ function getChunkSize2() {
        
     
       <div class="subcribe ">
-      <textarea class="myTextarea" readonly rows="10" cols="0">${value.subcibe}</textarea>
+      <textarea class="myTextarea" readonly rows="${maxHeight}" cols="0">${value.subcibe}</textarea>
       </div>
       <div class="heart">
         <i class="fa fa-heart" aria-hidden="true"></i>
