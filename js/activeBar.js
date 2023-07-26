@@ -1,6 +1,7 @@
 let selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || []
 const header = document.querySelector('.header-mobile')
 const headerDesktop = document.querySelector('.header-desktop')
+const sibar = document.querySelector('.sibar-mobile')
 
 let param = window.location.pathname
 const checkPage = () =>{
@@ -12,7 +13,56 @@ const checkPage = () =>{
     }
 }
 checkPage()
-console.log(param);
+
+
+header.innerHTML += `
+<div class="nav-mobile">
+<div class="map-mobile">
+    <i class="fa fa-map-marker" aria-hidden="true"></i>
+</div>
+<div class="logo-mobile">
+    <a href="../vi_vn-offers-page.html">
+    <img src="./img/logo.png" alt="" width="150px">
+    </a>
+    
+</div>
+<div class="right-mobile">
+<a href="../cart.html">
+<div class="cart-mobile">
+        <img src="./img/bag.svg" alt="" width="25px">
+        <span>${selectedItems.length}</span>
+    </div>
+</a>
+    
+    <div class="menu">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+</div>
+</div>  
+
+<div class="input-search-mobile">
+<input type="text" name="" id="" placeholder="Tôi đang tìm kiếm...">
+</div>
+
+
+<div class="list-menu-mobile">
+<ul>
+    
+<li> <a href="${checkPage() ? '#tang1' : '/vi_vn-offers-page.html'}"> 🎁 KHUYẾN MÃI</a></li>
+<li> <a href="${checkPage() ? '#combo2' : '/vi_vn-offers-page.html'}">❤️ MỚI & BÁN CHẠY</a> </li>
+<li> <a href="${checkPage() ? '#combo3' : '/vi_vn-offers-page.html'}">SET ƯU ĐÃI</a> </li>
+    <li>DƯỠNG DA</li>
+    <li>CHĂM SÓC CƠ THỂ</li>
+    <li>CHĂM SÓC TÓC</li>
+    <li>DÀNH CHO NAM</li>
+    <li>DỊCH VỤ TƯ VẤN</li>
+    <li> <a href="/vekiel.html">VỀ KIEHL'S</a> </li>
+</ul>
+</div>
+
+
+
+`
 headerDesktop.innerHTML += `
 <div class="container">
 <div class="top-header ">    
@@ -328,52 +378,7 @@ headerDesktop.innerHTML += `
 </div>
 
 `
-header.innerHTML += `
-<div class="nav-mobile">
-<div class="map-mobile">
-    <i class="fa fa-map-marker" aria-hidden="true"></i>
-</div>
-<div class="logo-mobile">
-    <a href="../vi_vn-offers-page.html">
-    <img src="./img/logo.png" alt="" width="150px">
-    </a>
-    
-</div>
-<div class="right-mobile">
-<a href="../cart.html">
-<div class="cart-mobile">
-        <img src="./img/bag.svg" alt="" width="25px">
-        <span>${selectedItems.length}</span>
-    </div>
-</a>
-    
-    <div class="menu">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-</div>
-</div>  
-
-<div class="input-search-mobile">
-<input type="text" name="" id="" placeholder="Tôi đang tìm kiếm...">
-</div>
-
-
-<div class="list-menu-mobile">
-<ul>
-    
-<li> <a href="${checkPage() ? '#tang1' : '/vi_vn-offers-page.html'}"> 🎁 KHUYẾN MÃI</a></li>
-<li> <a href="${checkPage() ? '#combo2' : '/vi_vn-offers-page.html'}">❤️ MỚI & BÁN CHẠY</a> </li>
-<li> <a href="${checkPage() ? '#combo3' : '/vi_vn-offers-page.html'}">SET ƯU ĐÃI</a> </li>
-    <li>DƯỠNG DA</li>
-    <li>CHĂM SÓC CƠ THỂ</li>
-    <li>CHĂM SÓC TÓC</li>
-    <li>DÀNH CHO NAM</li>
-    <li>DỊCH VỤ TƯ VẤN</li>
-    <li> <a href="/vekiel.html">VỀ KIEHL'S</a> </li>
-</ul>
-</div>
-
-
+sibar.innerHTML += `
 <div class="bar-mobile">
 <h5>ĐĂNG NHẬP HOẶC ĐĂNG KÝ</h5>
 <ul>
@@ -395,10 +400,13 @@ header.innerHTML += `
     <li><i class="fa fa-map-marker" aria-hidden="true"></i> Vị trí cửa hàng</li>
     <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i>CHĂM SÓC KHÁCH HÀNG</li>
 </ul>
+
+</div>
+
 <div class="btn-closes">
-    <button>X</button>
+<button>X</button>
 </div>
-</div>
+
 `
 
 
@@ -406,27 +414,25 @@ header.innerHTML += `
 const btnOpen = document.querySelector('.menu i')
 const bar = document.querySelector('.bar-mobile')
 const btnClose = document.querySelector('.btn-closes button')
+const btnCloses = document.querySelector('.btn-closes')
+
 const overlays = document.createElement('div');
 overlays.classList.add('overlay');
 document.body.appendChild(overlays);
-console.log(btnOpen , bar);
+
 btnOpen.addEventListener('click', ()=>{
     bar.classList.toggle('active-mobile-bar')
+    btnCloses.style.display = 'block'
     overlays.classList.toggle('active-overlay');
 })
 btnClose.addEventListener('click' , ()=>{
     bar.classList.remove('active-mobile-bar')
     overlays.classList.toggle('active-overlay');
+    btnCloses.style.display = 'none'
 })
 
 
 
-// const btnGiam10 = document.querySelector('.popup-giam10')
-// const popup = document.querySelector('.popup-main-giam10')
-// btnGiam10.addEventListener('click',()=>{
-//     popup.classList.toggle('visible')
-//     overlays.classList.toggle('active-overlay');
-// })
 
 
 $(document).ready(function() {
@@ -449,28 +455,6 @@ $(document).ready(function() {
     });
   });
   
-
-  $(document).ready(function() {
-    var lastScrollTop = 0;
-  
-    $(window).on('scroll', function() {
-      var scrollPosition = $(this).scrollTop();
-      if (scrollPosition < lastScrollTop) {
-        $('.header-mobile').addClass('ghim');
-      } else {
-        $('.header-mobile').removeClass('ghim');
-      }
-  
-      // Kiểm tra khi cuộn lên đầu trang (0), sẽ bỏ ghim
-      if (scrollPosition === 0) {
-        $('.header-mobile').removeClass('ghim');
-      }
-  
-      lastScrollTop = scrollPosition;
-    });
-  });
-  
-
 
 
 
@@ -514,3 +498,5 @@ submenuTriggers.forEach((trigger) => {
     }
   });
 });
+
+

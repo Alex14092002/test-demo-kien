@@ -469,12 +469,13 @@ body{
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #fff;
+    z-index: 1020;
+    display: none;
   }
   
   .bar-mobile {
     width: 85%;
- 
+    z-index: 2000;
     top: 0;
     right: 0;
     background-color: #fff;
@@ -489,8 +490,9 @@ body{
   
   .btn-closes button {
     padding: 0px 80%;
-    background-color: #000;
+   background-color: inherit;
     color: #fff;
+    font-weight: 600;
     border: none;
     font-size: 30px;
   }
@@ -1318,6 +1320,22 @@ body{
    font-family: 'Roboto' ,serif;
    font-weight: 600;
 } 
+#myTextarea{
+  width: 100% ;
+  border: none;
+  resize: none;
+     font-size: .875rem;
+    font-family: 'Amiri', serif;
+     color: #000 !important;
+   font-weight: 400;
+   font-style: italic;
+   text-align: center;
+  overflow-y: hidden;
+  will-change: contents !important;
+}
+#myTextarea:focus{
+  outline: none !important;
+}
 .item-sp-tomtat{
   padding: 10px 0;
   
@@ -1547,7 +1565,7 @@ body{
         background-color: #000;
         display: block;
         width: 100%;
-        z-index: 500000;
+        z-index: 1000 !important;
     }
     .list-menu-mobile{
         overflow-x: auto;
@@ -1590,6 +1608,7 @@ body{
     .map-mobile{
         font-size: 20px;
         color: #fff;
+        z-index: 1;
     }
     .nav-mobile{
         display: flex;

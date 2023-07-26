@@ -317,17 +317,13 @@ function updateTotalPrice() {
 
 
 
-const deleteCart = (key) => {
+const deleteCart = (keys) => {
   let cart = JSON.parse(localStorage.getItem("selectedItems"));
-
-  // for (let i = 0; i < cart.length; i++) {
-  //   if (cart[i].name.trim() == name) {
-  //     cart.splice(i, 1);
-  //   }
-  // }
-  Object.entries(cart).map(([key , value]) =>{
-    cart.splice(key , 1)
-  })
+  console.log(typeof cart);
+ 
+    cart.splice(keys , 1)
+    console.log(keys);
+ 
   localStorage.setItem("selectedItems", JSON.stringify(cart));
 
   setTimeout(function () {
@@ -335,7 +331,7 @@ const deleteCart = (key) => {
   }, 100);
 };
 
-if (cart.length > 0 && cart != null) {
+if (cart.length > 0) {
   Object.entries(cart).map(([key, value]) => {
     total += parseInt(value.price);
     carts.innerHTML += `

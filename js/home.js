@@ -167,6 +167,8 @@ localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
 
 
 
+
+
   var swiper = new Swiper(".mySwiper", {
       loop: true,
       spaceBetween: 10,
@@ -194,7 +196,7 @@ localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
 }
 const popupCart = document.querySelector('.popup-themgiohang');
 const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
-  let priceItem
+
   const updateLocalStorage = () => {
     const selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || [];
     const productName = data.nameSheet;
@@ -272,9 +274,23 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
 
   const closeCart = document.querySelector('.close-popup-cart');
   closeCart.addEventListener('click', () => {
+    const selectedItems = JSON.parse(localStorage.getItem('selectedItems')) || [];
+    const productName = data.nameSheet;
+  
+    // Filter out the product that matches the name of the current popup from the localStorage
+    const updatedItems = selectedItems.filter(item => item.name !== productName);
+  
+    // Update the localStorage with the filtered items
+    localStorage.setItem('selectedItems', JSON.stringify(updatedItems));
+  
+    // Update the cart length indicator
+    document.querySelector('.cart span').textContent = `GIỎ HÀNG (${updatedItems.length})`;
+    document.querySelector('.cart-mobile span').textContent = `${updatedItems.length}`;
+  
     popupCart.classList.remove('open-popup-cart');
     overlay.classList.toggle('active-overlay');
   });
+  
   const tieptuc = document.querySelector('.tieptuc')
   tieptuc.addEventListener('click', ()=>{
     popupCart.classList.remove('open-popup-cart');
@@ -478,7 +494,7 @@ function getChunkSize2() {
     return 3;
   }
 }
-  (async () => {
+(async () => {
   const res = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/mua1tang1.json`);
   const res2 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/combo2.json`);
   const res3 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/combo3.json`);
@@ -489,7 +505,7 @@ function getChunkSize2() {
   const data3 = await res3.json();
   const data4  = await res4.json();
   const data5 = await res5.json();
-  console.log(data);
+
   const productsChunks = chunkArray(Object.entries(data), getChunkSize2());
   productsChunks.forEach((products, index) => {
     const sliderId = `slider-${index}`;
@@ -582,6 +598,7 @@ function getChunkSize2() {
     const sliderContainer = document.createElement('div');
     sliderContainer.className = 'slider-product';
     sliderContainer.id = sliderId;
+    sliderContainer.innerHTML = '';
     products.forEach(([key, value]) => {
       sliderContainer.innerHTML += `
         <div class="item-product-home">
@@ -605,7 +622,7 @@ function getChunkSize2() {
        
     
       <div class="subcribe ">
-        <p>${value.subcibe}</p>
+        <textarea id="myTextarea" readonly rows="4" cols="auto">${value.subcibe}</textarea>
       </div>
       <div class="heart">
         <i class="fa fa-heart" aria-hidden="true"></i>
@@ -696,7 +713,7 @@ function getChunkSize2() {
        
     
       <div class="subcribe ">
-        <p>${value.subcibe}</p>
+      <textarea id="myTextarea" readonly rows="4" cols="auto">${value.subcibe}</textarea>
       </div>
       <div class="heart">
         <i class="fa fa-heart" aria-hidden="true"></i>
@@ -954,7 +971,8 @@ function getChunkSize2() {
     showPopupCart(data, existingProduct ? existingProduct.quantity : quantity, existingProduct ? existingProduct.price : data.price);
     popupCart.classList.add('open-popup-cart');
     overlay.classList.add('active-overlay');
-    document.querySelector('.cart span').textContent = `GIỎ HÀNG (${selectedItems.length})`
+    document.querySelector('.cart span').textContent = `GIỎ HÀNG (${cartLength})`
+    document.querySelector('.cart-mobile span').textContent = `${cartLength}`
   };
   
   addToCartButtons.forEach(button => {
@@ -964,6 +982,9 @@ function getChunkSize2() {
         addToCart(category, key)
       });
   });
-  })();
+
+  
 })();
 
+
+})();
