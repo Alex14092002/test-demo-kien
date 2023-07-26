@@ -95,7 +95,7 @@ const showPopup = async ( product , key) =>{
         </div>
         <div class="col-9 gift-popup">
           <h5>${value.name}</h5>
-          <p>${value.mota}</p>
+          
           <span>${value.dungtich}</span> <br>
           <span>Số lượng: ${value.soluong}</span>
         </div>
