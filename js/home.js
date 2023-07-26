@@ -353,7 +353,7 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
 
     <div class="container">
         <div class="banner-5" id="tang1">
-            <img src="${data.banner7}" alt="" width="100%" >
+            <img class="banner-special" src="${data.banner7}" alt="" width="100%" >
         </div>
      
       <div class="slider-product" >
@@ -364,7 +364,7 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
 
     <div class="container">
         <div class="banner-5" id="combo2">
-        <img src="${data.banner8}" alt="" width="100%">
+        <img class="banner-special" src="${data.banner8}" alt="" width="100%">
         </div>
         <div class="slider-product" >
 
@@ -374,7 +374,7 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
 
     <div class="container">
         <div class="banner-5" id="combo3">
-        <img src="${data.banner9}" alt="" width="100%">
+        <img class="banner-special" src="${data.banner9}" alt="" width="100%">
         </div>
         <div class="slider-product" >
 
