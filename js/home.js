@@ -598,7 +598,7 @@ function getChunkSize2() {
     const sliderContainer = document.createElement('div');
     sliderContainer.className = 'slider-product';
     sliderContainer.id = sliderId;
-    sliderContainer.innerHTML = '';
+
     products.forEach(([key, value]) => {
       sliderContainer.innerHTML += `
         <div class="item-product-home">
@@ -622,7 +622,7 @@ function getChunkSize2() {
        
     
       <div class="subcribe ">
-        <textarea id="myTextarea" readonly rows="4" cols="auto">${value.subcibe}</textarea>
+        <textarea class="myTextarea" readonly rows="7" cols="auto">${value.subcibe}</textarea>
       </div>
       <div class="heart">
         <i class="fa fa-heart" aria-hidden="true"></i>
@@ -713,7 +713,7 @@ function getChunkSize2() {
        
     
       <div class="subcribe ">
-      <textarea id="myTextarea" readonly rows="4" cols="auto">${value.subcibe}</textarea>
+      <textarea class="myTextarea" readonly rows="9" cols="0">${value.subcibe}</textarea>
       </div>
       <div class="heart">
         <i class="fa fa-heart" aria-hidden="true"></i>

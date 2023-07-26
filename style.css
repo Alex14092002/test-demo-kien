@@ -1319,21 +1319,20 @@ body{
   font-size: 12px;
    font-family: 'Roboto' ,serif;
    font-weight: 600;
-} 
-#myTextarea{
-  width: 100% ;
-  border: none;
-  resize: none;
+} .myTextarea{
+  width: 100%  !important;
+  border: none !important;
+  resize: none !important;
      font-size: .875rem;
     font-family: 'Amiri', serif;
      color: #000 !important;
    font-weight: 400;
    font-style: italic;
-   text-align: center;
-  overflow-y: hidden;
+   text-align: justify;
+  overflow-y: hidden !important;
   will-change: contents !important;
 }
-#myTextarea:focus{
+.myTextarea:focus{
   outline: none !important;
 }
 .item-sp-tomtat{
