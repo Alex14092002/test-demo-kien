@@ -323,7 +323,7 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
         <img src="${data.banner1}" alt="" width="100%">
     </div>
     <div class="banner1 pd-2 mobile-banner">
-        <img src="${data.mobile}" alt="" width="100%">
+        <img src="${data.banner13}" alt="" width="100%">
     </div>
 
     <div class="container">
