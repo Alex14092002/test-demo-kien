@@ -54,7 +54,7 @@ function formatCurrency(number) {
             <div class="detail-product">
                 <h1>${data.name}</h1>
                 <span>Dành cho mọi loại da, kể cả da nhạy cảm</span>
-                <p>${data.subcibe}</p>
+                <textarea class="textArea" readonly rows="6" cols="auto">${data.subcibe}</textarea>
                 <h5>Quà tặng kèm sẽ hiện thị đủ trong giỏ hàng.</h5>
             </div>
             <div class="heart heart-popup">
@@ -173,6 +173,7 @@ function formatCurrency(number) {
     </div>
 </div>
     `
+
 
 
     var swiper = new Swiper(".mySwiper", {
@@ -410,9 +411,7 @@ const priceTotal = price*selectedQuantity
 showPopupCart(data, selectedQuantity , priceTotal); // Hiển thị popup giỏ hàng với thông tin sản phẩm đã được chọn
 localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
 });
+
+
 })();
-
-
-
-
 

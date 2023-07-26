@@ -672,10 +672,15 @@ body{
     font-size: 14px;
     font-style: italic;
  }
- .detail-product p{
+ .detail-product textarea{
     font-size: 14px;
+    width: 100%;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    overflow-y: hidden;
+    border: none;
+    resize: none;
+    overflow-y: hidden;
     color: #000;
     margin-bottom: 0;
  }
