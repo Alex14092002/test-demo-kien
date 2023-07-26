@@ -911,13 +911,20 @@ body{
     font-style: normal;
 
   }
+  .textArea:focus{
+    outline: none !important;
+  }
   .item-cart{
     padding-bottom: 30px;
   }
+  .name-combo h3{
+   
+    max-height: 30px !important;
+  }
   .name-product h3{
        /* Thiết lập chiều cao cố định cho phần tử chứa văn bản */
-       height: max-content; /* Điều chỉnh giá trị theo ý muốn */
-        max-height: 80px;
+       height:80px; /* Điều chỉnh giá trị theo ý muốn */
+        max-height: 100px;
        /* Hiển thị nhiều dòng văn bản */
        display: -webkit-box;
        -webkit-box-orient: vertical;

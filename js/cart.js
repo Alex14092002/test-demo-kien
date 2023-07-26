@@ -13,36 +13,40 @@ const showPopup = async (product, key) => {
   const data = await res.json();
   const popupChitiet = document.querySelector(".popup-xemnhanh");
   popupChitiet.classList.add("open-popup");
+  const descriptionHeight = data.subcibe.split('\n').length;
   popupChitiet.innerHTML = `
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6 slider-detail">
-          <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide ">
-                <img src="${data.img1}"  />
-              </div>
-              <div class="swiper-slide ">
-                <img src="${data.img2}" />
-              </div>
-            </div>
-           
+        <div>
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide ">
+            <img src="${data.img1}"  />
           </div>
-          <div thumbsSlider="" class="swiper mySwiper thum">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide mini-img">
-                <img src="${data.img1}" />
-              </div>
-              <div class="swiper-slide mini-img">
-                <img src="${data.img2}" />
-              </div>
-            </div>
+          <div class="swiper-slide ">
+            <img src="${data.img2}" />
           </div>
+        </div>
+       
+      </div>
+      <div thumbsSlider="" class="swiper mySwiper thum">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide mini-img">
+            <img src="${data.img1}" />
+          </div>
+          <div class="swiper-slide mini-img">
+            <img src="${data.img2}" />
+          </div>
+        </div>
+      </div>
+        </div>
+        
         </div>
         <div class="col-12 col-md-6 detail-product">
           <h1>${data.name}</h1>
           <span>Mọi loại da</span>
-          <p>${data.subcibe}</p>
+          <textarea class="textArea" readonly rows="${descriptionHeight + 2}" cols="auto">${data.subcibe}</textarea>
           <h2>Quà tặng kèm sẽ hiện thị đủ trong giỏ hàng.</h2>
           <div class="heart heart-popup">
             <i class="fa fa-heart" aria-hidden="true"></i>
@@ -98,7 +102,7 @@ const showPopup = async (product, key) => {
         </div>
         <div class="col-9 gift-popup">
           <h5>${value.name}</h5>
-          <p>${value.mota}</p>
+        
           <span>${value.dungtich}</span> <br>
           <span>Số lượng: ${value.soluong}</span>
         </div>

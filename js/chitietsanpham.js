@@ -8,53 +8,57 @@ function formatCurrency(number) {
     const decimalPart = parts[1] ? `.${parts[1]}` : "";
     return `₫ ${integerPart}${decimalPart}`;
   }
-(async () => {
   let params = new URLSearchParams(location.search);
   let catelory = params.get("catelory");
   let key = params.get("key");
+(async () => {
+ 
   const res = await fetch(
     `https://data-kieh-default-rtdb.firebaseio.com/${catelory}/${key}.json`
   );
   const data = await res.json()
   console.log(data);
-
+  const descriptionHeight = data.subcibe.split('\n').length;
   const main = document.querySelector(`.main-chi-tietsp`)
   if(data){
     main.innerHTML += `
     <div class="container">
     <div class="main-chitietsp row">
         <div class="col-12 col-md-6 slider-chitiet">
-            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="${data.img1}" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="${data.img2}" />
-                  </div>
-                
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-              </div>
-              <div thumbsSlider="" class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="${data.img1}" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="${data.img2}" />
-                  </div>
-                 
-                </div>
-              </div>
-            
+        <div>
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="${data.img1}" />
+          </div>
+          <div class="swiper-slide">
+            <img src="${data.img2}" />
+          </div>
+        
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div thumbsSlider="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="${data.img1}" />
+          </div>
+          <div class="swiper-slide">
+            <img src="${data.img2}" />
+          </div>
+         
+        </div>
+      </div>
+    
+        </div>
+         
         </div>
         <div class="col-12 col-md-6 name-chitiet">
             <div class="detail-product">
                 <h1>${data.name}</h1>
                 <span>Dành cho mọi loại da, kể cả da nhạy cảm</span>
-                <textarea class="textArea" readonly rows="6" cols="auto">${data.subcibe}</textarea>
+                <textarea class="textArea" readonly rows="${descriptionHeight + 2}" cols="auto">${data.subcibe}</textarea>
                 <h5>Quà tặng kèm sẽ hiện thị đủ trong giỏ hàng.</h5>
             </div>
             <div class="heart heart-popup">
@@ -411,7 +415,23 @@ const priceTotal = price*selectedQuantity
 showPopupCart(data, selectedQuantity , priceTotal); // Hiển thị popup giỏ hàng với thông tin sản phẩm đã được chọn
 localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
 });
+const gioithieu = document.querySelectorAll('.gioithieu')
+const thanhphan = document.querySelector('.thanhphan')
+const sliderTP = document.querySelector('.slider-thanhphan')
+const hr = document.querySelectorAll('hr')
+console.log(hr);
+console.log(thanhphan);
+console.log(catelory);
 
-
+if(catelory == 'combo2' || catelory == 'combo3'){
+  thanhphan.style.display = 'none'
+  sliderTP.style.display = 'none'
+  gioithieu.forEach((div)=>{
+    div.style.display = 'none'
+  })
+  hr.forEach((item) =>{
+    item.style.display = 'none'
+  })
+}
 })();
 

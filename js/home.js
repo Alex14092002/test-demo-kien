@@ -12,36 +12,40 @@ const showPopup = async ( product , key) =>{
   const data = await res.json()
   const popupChitiet = document.querySelector(".popup-xemnhanh");
   popupChitiet.classList.add('open-popup');
+  const descriptionHeight = data.subcibe.split('\n').length;
   popupChitiet.innerHTML = `
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6 slider-detail">
-          <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide ">
-                <img src="${data.img1}"  />
-              </div>
-              <div class="swiper-slide ">
-                <img src="${data.img2}" />
-              </div>
-            </div>
-           
+        <div>
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide ">
+            <img src="${data.img1}"  />
           </div>
-          <div thumbsSlider="" class="swiper mySwiper thum">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide mini-img">
-                <img src="${data.img1}" />
-              </div>
-              <div class="swiper-slide mini-img">
-                <img src="${data.img2}" />
-              </div>
-            </div>
+          <div class="swiper-slide ">
+            <img src="${data.img2}" />
           </div>
+        </div>
+       
+      </div>
+      <div thumbsSlider="" class="swiper mySwiper thum">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide mini-img">
+            <img src="${data.img1}" />
+          </div>
+          <div class="swiper-slide mini-img">
+            <img src="${data.img2}" />
+          </div>
+        </div>
+      </div>
+        </div>
+       
         </div>
         <div class="col-12 col-md-6 detail-product">
           <h1>${data.name}</h1>
           <span>Mọi loại da</span>
-          <p>${data.subcibe}</p>
+          <textarea class="textArea" readonly rows="${descriptionHeight + 2}" cols="auto">${data.subcibe}</textarea>
           <h2>Quà tặng kèm sẽ hiện thị đủ trong giỏ hàng.</h2>
           <div class="heart heart-popup">
             <i class="fa fa-heart" aria-hidden="true"></i>
@@ -564,7 +568,7 @@ function getChunkSize2() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 5000,
       responsive: [
         {
           breakpoint: 1024,
@@ -604,13 +608,15 @@ function getChunkSize2() {
     let maxHeight = 0;
     products.forEach(([key, value]) => {
       const descriptionHeight = value.subcibe.split('\n').length;
-      if (descriptionHeight > maxHeight && descriptionHeight < 5) {
+
+      if ( window.innerWidth >= 768 ) {
         maxHeight = descriptionHeight;
       } else {
         maxHeight = descriptionHeight + 2;
       }
+      
     });
-   
+  
     products.forEach(([key, value]) => {
     
       sliderContainer.innerHTML += `
@@ -628,7 +634,7 @@ function getChunkSize2() {
      
         </div>
         <a href="../chitietsp.html?catelory=combo2&key=${key}">
-        <div class="name-product">
+        <div class="name-product name-combo">
         <h3>${value.name}</h3>
       </div>
         </a>
@@ -666,7 +672,7 @@ function getChunkSize2() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 5000,
       responsive: [
         {
           breakpoint: 1024,
@@ -706,11 +712,12 @@ function getChunkSize2() {
     let maxHeight = 0;
     products.forEach(([key, value]) => {
       const descriptionHeight = value.subcibe.split('\n').length;
-      if (descriptionHeight > maxHeight && descriptionHeight < 5) {
-        maxHeight = descriptionHeight;
+      if ( window.innerWidth >= 768 ) {
+        maxHeight = descriptionHeight +4;
       } else {
         maxHeight = descriptionHeight + 4;
       }
+      console.log(maxHeight);
     });
     products.forEach(([key, value]) => {
       sliderContainer.innerHTML += `
@@ -728,7 +735,7 @@ function getChunkSize2() {
      
         </div>
         <a href="../chitietsp.html?catelory=combo3&key=${key}">
-        <div class="name-product">
+        <div class="name-product name-combo">
         <h3>${value.name}</h3>
       </div>
         </a>
@@ -766,7 +773,7 @@ function getChunkSize2() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 5000,
       responsive: [
         {
           breakpoint: 1024,
@@ -853,7 +860,7 @@ function getChunkSize2() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 5000,
       responsive: [
         {
           breakpoint: 1024,
@@ -941,7 +948,7 @@ function getChunkSize2() {
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 5000,
       responsive: [
         {
           breakpoint: 1024,
