@@ -319,27 +319,27 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
 
   if (data) {
     wrap.innerHTML += `
-<div class="banner1 pd-2 desktop-banner">
+<div class="banner1 pd-1 desktop-banner">
         <img src="${data.banner1}" alt="" width="100%">
     </div>
-    <div class="banner1 pd-2 mobile-banner">
+    <div class="banner1 pd-1 mobile-banner">
         <img src="${data.banner13}" alt="" width="100%">
     </div>
 
     <div class="container">
         
-        <div class="banner2 pd-2">
+        <div class="banner2 pd-1">
             <img src="${data.banner2}" alt="" width="100%">
         </div>
     
-        <div class="banner3  pd-2">
+        <div class="banner3  pd-1">
             <img src="${data.banner3}" alt="" width="100%">
         </div>
-        <div class="banner4 pd-2" >
+        <div class="banner4 pd-1" >
             <img src="${data.banner4}" alt="" width="100%">
         </div>
        
-        <div class="row pd-2">
+        <div class="row pd-1">
                 <div class="col-6">
                 <img src="${data.banner5}" alt="" width="100%">
                 </div>
