@@ -622,7 +622,7 @@ function getChunkSize2() {
        
     
       <div class="subcribe ">
-        <textarea class="myTextarea" readonly rows="8" cols="auto">${value.subcibe}</textarea>
+        <textarea class="myTextarea" readonly rows="9" cols="auto">${value.subcibe}</textarea>
       </div>
       <div class="heart">
         <i class="fa fa-heart" aria-hidden="true"></i>
@@ -713,7 +713,7 @@ function getChunkSize2() {
        
     
       <div class="subcribe ">
-      <textarea class="myTextarea" readonly rows="9" cols="0">${value.subcibe}</textarea>
+      <textarea class="myTextarea" readonly rows="10" cols="0">${value.subcibe}</textarea>
       </div>
       <div class="heart">
         <i class="fa fa-heart" aria-hidden="true"></i>
