@@ -95,7 +95,7 @@ const showPopup = async ( product , key) =>{
         </div>
         <div class="col-9 gift-popup">
           <h5>${value.name}</h5>
-          
+
           <span>${value.dungtich}</span> <br>
           <span>Số lượng: ${value.soluong}</span>
         </div>
@@ -357,7 +357,7 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
         </div>
      
       <div class="slider-product" >
-
+          
       </div>
     </div>
 

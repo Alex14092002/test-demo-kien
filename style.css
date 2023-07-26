@@ -1325,6 +1325,9 @@ body{
   font-size: 16px;
   font-family: 'Amiri', serif;
 }
+.slider-product{
+  padding-top: 50px;
+}
 .item-tomtat p{
   font-size: 12px;
    font-family: 'Roboto' ,serif;
