@@ -425,7 +425,7 @@ if (cart.length > 0) {
      </div>
     
       <div class="btn-thanhtoan-cart">
-        <button >THANH TOÁN</button>
+        <button >ĐẶT HÀNG</button>
       </div>
  </div>
  <div class="cothebanthich">
