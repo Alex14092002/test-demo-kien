@@ -76,7 +76,7 @@ function formatCurrency(number) {
                     <label class="quantity-label" for="">Số lượng</label> <br>
                   </div>
                   <div class="btn-add btn-add-popup">
-                    <button>MUA TRỌN BỘ COMBO</button>
+                    <button>MUA NGAY</button>
                   </div>
                 </div>
               </div>

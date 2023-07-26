@@ -62,7 +62,7 @@ const showPopup = async ( product , key) =>{
                 <label class="quantity-label" for="">Số lượng</label> <br>
               </div>
               <div class="btn-add btn-add-popup">
-                <button>MUA TRỌN BỘ COMBO</button>
+                <button>MUA NGAY</button>
               </div>
             </div>
           </div>
@@ -455,7 +455,7 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
                     <h2>${formatCurrency(value.price)}</h2>
                 </div>
                 <div class="btn-add btn-add-to-cart">
-                    <button data-category="homeproduct" data-key="${encodeURIComponent(key)}" >MUA TRỌN BỘ COMBO</button>
+                    <button data-category="homeproduct" data-key="${encodeURIComponent(key)}" >MUA NGAY</button>
                 </div>
             </div>
             `
@@ -494,6 +494,7 @@ function getChunkSize2() {
     return 3;
   }
 }
+
 (async () => {
   const res = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/mua1tang1.json`);
   const res2 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/combo2.json`);
@@ -547,7 +548,7 @@ function getChunkSize2() {
          <h2>${formatCurrency(value.price)}</h2>
       </div>
       <div class="btn-add btn-add-to-cart add-to-cart">
-         <button data-category="mua1tang1" data-key="${encodeURIComponent(key)}">MUA TRỌN BỘ COMBO</button>
+         <button data-category="mua1tang1" data-key="${encodeURIComponent(key)}">MUA NGAY</button>
       </div>
    </div>
       `;
@@ -647,7 +648,7 @@ function getChunkSize2() {
         <h2>${formatCurrency(value.price)}</h2>
       </div>
       <div class="btn-add btn-add-to-cart add-to-cart">
-      <button data-category="combo2" data-key="${encodeURIComponent(key)}">MUA TRỌN BỘ COMBO</button>
+      <button data-category="combo2" data-key="${encodeURIComponent(key)}">MUA NGAY</button>
       </div>
     </div>
         </div>
@@ -747,7 +748,7 @@ function getChunkSize2() {
         <h2>${formatCurrency(value.price)}</h2>
       </div>
       <div class="btn-add btn-add-to-cart add-to-cart">
-      <button data-category="combo3" data-key="${encodeURIComponent(key)}" >MUA TRỌN BỘ COMBO</button>
+      <button data-category="combo3" data-key="${encodeURIComponent(key)}" >MUA NGAY</button>
       </div>
     </div>
         </div>
@@ -795,7 +796,7 @@ function getChunkSize2() {
   });
 
 
-  const productsChunksKemchongnang = chunkArray(Object.entries(data4), getChunkSize());
+  const productsChunksKemchongnang = chunkArray(Object.entries(data4), 4);
   productsChunksKemchongnang.forEach((products, index) => {
     const sliderId = `slider-kemchongnang-${index}`;
     const sliderContainer = document.createElement('div');
@@ -834,7 +835,7 @@ function getChunkSize2() {
         <h2>${formatCurrency(value.price)}</h2>
       </div>
       <div class=" btn-add">
-      <button  >MUA TRỌN BỘ COMBO</button>
+      <button  >MUA NGAY</button>
       </div>
     </div>
         </div>
@@ -857,8 +858,8 @@ function getChunkSize2() {
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 2,
+            slidesToScroll: 2,
             infinite: true,
             dots: true
           }
@@ -883,7 +884,7 @@ function getChunkSize2() {
 
 
 
-  const productsChunksDuongthe = chunkArray(Object.entries(data5), getChunkSize());
+  const productsChunksDuongthe = chunkArray(Object.entries(data5), 4);
   productsChunksDuongthe.forEach((products, index) => {
     const sliderId = `slider-duongthe-${index}`;
     const sliderContainer = document.createElement('div');
@@ -922,7 +923,7 @@ function getChunkSize2() {
         <h2>${formatCurrency(value.price)}</h2>
       </div>
       <div class="btn-add ">
-      <button >MUA TRỌN BỘ COMBO</button>
+      <button >MUA NGAY</button>
       </div>
     </div>
         </div>
@@ -945,8 +946,8 @@ function getChunkSize2() {
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 4,
+            slidesToScroll: 4,
             infinite: true,
             dots: true
           }

@@ -63,7 +63,7 @@ const showPopup = async (product, key) => {
                 <label class="quantity-label" for="">Số lượng</label> <br>
               </div>
               <div class="btn-add btn-add-popup">
-                <button>MUA TRỌN BỘ COMBO</button>
+                <button>MUA NGAY</button>
               </div>
             </div>
           </div>
@@ -483,7 +483,7 @@ if (cart.length > 0) {
       <div class="btn-add btn-add-to-cart add-to-cart">
          <button data-category="combo2" data-key="${encodeURIComponent(
            key
-         )}" >MUA TRỌN BỘ COMBO</button>
+         )}" >MUA NGAY</button>
       </div>
    </div>
       `;
