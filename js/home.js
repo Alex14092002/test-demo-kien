@@ -241,12 +241,12 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
       <div class="row btn-cart">
         <div class="col-12 col-md-6">
           <div class="btn-add-cart no-active">
-            <button class="tieptuc">TIẾP TỤC MUA SẮM</button>
+            <button class="tieptuc">THÊM VÀO GIỎ HÀNG</button>
           </div>
         </div>
         <div class="col-12 col-md-6">
           <div class="btn-add-cart">
-            <button class="getCart">ĐI ĐẾN GIỎ HÀNG CỦA TÔI</button>
+            <button class="getCart">MUA NGAY</button>
           </div>
         </div>
       </div>
@@ -360,7 +360,7 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
             <img class="banner-special" src="${data.banner7}" alt="" width="100%" >
         </div>
      
-      <div class="slider-product" >
+      <div class="main-mua1tang1 row" >
           
       </div>
     </div>
@@ -370,7 +370,7 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
         <div class="banner-5" id="combo2">
         <img class="banner-special" src="${data.banner8}" alt="" width="100%">
         </div>
-        <div class="slider-product" >
+        <div class="row main-combo2" >
 
         </div>
     </div>
@@ -380,7 +380,7 @@ const showPopupCart = (data, selectedQuantity ,priceTotal ) => {
         <div class="banner-5" id="combo3">
         <img class="banner-special" src="${data.banner9}" alt="" width="100%">
         </div>
-        <div class="slider-product" >
+        <div class="row main-combo3" >
 
         </div>
     </div>
@@ -511,18 +511,14 @@ function getChunkSize2() {
   const data4  = await res4.json();
   const data5 = await res5.json();
 
-  const productsChunks = chunkArray(Object.entries(data), getChunkSize2());
-  productsChunks.forEach((products, index) => {
-    const sliderId = `slider-${index}`;
-    const sliderContainer = document.createElement('div');
-    sliderContainer.className = 'slider-product';
-    sliderContainer.id = sliderId;
 
-    
-    products.forEach(([key, value]) => {
-      sliderContainer.innerHTML += `
-       
-    <div class="item-product-home" >
+  const main = document.querySelector(".main-mua1tang1");
+  const main2 = document.querySelector(".main-combo2 ")
+  const main3 = document.querySelector(".main-combo3")
+  
+  Object.entries(data).map(([key, value]) =>{
+      main.innerHTML += `
+      <div class="item-product-home col-6 col-md-3" >
       <div class="img-product">
          <img src="${value.img1}" alt="" width="100%">
          <div class="img-hover mini-product">
@@ -555,252 +551,91 @@ function getChunkSize2() {
          <button data-category="mua1tang1" data-key="${encodeURIComponent(key)}">MUA NGAY</button>
       </div>
    </div>
+
       `;
     });
-    const main = document.querySelector("#tang1");
-    main.appendChild(sliderContainer);
-   
- 
-    $(`#${sliderId}`).slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        }
-      ]
-    });
-  
 
-  });
-
-  const productsChunksCombo2 = chunkArray(Object.entries(data2), getChunkSize());
-  productsChunksCombo2.forEach((products, index) => {
-    const sliderId = `slider-combo2-${index}`;
-    const sliderContainer = document.createElement('div');
-    sliderContainer.className = 'slider-product';
-    sliderContainer.id = sliderId;
-    let maxHeight = 0;
-    products.forEach(([key, value]) => {
-      const descriptionHeight = value.subcibe.split('\n').length;
-
-      if ( window.innerWidth >= 768 ) {
-        maxHeight = descriptionHeight;
-      } else {
-        maxHeight = descriptionHeight + 2;
-      }
-      
-    });
-  
-    products.forEach(([key, value]) => {
-    
-      sliderContainer.innerHTML += `
-        <div class="item-product-home">
-        <div class="item-product-home" >
-        <div class="img-product">
-          <img src="${value.img1}" alt="" width="100%">
-          <div class="img-hover mini-product">
-          <a class="link-buy-nhanh" href="../chitietsp.html?catelory=combo2&key=${key}">
-          <img src="${value.img2}" alt="" width="100%">
-          </a>
-             
+    Object.entries(data2).map(([key, value]) =>{
+      main2.innerHTML += `
+      <div class="item-product-home col-6 col-md-3" >
+      <div class="img-product">
+         <img src="${value.img1}" alt="" width="100%">
+         <div class="img-hover mini-product">
+         <a class="link-buy-nhanh" href="../chitietsp.html?catelory=combo2&key=${key}">
+         <img src="${value.img2}" alt="" width="100%">
+         </a>
+            
             <button class="btn-view-more btn-mini" onclick="showPopup('combo2' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
-          </div>
-     
-        </div>
-        <a href="../chitietsp.html?catelory=combo2&key=${key}">
-        <div class="name-product name-combo">
-        <h3>${value.name}</h3>
+         </div>
       </div>
-        </a>
-       
-    
+      <a href="../chitietsp.html?catelory=combo2&key=${key}">
+         <div class="name-product">
+            <h3>${value.name}</h3>
+         </div>
+      </a>
       <div class="subcribe ">
-        <textarea class="myTextarea" readonly rows="${maxHeight}" cols="auto">${value.subcibe}</textarea>
+         <p>${value.subcibe}</p>
       </div>
       <div class="heart">
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
       </div>
       <div class="price">
-        <h2>${formatCurrency(value.price)}</h2>
+         <h2>${formatCurrency(value.price)}</h2>
       </div>
       <div class="btn-add btn-add-to-cart add-to-cart">
-      <button data-category="combo2" data-key="${encodeURIComponent(key)}">MUA NGAY</button>
+         <button data-category="combo2" data-key="${encodeURIComponent(key)}">MUA NGAY</button>
       </div>
-    </div>
-        </div>
+   </div>
+
       `;
     });
-    const main = document.querySelector("#combo2");
-   
-    main.appendChild(sliderContainer);
-   
- 
-    $(`#${sliderId}`).slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        }
-      ]
-    });
-  });
-
-
-
-  const productsChunksCombo3 = chunkArray(Object.entries(data3), getChunkSize());
-  productsChunksCombo3.forEach((products, index) => {
-    const sliderId = `slider-combo3-${index}`;
-    const sliderContainer = document.createElement('div');
-    sliderContainer.className = 'slider-product';
-    sliderContainer.id = sliderId;
-    let maxHeight = 0;
-    products.forEach(([key, value]) => {
-      const descriptionHeight = value.subcibe.split('\n').length;
-      if ( window.innerWidth >= 768 ) {
-        maxHeight = descriptionHeight +4;
-      } else {
-        maxHeight = descriptionHeight + 4;
-      }
-      console.log(maxHeight);
-    });
-    products.forEach(([key, value]) => {
-      sliderContainer.innerHTML += `
-        <div class="item-product-home">
-        <div class="item-product-home" >
-        <div class="img-product">
-          <img src="${value.img1}" alt="" width="100%">
-          <div class="img-hover mini-product">
-          <a class="link-buy-nhanh" href="../chitietsp.html?catelory=combo3&key=${key}">
-          <img src="${value.img2}" alt="" width="100%">
-          </a>
-             
+    Object.entries(data3).map(([key, value]) =>{
+      main3.innerHTML += `
+      <div class="item-product-home col-6 col-md-3" >
+      <div class="img-product">
+         <img src="${value.img1}" alt="" width="100%">
+         <div class="img-hover mini-product">
+         <a class="link-buy-nhanh" href="../chitietsp.html?catelory=combo3&key=${key}">
+         <img src="${value.img2}" alt="" width="100%">
+         </a>
+            
             <button class="btn-view-more btn-mini" onclick="showPopup('combo3' ,'${encodeURIComponent(key)}')" >XEM NHANH</button>
-          </div>
-     
-        </div>
-        <a href="../chitietsp.html?catelory=combo3&key=${key}">
-        <div class="name-product name-combo">
-        <h3>${value.name}</h3>
+         </div>
       </div>
-        </a>
-       
-    
+      <a href="../chitietsp.html?catelory=combo3&key=${key}">
+         <div class="name-product">
+            <h3>${value.name}</h3>
+         </div>
+      </a>
       <div class="subcribe ">
-      <textarea class="myTextarea" readonly rows="${maxHeight}" cols="0">${value.subcibe}</textarea>
+         <p>${value.subcibe}</p>
       </div>
       <div class="heart">
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
+         <i class="fa fa-heart" aria-hidden="true"></i>
       </div>
       <div class="price">
-        <h2>${formatCurrency(value.price)}</h2>
+         <h2>${formatCurrency(value.price)}</h2>
       </div>
       <div class="btn-add btn-add-to-cart add-to-cart">
-      <button data-category="combo3" data-key="${encodeURIComponent(key)}" >MUA NGAY</button>
+         <button data-category="combo3" data-key="${encodeURIComponent(key)}">MUA NGAY</button>
       </div>
-    </div>
-        </div>
+   </div>
+
       `;
     });
-    const main = document.querySelector("#combo3");
-   
-    main.appendChild(sliderContainer);
-   
- 
-    $(`#${sliderId}`).slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        }
-      ]
-    });
-  });
+
+  
+
+
+
 
 
   const productsChunksKemchongnang = chunkArray(Object.entries(data4), 4);
