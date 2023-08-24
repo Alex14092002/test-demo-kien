@@ -1482,6 +1482,34 @@ body{
   font-family: 'Amiri', serif;
 
 }
+.title-noitroi h1{
+  font-size: 30px;
+  text-align: center;
+   font-family: 'Amiri', serif;
+   font-weight: bold;
+}
+.box-noitroi{
+  box-shadow: rgb(0, 0, 0) 0px 10px 20px -15px;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+.box-noitroi img{
+  padding: 0px !important;
+}
+.list ul{
+  padding:  17px;
+}
+.list{
+  border: 1px solid rgb(255, 145, 77);
+}
+.main-noitroi div{
+  padding-bottom: 12px;
+  
+}
+.list{
+  height: 300px ;
+}
 @media(min-width :1500px){
     .popup-xemnhanh{
         height: 80vh;
