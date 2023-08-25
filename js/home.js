@@ -611,6 +611,11 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
                 <div class="subcribe ">
                     <p>${value.subcibe}</p>
                 </div>
+                <div class="check-giamgia">
+      <div class="giamgias">
+      <p>${value.giamgia}</p>
+    </div>
+      </div>
                
                 <div class="heart">
                     <i class="fa fa-heart" aria-hidden="true"></i>
