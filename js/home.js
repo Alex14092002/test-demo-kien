@@ -533,12 +533,46 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
           </div>
       </div>
 
+    <img src="../img/z4485039558322_5ed715b52fa65b136fb7789874e64912vbnm-20230703123104-iepvb.jpeg"  width="100%" />
+
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"> <img src="../img/slider1.jpeg"  width="100%" /></div>
+      <div class="swiper-slide"> <img src="../img/slider2.jpeg"  width="100%" /></div>
+      <div class="swiper-slide"> <img src="../img/slider3.jpeg"  width="100%" /></div>
+      <div class="swiper-slide"> <img src="../img/slider4.jpeg"  width="100%" /></div>
+      <div class="swiper-slide"> <img src="../img/slider5.jpeg"  width="100%" /></div>
+      <div class="swiper-slide"> <img src="../img/silder6.jpeg"  width="100%" /></div>
+  
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
 
 
     <img src="${data.banner11}" alt="" width="100%">
     <img src="${data.banner12}" alt="" width="100%">
     </div>
 `;
+
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  loop:true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
   }
 
   (async () => {
