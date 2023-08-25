@@ -414,7 +414,7 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
             <div class="col-6 col-md-3">
               <div class="box-noitroi">
                   <img src="../img/f5fe3bc3ca018dccf0fb90bf638be1e6png_720x720q80png_-20230421053050-ayy9n.jpeg" width="100%"/>
-                  <div class="list">
+                  <div class="list custom-mobile1">
                   <ul>
                     <li>Nhẹ nhàng lấy đi bụi bẩn và dầu thừa</li>
                     <li>Làm sạch sâu mà không gây khô, bong tróc da</li>
@@ -429,13 +429,13 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
             <div class="col-6 col-md-3">
             <div class="box-noitroi">
                 <img src="../img/37ba81bf839d06cdd94bdc26ff545979png_720x720q80png_-1-20230420115533-bltaf.jpeg" width="100%"/>
-                <div class="list">
+                <div class="list custom-mobile1">
                 <ul>
                   <li> Làm sạch da một cách dịu nhẹ và mang lại cảm giác sảng khoái</li>
                   <li>Làm dịu và cân bằng độ ẩm</li>
                   <li>Chứa nhiều thành phần dưỡng chất chuyên sâu cho da</li>
                   <li>Giúp da đều màu hơn</li>
-                  <li>Phù hợp với mọi loại da cả kể da nhạy cảmm</li>
+                  <li>Phù hợp với mọi loại da cả kể da nhạy cảm</li>
                 </ul>
               </div>
             </div>
@@ -445,10 +445,10 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
           <div class="col-6 col-md-3">
               <div class="box-noitroi">
                   <img src="../img/56f7749c0d189d8f3873f0d3d6c63f4d-20230605003258-bojpj.jpeg" width="100%"/>
-                  <div class="list">
+                  <div class="list custom-mobile2">
                   <ul>
                     <li>Cấp nước cho da suốt 24 giờ. Nhanh chóng thấm sâu với khả năng làm mát tức thì</li>
-                    <li>Không gây bít lỗ chân lông, không gây kích ứng da làm da trắng sáng rạng rỡ/li>
+                    <li>Không gây bít lỗ chân lông, không gây kích ứng da làm da trắng sáng rạng rỡ</li>
 
                   </ul>
                 </div>
@@ -458,7 +458,7 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
             <div class="col-6 col-md-3">
               <div class="box-noitroi">
                   <img src="../img/219da61a316386e48aa2e83d123b97e6png_720x720q80png_-20230420114832-kbkc4.jpeg" width="100%"/>
-                  <div class="list">
+                  <div class="list custom-mobile2">
                   <ul>
                     <li>Cực kì lành tính, dưỡng ẩm suốt 24 giờ</li>
                     <li>Cải thiện độ ẩm của làn da ngay cả những vùng da khô</li>
@@ -473,7 +473,7 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
             <div class="col-6 col-md-3">
               <div class="box-noitroi">
                   <img src="../img/z4303915734102_b6213e3b6a943e0a4c8f3152f95e9a4d-20230503185118-bcusa.jpeg" width="100%"/>
-                  <div class="list">
+                  <div class="list custom-mobile3">
                   <ul>
                     <li>Giúp bảo vệ làn da khỏi các tác nhân gây hại từ ô nhiễm môi trường và tia UVA/UVB, nguyên nhân khiến da lão hóa da sớm</li>
                     <li>Chất liệu mỏng nhẹ thẩm thấu nhanh và trong suốt</li>
@@ -488,7 +488,7 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
             <div class="col-6 col-md-3">
               <div class="box-noitroi">
                   <img src="../img/350370158_275423304961451_5250775858200540108_n-20230605003258--uyvf.png" width="100%"/>
-                  <div class="list">
+                  <div class="list custom-mobile3">
                   <ul>
                     <li>Tinh chất Retinol giúp tái tạo da & giúp da săn chắc đàn hồi và rạng rỡ hơn đồng thời hạn chế được tình trạng bong tróc, mẩn đỏ, khó chịu.a</li>
                     <li>Phù hợp với mọi loại da cả kể da nhạy cảm a</li>
@@ -501,7 +501,7 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
             <div class="col-6 col-md-3">
               <div class="box-noitroi">
                   <img src="../img/228744a9ab70368c6070410a1c52fb7dpng_720x720q80png_-20230420115421-nihl0.jpeg" width="100%"/>
-                  <div class="list">
+                  <div class="list custom-mobile4">
                   <ul>
                     <li>Giúp làm sạch cho làn da đồng thời làm thu nhỏ các lỗ chân lông to</li>
                     <li>Nhẹ nhàng lấy sạch dầu thừa, bụi bẩn và chất dơ làm bít lỗ chân lông</li>
@@ -517,7 +517,7 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
               <div class="box-noitroi">
                   <img src="../img/48b65f1493769a749fb07c2c51565f4epng_720x720q80png_-20230421053732-1qlge.jpeg"
                    width="100%"/>
-                  <div class="list">
+                  <div class="list custom-mobile4">
                   <ul>
                     <li>Làm mờ các vết thâm mụn, đốm nâu, da không đều màu  </li>
                     <li>Tác dụng nhanh, thẩm thấu nhanh, không bóng nhờn</li>
@@ -611,6 +611,7 @@ var swiper = new Swiper(".mySwiper", {
                 <div class="subcribe ">
                     <p>${value.subcibe}</p>
                 </div>
+               
                 <div class="heart">
                     <i class="fa fa-heart" aria-hidden="true"></i>
                     <i class="fa fa-heart" aria-hidden="true"></i>
@@ -706,6 +707,9 @@ var swiper = new Swiper(".mySwiper", {
       <div class="subcribe ">
          <p>${value.subcibe}</p>
       </div>
+      <div class="giamgia">
+      <p>${value.giamgia}</p>
+    </div>
       <div class="heart">
          <i class="fa fa-heart" aria-hidden="true"></i>
          <i class="fa fa-heart" aria-hidden="true"></i>
@@ -749,6 +753,9 @@ var swiper = new Swiper(".mySwiper", {
       <div class="subcribe ">
          <p>${value.subcibe}</p>
       </div>
+      <div class="giamgia">
+      <p>${value.giamgia}</p>
+    </div>
       <div class="heart">
          <i class="fa fa-heart" aria-hidden="true"></i>
          <i class="fa fa-heart" aria-hidden="true"></i>

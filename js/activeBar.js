@@ -380,7 +380,7 @@ headerDesktop.innerHTML += `
 `
 sibar.innerHTML += `
 <div class="bar-mobile">
-<h5>ĐĂNG NHẬP HOẶC ĐĂNG KÝ</h5>
+<h5></h5>
 <ul>
  
     <li>🎁 KHUYẾN MÃI <i class="fa fa-plus" aria-hidden="true"></i> </li>

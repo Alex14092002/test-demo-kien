@@ -340,12 +340,12 @@ function formatCurrency(number) {
         <div class="row btn-cart">
           <div class="col-12 col-md-6">
             <div class="btn-add-cart no-active">
-              <button class="tieptuc">TIẾP TỤC MUA SẮM</button>
+              <button class="tieptuc">THÊM VÀO GIỎ HÀNG</button>
             </div>
           </div>
           <div class="col-12 col-md-6">
             <div class="btn-add-cart">
-              <button class="getCart">ĐI ĐẾN GIỎ HÀNG CỦA TÔI</button>
+              <button class="getCart">MUA NGAY</button>
             </div>
           </div>
         </div>

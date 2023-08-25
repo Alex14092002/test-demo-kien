@@ -65,7 +65,6 @@
       }
     console.log(checkData); 
     const ho = document.querySelector('#ho');
-    const ten = document.querySelector('#ten');
     const diachi = document.querySelector('#diachi');
     const tinh = document.querySelector('#province');
     const quan = document.querySelector('#district');
@@ -81,7 +80,7 @@
            
             
         
-            if(ho.value.trim() === '' || ten.value.trim() === '' || diachi.value.trim() === '' || tinh.value.trim() === '' || quan.value.trim() === '' || phuong.value.trim() === '' || sdt.value.value === ''){
+            if(ho.value.trim() === '' || diachi.value.trim() === '' || tinh.value.trim() === '' || quan.value.trim() === '' || phuong.value.trim() === '' || sdt.value.value === ''){
                 console.log('Chưa nhập đủ thông tin');
                 checkData.forEach((element) => {
                     element.classList.add('open-data');
@@ -97,7 +96,7 @@
                 overlay.classList.toggle('active-overlay');
                 setTimeout(() => {
                     ho.value = "";
-                    ten.value = "";
+                    
                     diachi.value = "";
                     tinh.value = "";
                     quan.value = "";
@@ -108,7 +107,7 @@
                 }, 2000);
         
                 const hoPhu = document.querySelector('#hophu');
-                const tenPhu = document.querySelector('#tenphu');
+                
                 const diachiPhu = document.querySelector('#diachiphu');
                 const tinhPhu = document.querySelector('#provincephu');
                 const quanPhu = document.querySelector('#districtphu');
@@ -118,7 +117,6 @@
                 const magiamgiaPhu = document.querySelector('#magiamgiaphu');
                 
                 hoPhu.value = ho.value;
-                tenPhu.value = ten.value;
                 diachiPhu.value = diachi.value;
                 tinhPhu.value = tinh.value;
                 quanPhu.value = quan.value;
@@ -138,7 +136,7 @@
       
       // Xử lý sự kiện focus trên các ô input
       ho.addEventListener('focus', removeOpenDataClass);
-      ten.addEventListener('focus', removeOpenDataClass);
+     
       diachi.addEventListener('focus', removeOpenDataClass);
       tinh.addEventListener('focus', removeOpenDataClass);
       quan.addEventListener('focus', removeOpenDataClass);
