@@ -1,5 +1,12 @@
     let form2 = document.querySelector('.thong-tin-phu');
     let form = document.querySelector('.thong-tin');
+    const now = new Date();
+    const currentDate = now.toLocaleDateString('en-US'); // Định dạng ngày tháng: MM/DD/YYYY
+    const currentTime = now.toLocaleTimeString('en-US'); // Định dạng giờ: HH:MM:SS AM/PM
+    
+    console.log('Ngày hiện tại:', currentDate);
+    console.log('Giờ hiện tại:', currentTime);
+    
     (async () => {
         const res = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/sheet/0.json`);
         const res2 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/sheet/1.json`);
@@ -71,13 +78,16 @@
     const phuong = document.querySelector('#ward');
     const sdt = document.querySelector('#sdt');
     const phoneCheck = document.querySelector('.phone-check')
+    const time = document.querySelector('#time')
+   
     btnS.addEventListener('click', (event) => {
             event.preventDefault(); // Ngăn chặn sự kiện submit mặc định
             const inputProduct = document.querySelector('#product');
             const magiamgia = document.querySelector('#magiamgia');
             magiamgia.value = ma;
             inputProduct.value = nameString;
-           
+            time.value = currentDate  + '_' + currentTime
+    console.log(time.value);
             
         
             if(ho.value.trim() === '' || diachi.value.trim() === '' || tinh.value.trim() === '' || quan.value.trim() === '' || phuong.value.trim() === '' || sdt.value.value === ''){
