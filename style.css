@@ -1539,6 +1539,15 @@ body{
   color:#fff;
   padding:0px  15px;
   border-radius: 10px;
+  margin: 10px 0;
+  
+}
+.giamgias p{
+  margin-bottom: 0;
+}
+.check-giamgia{
+  display: flex;
+
 }
 @media(min-width :1500px){
     .popup-xemnhanh{

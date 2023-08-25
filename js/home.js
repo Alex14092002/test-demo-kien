@@ -556,23 +556,23 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
     </div>
 `;
 
-var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  loop:true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   }
 
   (async () => {
@@ -707,9 +707,11 @@ var swiper = new Swiper(".mySwiper", {
       <div class="subcribe ">
          <p>${value.subcibe}</p>
       </div>
+      <div class="check-giamgia">
       <div class="giamgias">
       <p>${value.giamgia}</p>
     </div>
+      </div>
       <div class="heart">
          <i class="fa fa-heart" aria-hidden="true"></i>
          <i class="fa fa-heart" aria-hidden="true"></i>
@@ -753,9 +755,12 @@ var swiper = new Swiper(".mySwiper", {
       <div class="subcribe ">
          <p>${value.subcibe}</p>
       </div>
+      <div class="check-giamgia">
       <div class="giamgias">
       <p>${value.giamgia}</p>
     </div>
+      </div>
+     
       <div class="heart">
          <i class="fa fa-heart" aria-hidden="true"></i>
          <i class="fa fa-heart" aria-hidden="true"></i>
