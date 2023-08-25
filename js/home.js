@@ -707,7 +707,7 @@ var swiper = new Swiper(".mySwiper", {
       <div class="subcribe ">
          <p>${value.subcibe}</p>
       </div>
-      <div class="giamgia">
+      <div class="giamgias">
       <p>${value.giamgia}</p>
     </div>
       <div class="heart">
@@ -753,7 +753,7 @@ var swiper = new Swiper(".mySwiper", {
       <div class="subcribe ">
          <p>${value.subcibe}</p>
       </div>
-      <div class="giamgia">
+      <div class="giamgias">
       <p>${value.giamgia}</p>
     </div>
       <div class="heart">
