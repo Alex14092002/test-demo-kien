@@ -737,7 +737,9 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
       `;
     });
 
+   
     Object.entries(data2).map(([key, value]) => {
+     
       main2.innerHTML += `
       <div class="item-product-home col-6 col-md-3" >
       <div class="img-product">
@@ -754,11 +756,13 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
       </div>
       <a href="../chitietsp.html?catelory=combo2&key=${key}">
          <div class="name-product">
-            <h3>${value.name}</h3>
+            <h3 class="name-combo">${value.name}</h3>
          </div>
       </a>
       <div class="subcribe ">
-         <p>${value.subcibe}</p>
+      <textarea class="textArea" readonly rows="8" cols="auto">${
+        value.subcibe
+      }</textarea>
       </div>
       <div class="check-giamgia">
       <div class="giamgias">
@@ -785,7 +789,9 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
 
       `;
     });
+
     Object.entries(data3).map(([key, value]) => {
+     
       main3.innerHTML += `
       <div class="item-product-home col-6 col-md-3" >
       <div class="img-product">
@@ -802,11 +808,13 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
       </div>
       <a href="../chitietsp.html?catelory=combo3&key=${key}">
          <div class="name-product">
-            <h3>${value.name}</h3>
+            <h3 class="name-combo">${value.name}</h3>
          </div>
       </a>
       <div class="subcribe ">
-         <p>${value.subcibe}</p>
+      <textarea class="textArea" readonly rows="8" cols="auto">${
+        value.subcibe
+      }</textarea>
       </div>
       <div class="heart">
          <i class="fa fa-heart" aria-hidden="true"></i>

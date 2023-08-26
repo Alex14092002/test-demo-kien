@@ -679,7 +679,7 @@ body{
  .slick-arrow{
   z-index: 500 !important;
  }
- .detail-product textarea{
+ .detail-product textarea , .subcribe textarea{
     font-size: 14px;
     width: 100%;
     font-family: 'Roboto', sans-serif;
@@ -916,12 +916,12 @@ body{
     padding-bottom: 30px;
   }
   .name-combo h3{
-   
+    
     max-height: 30px !important;
   }
   .name-product h3{
        /* Thiết lập chiều cao cố định cho phần tử chứa văn bản */
-       height:80px; /* Điều chỉnh giá trị theo ý muốn */
+       height:40px; /* Điều chỉnh giá trị theo ý muốn */
         max-height: 100px;
        /* Hiển thị nhiều dòng văn bản */
        display: -webkit-box;
@@ -932,6 +932,9 @@ body{
        overflow: hidden;
        text-overflow: ellipsis;
 
+  }
+  .name-combo{
+    height: 24px !important;
   }
   .--cart-title h5{
     text-align: center;
@@ -1561,6 +1564,9 @@ body{
   }
 }
 @media(max-width : 700px){
+  .detail-product textarea, .subcribe textarea{
+    font-size: 13px;  
+  }
   .custom-mobile1{
     height: 330px !important;
   }
