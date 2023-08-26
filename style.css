@@ -915,8 +915,8 @@ body{
   .item-cart{
     padding-bottom: 30px;
   }
-  .name-combo h3{
-    
+  .name-combo{
+    margin-bottom: 0;
     max-height: 30px !important;
   }
   .name-product h3{
@@ -989,6 +989,10 @@ body{
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 600;
+}
+.subcribe-combo p{
+  text-align: start;
+ 
 }
   @keyframes spin {
     0% {

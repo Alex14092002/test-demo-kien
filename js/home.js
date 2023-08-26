@@ -737,61 +737,89 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
       `;
     });
 
-   
-    Object.entries(data2).map(([key, value]) => {
-     
-      main2.innerHTML += `
-      <div class="item-product-home col-6 col-md-3" >
-      <div class="img-product">
-         <img src="${value.img1}" alt="" width="100%">
-         <div class="img-hover mini-product">
-         <a class="link-buy-nhanh" href="../chitietsp.html?catelory=combo2&key=${key}">
-         <img src="${value.img2}" alt="" width="100%">
-         </a>
-            
-            <button class="btn-view-more btn-mini" onclick="showPopup('combo2' ,'${encodeURIComponent(
-              key
-            )}')" >XEM NHANH</button>
-         </div>
-      </div>
-      <a href="../chitietsp.html?catelory=combo2&key=${key}">
-         <div class="name-product">
-            <h3 class="name-combo">${value.name}</h3>
-         </div>
-      </a>
-      <div class="subcribe ">
-      <textarea class="textArea" readonly rows="8" cols="auto">${
-        value.subcibe
-      }</textarea>
-      </div>
-      <div class="check-giamgia">
-      <div class="giamgias">
-      <p>${value.giamgia}</p>
-    </div>
-      </div>
-     
-      <div class="heart">
-         <i class="fa fa-heart" aria-hidden="true"></i>
-         <i class="fa fa-heart" aria-hidden="true"></i>
-         <i class="fa fa-heart" aria-hidden="true"></i>
-         <i class="fa fa-heart" aria-hidden="true"></i>
-         <i class="fa fa-heart" aria-hidden="true"></i>
-      </div>
-      <div class="price">
-         <h2>${formatCurrency(value.price)}</h2>
-      </div>
-      <div class="btn-add btn-add-to-cart add-to-cart">
-         <button data-category="combo2" data-key="${encodeURIComponent(
-           key
-         )}">MUA NGAY</button>
-      </div>
-   </div>
-
-      `;
+    const calculateHeightAndLines = (subcibe) => {
+      const newlineCount = (subcibe.match(/\n/g) || []).length;
+      const calculatedHeight = (newlineCount + 3) * 10;
+      const maxLineCount = newlineCount + 3;
+      return { calculatedHeight, maxLineCount };
+    };
+    
+    const products = Object.entries(data2);
+    const rows = [];
+    const isMobile = window.innerWidth <= 768; // Kiểm tra nếu là màn hình điện thoại
+    
+    for (let i = 0; i < products.length; i += (isMobile ? 2 : 4)) {
+      rows.push(products.slice(i, i + (isMobile ? 2 : 4)));
+    }
+    
+    rows.forEach(row => {
+      let maxCalculatedHeight = 0;
+      let maxLineCount = 0;
+    
+      row.forEach(([key, value]) => {
+        const { calculatedHeight, maxLineCount: currentMaxLine } = calculateHeightAndLines(value.subcibe);
+        if (calculatedHeight > maxCalculatedHeight) {
+          maxCalculatedHeight = calculatedHeight;
+          maxLineCount = currentMaxLine;
+        }
+      });
+    
+      const rowHeight = maxCalculatedHeight + (row.length > 2 ? 17 : 55); // Thêm 55px cho hàng máy tính, 50px cho hàng điện thoại
+      const rowMaxHeight = maxCalculatedHeight + (row.length > 2 ? 17 : 55); // Thêm 55px cho hàng máy tính, 50px cho hàng điện thoại
+    
+      row.forEach(([key, value]) => {
+        main2.innerHTML += `
+          <div class="item-product-home col-6 col-md-3">
+              <div class="img-product">
+                  <img src="${value.img1}" alt="" width="100%">
+                  <div class="img-hover mini-product">
+                      <a class="link-buy-nhanh" href="../chitietsp.html?catelory=combo2&key=${key}">
+                          <img src="${value.img2}" alt="" width="100%">
+                      </a>
+                      <button class="btn-view-more btn-mini" onclick="showPopup('combo2', '${encodeURIComponent(key)}')">XEM NHANH</button>
+                  </div>
+              </div>
+              <a href="../chitietsp.html?catelory=combo2&key=${key}">
+                  <div class="name-product">
+                      <h3 class="name-combo">${value.name}</h3>
+                  </div>
+              </a>
+              <div class="subcribe subcribe-combo">
+                  <p style="white-space: pre-wrap; height: ${rowHeight}px; max-height: ${rowMaxHeight}px; -webkit-line-clamp: ${maxLineCount};">${value.subcibe}</p>
+              </div>
+              <div class="check-giamgia">
+                  <div class="giamgias">
+                      <p>${value.giamgia}</p>
+                  </div>
+              </div>
+              <div class="heart">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
+              <div class="price">
+                  <h2>${formatCurrency(value.price)}</h2>
+              </div>
+              <div class="btn-add btn-add-to-cart add-to-cart">
+                  <button data-category="combo2" data-key="${encodeURIComponent(key)}">MUA NGAY</button>
+              </div>
+          </div>
+        `;
+      });
     });
+    
+    
+    
+    
+    
+  
+
+    
 
     Object.entries(data3).map(([key, value]) => {
-     
+      const newlineCount = (value.subcibe.match(/\n/g) || []).length
       main3.innerHTML += `
       <div class="item-product-home col-6 col-md-3" >
       <div class="img-product">
@@ -812,9 +840,9 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
          </div>
       </a>
       <div class="subcribe ">
-      <textarea class="textArea" readonly rows="8" cols="auto">${
-        value.subcibe
-      }</textarea>
+      <div class="subcribe subcribe-combo">
+      <p style="white-space: pre-wrap; height:140px; max-height: 140px; -webkit-line-clamp:9px;">${value.subcibe}</p>
+  </div>
       </div>
       <div class="heart">
          <i class="fa fa-heart" aria-hidden="true"></i>
