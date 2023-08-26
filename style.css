@@ -921,7 +921,7 @@ body{
   }
   .name-product h3{
        /* Thiết lập chiều cao cố định cho phần tử chứa văn bản */
-       height:40px; /* Điều chỉnh giá trị theo ý muốn */
+       height:80px; /* Điều chỉnh giá trị theo ý muốn */
         max-height: 100px;
        /* Hiển thị nhiều dòng văn bản */
        display: -webkit-box;
@@ -934,7 +934,7 @@ body{
 
   }
   .name-combo{
-    height: 24px !important;
+    height: 30px !important;
   }
   .--cart-title h5{
     text-align: center;
