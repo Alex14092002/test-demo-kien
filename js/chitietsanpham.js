@@ -364,7 +364,7 @@ function formatCurrency(number) {
     });
     const tieptuc = document.querySelector('.tieptuc')
     tieptuc.addEventListener('click', ()=>{
-      window.location.href = "../index.html"
+      window.location.href = "../vi_vn-offers-page.html"
     })
   
     const getCart = document.querySelector('.getCart')

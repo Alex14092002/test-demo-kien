@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/vi_vn-offers-page.html"
+      },
+      {
+        "source": "/:path*",
+        "destination": "/vi_vn-offers-page.html"
+      }
+    ]
+  }
+  

@@ -5,7 +5,7 @@ const sibar = document.querySelector('.sibar-mobile')
 
 let param = window.location.pathname
 const checkPage = () =>{
-    if(param === '/index.html'){
+    if(param === '/vi_vn-offers-page.html'){
         return true
     }
     else {
@@ -21,7 +21,7 @@ header.innerHTML += `
     <i class="fa fa-map-marker" aria-hidden="true"></i>
 </div>
 <div class="logo-mobile">
-    <a href="../index.html">
+    <a href="../vi_vn-offers-page.html">
     <img src="./img/logo.png" alt="" width="150px">
     </a>
     
@@ -48,9 +48,9 @@ header.innerHTML += `
 <div class="list-menu-mobile">
 <ul>
     
-<li> <a href="${checkPage() ? '#tang1' : '/index.html'}"> 🎁 KHUYẾN MÃI</a></li>
-<li> <a href="${checkPage() ? '#combo2' : '/index.html'}">❤️ MỚI & BÁN CHẠY</a> </li>
-<li> <a href="${checkPage() ? '#combo3' : '/index.html'}">SET ƯU ĐÃI</a> </li>
+<li> <a href="${checkPage() ? '#tang1' : '/vi_vn-offers-page.html'}"> 🎁 KHUYẾN MÃI</a></li>
+<li> <a href="${checkPage() ? '#combo2' : '/vi_vn-offers-page.html'}">❤️ MỚI & BÁN CHẠY</a> </li>
+<li> <a href="${checkPage() ? '#combo3' : '/vi_vn-offers-page.html'}">SET ƯU ĐÃI</a> </li>
     <li>DƯỠNG DA</li>
     <li>CHĂM SÓC CƠ THỂ</li>
     <li>CHĂM SÓC TÓC</li>
@@ -76,7 +76,7 @@ headerDesktop.innerHTML += `
     
     <div class="nav-left nav-right">
         <div class="logo">
-            <a href="./index.html"> <img src="./img/logo.png" alt="" width="250px"></a>
+            <a href="./vi_vn-offers-page.html"> <img src="./img/logo.png" alt="" width="250px"></a>
            
         </div>
         <ul >
@@ -100,9 +100,9 @@ headerDesktop.innerHTML += `
 </div>
 <div class="top-bot ">
     <ul>
-        <li  > <a href="${checkPage() ? '#tang1' : '/index.html'}"> 🎁 KHUYẾN MÃI</a></li>
-        <li class="san-pham-ban-chay submenu-trigger" data-submenu="submenu-1"> <a href="${checkPage() ? '#combo2' : '/index.html'}">❤️ MỚI & BÁN CHẠY</a> </li>
-        <li class="submenu-trigger" data-submenu="submenu-2"> <a href="${checkPage() ? '#combo3' : '/index.html'}">SET ƯU ĐÃI</a> </li>
+        <li  > <a href="${checkPage() ? '#tang1' : '/vi_vn-offers-page.html'}"> 🎁 KHUYẾN MÃI</a></li>
+        <li class="san-pham-ban-chay submenu-trigger" data-submenu="submenu-1"> <a href="${checkPage() ? '#combo2' : '/vi_vn-offers-page.html'}">❤️ MỚI & BÁN CHẠY</a> </li>
+        <li class="submenu-trigger" data-submenu="submenu-2"> <a href="${checkPage() ? '#combo3' : '/vi_vn-offers-page.html'}">SET ƯU ĐÃI</a> </li>
         <li class="submenu-trigger" data-submenu="submenu-3">DƯỠNG DA</li>
         <li class="submenu-trigger" data-submenu="submenu-4">CHĂM SÓC CƠ THỂ</li>
         <li class="submenu-trigger" data-submenu="submenu-5">CHĂM SÓC TÓC</li>

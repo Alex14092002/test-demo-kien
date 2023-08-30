@@ -53,7 +53,7 @@
     btnXN.addEventListener('click', () => {
         localStorage.removeItem('selectedItems');
         localStorage.removeItem('magiamgia');
-        window.location.href = "../index.html";
+        window.location.href = "../vi_vn-offers-page.html";
     });
     function isValidStringLength(str) {
         // Sử dụng biểu thức chính quy để kiểm tra độ dài chuỗi
