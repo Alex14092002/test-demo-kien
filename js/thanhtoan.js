@@ -8,8 +8,8 @@
     console.log('Giờ hiện tại:', currentTime);
     
     (async () => {
-        const res = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/sheet/0.json`);
-        const res2 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/sheet/1.json`);
+        const res = await fetch(`https://kieh-b666e-default-rtdb.firebaseio.com/sheet/0.json`);
+        const res2 = await fetch(`https://kieh-b666e-default-rtdb.firebaseio.com/sheet/1.json`);
         const data = await res.json();
         const data2 = await res2.json();
      

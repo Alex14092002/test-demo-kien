@@ -14,7 +14,7 @@ function formatCurrency(number) {
 (async () => {
  
   const res = await fetch(
-    `https://data-kieh-default-rtdb.firebaseio.com/${catelory}/${key}.json`
+    `https://kieh-b666e-default-rtdb.firebaseio.com/${catelory}/${key}.json`
   );
   const data = await res.json()
   console.log(data);
@@ -200,7 +200,7 @@ function formatCurrency(number) {
       });
   }
 
-  const res2 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/${catelory}/${key}/list.json`)
+  const res2 = await fetch(`https://kieh-b666e-default-rtdb.firebaseio.com/${catelory}/${key}/list.json`)
   const data2 = await res2.json()
   const divChitiet = document.querySelector('#chitiet-combo')
 
@@ -220,7 +220,7 @@ function formatCurrency(number) {
     })
   }
 
-  const res3 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/${catelory}/${key}/cd.json`)
+  const res3 = await fetch(`https://kieh-b666e-default-rtdb.firebaseio.com/${catelory}/${key}/cd.json`)
   const data3 = await res3.json()
 
   const divCongdung = document.querySelector(`#cd`)
@@ -232,7 +232,7 @@ function formatCurrency(number) {
     })
   }
   
-  const res4 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/${catelory}/${key}/tp.json`)
+  const res4 = await fetch(`https://kieh-b666e-default-rtdb.firebaseio.com/${catelory}/${key}/tp.json`)
   const data4 = await res4.json()
 
   const divThanhphan = document.querySelector('.slider-thanhphan')
@@ -255,7 +255,7 @@ function formatCurrency(number) {
   }
 
 
-  const res5 = await fetch(`https://data-kieh-default-rtdb.firebaseio.com/${catelory}/${key}/hdsd.json`)
+  const res5 = await fetch(`https://kieh-b666e-default-rtdb.firebaseio.com/${catelory}/${key}/hdsd.json`)
   const data5 = await res5.json()
 
   const divHuongdan = document.querySelector('#huongdan')

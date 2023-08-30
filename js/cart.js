@@ -8,7 +8,7 @@ document.body.appendChild(overlay);
 const showPopup = async (product, key) => {
   overlay.classList.toggle("active-overlay");
   const res = await fetch(
-    `https://data-kieh-default-rtdb.firebaseio.com/${product}/${key}.json`
+    `https://kieh-b666e-default-rtdb.firebaseio.com/${product}/${key}.json`
   );
   const data = await res.json();
   const popupChitiet = document.querySelector(".popup-xemnhanh");
@@ -89,7 +89,7 @@ const showPopup = async (product, key) => {
   `;
 
   const resList = await fetch(
-    `https://data-kieh-default-rtdb.firebaseio.com/${product}/${key}/list.json`
+    `https://kieh-b666e-default-rtdb.firebaseio.com/${product}/${key}/list.json`
   );
   const list = await resList.json();
 
@@ -449,7 +449,7 @@ if (cart.length > 0) {
   const cothethich = document.querySelector(".cothethich-slider");
 
   const res = await fetch(
-    `https://data-kieh-default-rtdb.firebaseio.com/mua1tang1.json`
+    `https://kieh-b666e-default-rtdb.firebaseio.com/mua1tang1.json`
   );
   const data = await res.json();
   console.log(data);
@@ -533,7 +533,7 @@ if (cart.length > 0) {
   // Hàm để lưu thông tin sản phẩm vào local storage
   const addToCart = async (category, key) => {
     const res = await fetch(
-      `https://data-kieh-default-rtdb.firebaseio.com/${category}/${key}.json`
+      `https://kieh-b666e-default-rtdb.firebaseio.com/${category}/${key}.json`
     );
     const data = await res.json();
 

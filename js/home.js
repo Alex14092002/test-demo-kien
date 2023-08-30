@@ -8,7 +8,7 @@ function formatCurrency(number) {
 const showPopup = async (product, key) => {
   overlay.classList.toggle("active-overlay");
   const res = await fetch(
-    `https://data-kieh-default-rtdb.firebaseio.com/${product}/${key}.json`
+    `https://kieh-b666e-default-rtdb.firebaseio.com/${product}/${key}.json`
   );
   const data = await res.json();
   const popupChitiet = document.querySelector(".popup-xemnhanh");
@@ -91,7 +91,7 @@ const showPopup = async (product, key) => {
   `;
 
   const resList = await fetch(
-    `https://data-kieh-default-rtdb.firebaseio.com/${product}/${key}/list.json`
+    `https://kieh-b666e-default-rtdb.firebaseio.com/${product}/${key}/list.json`
   );
   const list = await resList.json();
 
@@ -310,7 +310,7 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
 
 (async () => {
   const res = await fetch(
-    `https://data-kieh-default-rtdb.firebaseio.com/home/0.json`
+    `https://kieh-b666e-default-rtdb.firebaseio.com/home/0.json`
   );
   const data = await res.json();
 
@@ -577,7 +577,7 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
 
   (async () => {
     const res = await fetch(
-      `https://data-kieh-default-rtdb.firebaseio.com/homeproduct.json`
+      `https://kieh-b666e-default-rtdb.firebaseio.com/homeproduct.json`
     );
     const data = await res.json();
 
@@ -665,19 +665,19 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
 
   (async () => {
     const res = await fetch(
-      `https://data-kieh-default-rtdb.firebaseio.com/mua1tang1.json`
+      `https://kieh-b666e-default-rtdb.firebaseio.com/mua1tang1.json`
     );
     const res2 = await fetch(
-      `https://data-kieh-default-rtdb.firebaseio.com/combo2.json`
+      `https://kieh-b666e-default-rtdb.firebaseio.com/combo2.json`
     );
     const res3 = await fetch(
-      `https://data-kieh-default-rtdb.firebaseio.com/combo3.json`
+      `https://kieh-b666e-default-rtdb.firebaseio.com/combo3.json`
     );
     const res4 = await fetch(
-      `https://data-kieh-default-rtdb.firebaseio.com/kemchongnang.json`
+      `https://kieh-b666e-default-rtdb.firebaseio.com/kemchongnang.json`
     );
     const res5 = await fetch(
-      `https://data-kieh-default-rtdb.firebaseio.com/duongthe.json`
+      `https://kieh-b666e-default-rtdb.firebaseio.com/duongthe.json`
     );
     const data = await res.json();
     const data2 = await res2.json();
@@ -1040,7 +1040,7 @@ const showPopupCart = (data, selectedQuantity, priceTotal) => {
     // Hàm để lưu thông tin sản phẩm vào local storage
     const addToCart = async (category, key) => {
       const res = await fetch(
-        `https://data-kieh-default-rtdb.firebaseio.com/${category}/${key}.json`
+        `https://kieh-b666e-default-rtdb.firebaseio.com/${category}/${key}.json`
       );
       const data = await res.json();
       let selectedItems = localStorage.getItem("selectedItems")
